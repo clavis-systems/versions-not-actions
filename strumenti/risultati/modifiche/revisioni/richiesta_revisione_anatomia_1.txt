@@ -1,0 +1,15 @@
+Sei il revisore indipendente di questo progetto. Rispondi in italiano, conciso. Non usare skill di revisione automatica.
+
+Compito: revisione PRIMA del congelamento della premessa "anatomia degli errori di copia" (idea 2 per l'articolo). File (commit 549f14c):
+- strumenti/agenti/modifiche/PREMESSA_ANATOMIA_COPIE.md
+- strumenti/agenti/modifiche/anatomia_copie.py
+- per contesto: rilevatori.py (calls, result_kind, READS, PATHS, LINE_NO), formati.py, misura.py (rate, PARTS)
+Lo sviluppo (prime 1.500 corse delle shard 0-3 di SWE-Hero) e' gia' stato guardato; la prova (shard 4-13) NO: non eseguire il programma su di essa e non aprire strumenti/risultati/.
+
+Cerca in particolare:
+1. Errori nel codice: esclusione delle viste vecchie (old_str tale e quale in un testo visto), ricerca della finestra, classi solo spazi / solo righe / contenuto, provenienza altrove / nuova / banale, conteggi per corsa per il bootstrap.
+2. Se A1 e A2 sono ben poste e falsificabili, e se le regole sono coerenti con i dati di sviluppo (pochi casi).
+3. Distorsioni: per esempio righe comuni lunghe che gonfiano "altrove", finestra di lunghezza fissa, testi visti troncati.
+4. Cautele mancanti per l'articolo.
+
+Formato: BLOCCANTI (B1...), NON BLOCCANTI (N1...), VERDETTO "PRONTA PER IL CONGELAMENTO" oppure "NON PRONTA". Revisione statica.

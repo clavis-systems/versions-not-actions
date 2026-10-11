@@ -1,0 +1,116 @@
+{
+ "limit": null,
+ "sources_option": "swehero",
+ "runs": {
+  "swehero_dev": 10000,
+  "swehero_heldout": 24269
+ },
+ "incidents": {
+  "swehero_dev": {
+   "never_seen": 207,
+   "circle": 137,
+   "noop": 696,
+   "known_bad_retry": 123,
+   "stale": 49,
+   "multiple": 190
+  },
+  "swehero_heldout": {
+   "noop": 2158,
+   "stale": 140,
+   "circle": 332,
+   "known_bad_retry": 301,
+   "never_seen": 734,
+   "multiple": 563
+  }
+ },
+ "input_files": [
+  {
+   "path": "esterni/SWE-Hero-openhands-trajectories/data/train-00000-of-00014.parquet",
+   "bytes": 151791408,
+   "sha256": "5149ba06dc7bcfe2fc01a20036e35cd535fde91840253c15bc070d95cf217be6"
+  },
+  {
+   "path": "esterni/SWE-Hero-openhands-trajectories/data/train-00001-of-00014.parquet",
+   "bytes": 151548338,
+   "sha256": "93eea922fc3b77176541ff51e4a7774a910332008c99a885ec9dfe6c3a501803"
+  },
+  {
+   "path": "esterni/SWE-Hero-openhands-trajectories/data/train-00002-of-00014.parquet",
+   "bytes": 151438507,
+   "sha256": "82fa1c11dcb959bf7442a013202a0e2d0e13b010fa8f43a8374961734759fc59"
+  },
+  {
+   "path": "esterni/SWE-Hero-openhands-trajectories/data/train-00003-of-00014.parquet",
+   "bytes": 157662607,
+   "sha256": "8951f4d4d2e3fc4c3355fbce296a774320be92d9a1a06fc4fe40ed5c9efca58a"
+  },
+  {
+   "path": "esterni/SWE-Hero-openhands-trajectories/data/train-00004-of-00014.parquet",
+   "bytes": 157992475,
+   "sha256": "a086aea4c6e1336612cbe33ed381913aa2b3af8833b8f6880fc6b10f3f8c7f3f"
+  },
+  {
+   "path": "esterni/SWE-Hero-openhands-trajectories/data/train-00005-of-00014.parquet",
+   "bytes": 157021081,
+   "sha256": "368086731fbc2be0325504dea98b2da246748a741bf7407c14a469334365519b"
+  },
+  {
+   "path": "esterni/SWE-Hero-openhands-trajectories/data/train-00006-of-00014.parquet",
+   "bytes": 175925246,
+   "sha256": "a74b60b8eacdf5fe57b77dc90bcaf7498fc936d762c73e741d681e4c5089eaff"
+  },
+  {
+   "path": "esterni/SWE-Hero-openhands-trajectories/data/train-00007-of-00014.parquet",
+   "bytes": 168067123,
+   "sha256": "c4cbe1709237ba81499de533b90d0007578797bebf61be571eba42f7bd88d123"
+  },
+  {
+   "path": "esterni/SWE-Hero-openhands-trajectories/data/train-00008-of-00014.parquet",
+   "bytes": 171348241,
+   "sha256": "b523c6f9db86fc289d872558210db619b2ab3736f0592fdb4c56449efb4adc26"
+  },
+  {
+   "path": "esterni/SWE-Hero-openhands-trajectories/data/train-00009-of-00014.parquet",
+   "bytes": 208247441,
+   "sha256": "e608a33f616ce1c5322c6e72981fc78cf9eb4e56ac3ccf8950099e2bfac299d3"
+  },
+  {
+   "path": "esterni/SWE-Hero-openhands-trajectories/data/train-00010-of-00014.parquet",
+   "bytes": 245825405,
+   "sha256": "bf5e920077bf721832ab9fc34d1ea9275ed4cb8b5a2355bff2b6b2f598c199de"
+  },
+  {
+   "path": "esterni/SWE-Hero-openhands-trajectories/data/train-00011-of-00014.parquet",
+   "bytes": 163740812,
+   "sha256": "2f80d4bdba8ca57af6f8740ebc6185c1d691afd39c92430a2cc18cadb58f0f8e"
+  },
+  {
+   "path": "esterni/SWE-Hero-openhands-trajectories/data/train-00012-of-00014.parquet",
+   "bytes": 200489804,
+   "sha256": "529244ce0c3465c022565e8c6eeb3ef3d6b2981cabfb76dbed4f02c4f782722d"
+  },
+  {
+   "path": "esterni/SWE-Hero-openhands-trajectories/data/train-00013-of-00014.parquet",
+   "bytes": 140913929,
+   "sha256": "936b195ed11b2b9be2e60cf9cb274dfc2f31d07745cbd6144658da988ce295a9"
+  }
+ ],
+ "sources": {
+  "swehero": "https://huggingface.co/datasets/nvidia/SWE-Hero-openhands-trajectories (CC-BY-4.0)",
+  "openhands": "https://github.com/SWE-bench/experiments (evaluation/verified)"
+ },
+ "code_sha256": {
+  "formati.py": "ac9479c8a98c494f630c39e278f4b6914a76a05be15cee67eaf14e4e27600c24",
+  "rilevatori.py": "67736642fa833775858219cfafbf244a8855106b197d03d92beb7442321b4165",
+  "misura.py": "ab9ddaa3c80f5982bbbc7bfdcf0978cf9e4a54ad9872a780e6a4bc3d7370156c",
+  "indice_incidenti.py": "8e31d8a28e71334dd2188c60ae5361b86a9b0eb733d7fd8cb8b8cc7e2732289e"
+ },
+ "categories": [
+  "noop",
+  "multiple",
+  "stale",
+  "never_seen",
+  "known_bad_retry",
+  "circle"
+ ]
+}

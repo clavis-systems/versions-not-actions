@@ -1,0 +1,5 @@
+== swehero_dev
+  near copies: {'near_copy': 35}
+  differing lines: {'added_from_elsewhere': '49 (36%)', 'dropped': '28 (20%)', 'comment': '12 (9%)', 'other_from_elsewhere': '12 (9%)', 'identifier': '12 (9%)', 'added_blank': '11 (8%)', 'other_new': '9 (7%)', 'dropped_blank': '3 (2%)', 'literal': '1 (1%)', 'added_new': '1 (1%)'}
+  repeats: {'failed': 293, 'identical_repeat_same_version': 9, 'right_after_a_failure': 19, 'right_after_a_failure_identical': 6}
+  regressions: {'runs': 2500, 'runs_with_a_passing_test': 2084, 'lost_a_passing_state': 37}

@@ -1,0 +1,83 @@
+{
+ "tasks_total": 20,
+ "tasks_compared": 20,
+ "excluded": [],
+ "L1": {
+  "solved_off": 17,
+  "solved_on": 17,
+  "wins": 0,
+  "losses": 0,
+  "p": 1.0,
+  "supported": false,
+  "difference": {
+   "mean": 0.0,
+   "low": 0.0,
+   "high": 0.0
+  }
+ },
+ "L1_sensitivity_suspicious_as_unsolved": null,
+ "L2": {
+  "total_off": 45,
+  "total_on": 25,
+  "difference": {
+   "mean": -1.0,
+   "low": -2.1,
+   "high": -0.2
+  },
+  "supported": true
+ },
+ "L3": {
+  "total_off": 19,
+  "total_on": 9,
+  "difference": {
+   "mean": -0.5,
+   "low": -1.35,
+   "high": 0.05
+  },
+  "supported": false
+ },
+ "describe": {
+  "off": {
+   "str_replace_outcomes": {
+    "edited": 27,
+    "missing": 18,
+    "noop": 1,
+    "multiple": 9
+   },
+   "host_notes": {},
+   "tokens": {
+    "prompt": 583934,
+    "completion": 24600
+   },
+   "calls": 202,
+   "finished": 19,
+   "dropped_calls": 0,
+   "seconds": 429.5
+  },
+  "on": {
+   "str_replace_outcomes": {
+    "edited": 27,
+    "missing": 7,
+    "noop": 1,
+    "multiple": 10
+   },
+   "host_notes": {
+    "closest": 1,
+    "already_made_edit": 6,
+    "noop_identical": 1,
+    "multiple": 10
+   },
+   "tokens": {
+    "prompt": 488949,
+    "completion": 21582
+   },
+   "calls": 181,
+   "finished": 19,
+   "dropped_calls": 0,
+   "seconds": 374.3
+  }
+ },
+ "solved_off_not_on": [],
+ "solved_on_not_off": [],
+ "suspicious": []
+}

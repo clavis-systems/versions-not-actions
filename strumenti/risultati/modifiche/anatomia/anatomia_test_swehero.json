@@ -1,0 +1,52 @@
+{
+ "swehero_heldout": {
+  "runs": 24269,
+  "runs_with_cases": 534,
+  "near_copies": 552,
+  "classes": {
+   "whitespace_only": 134,
+   "content": 290,
+   "lines_only": 128
+  },
+  "possibly_seen_otherwise": {
+   "whitespace_only": 123,
+   "content": 259,
+   "lines_only": 115
+  },
+  "copy_lines_not_in_file": {
+   "unseen_line": 333,
+   "trivial": 97,
+   "seen_line": 367
+  },
+  "A1_whitespace_only": {
+   "num": 134,
+   "den": 552,
+   "value": 0.2427536231884058,
+   "ci95": [
+    0.20833333333333334,
+    0.27878953593881645
+   ],
+   "invalid_replicates": 0
+  },
+  "A1_sensitivity_without_possibly_seen": {
+   "num": 11,
+   "den": 55,
+   "value": 0.2,
+   "ci95": [
+    0.09995901639344264,
+    0.31429894179894174
+   ],
+   "invalid_replicates": 0
+  },
+  "A2_seen_lines": {
+   "num": 367,
+   "den": 700,
+   "value": 0.5242857142857142,
+   "ci95": [
+    0.4579491214054269,
+    0.5901041529272107
+   ],
+   "invalid_replicates": 0
+  }
+ }
+}

@@ -1,0 +1,110 @@
+{
+ "openhands_qwen3_coder_30b": {
+  "edits_with_state": 4070,
+  "undo_edits": 0,
+  "edits_no_change": 0,
+  "type_cycles_progress": 3510,
+  "type_cycles_known": 3801,
+  "runs": 450,
+  "runs_with_return": 75,
+  "without_return_unresolved": 154,
+  "untracked_changes": 654,
+  "untracked_returns": 107,
+  "without_return_resolved": 221,
+  "stuck_attempts": 181,
+  "stuck_not_recurrence": 153,
+  "type_cycles_failed": 181,
+  "edits_unrecognised": 69,
+  "type_cycles_unknown": 71,
+  "type_cycles_return": 110,
+  "returns": 110,
+  "returns_not_recurrence": 85,
+  "with_return_unresolved": 60,
+  "with_return_resolved": 14,
+  "edits_without_state": 2,
+  "undo_without_state": 2,
+  "S1_returns_not_recurrence": {
+   "num": 85,
+   "den": 110,
+   "value": 0.7727272727272727,
+   "ci95": [
+    0.6888888888888889,
+    0.8582732877729906
+   ],
+   "invalid_replicates": 0
+  },
+  "S2_stuck_not_recurrence": {
+   "num": 153,
+   "den": 181,
+   "value": 0.8453038674033149,
+   "ci95": [
+    0.7892150238473767,
+    0.9012446873102611
+   ],
+   "invalid_replicates": 0
+  },
+  "S3_type_cycles_progress": {
+   "num": 3510,
+   "den": 3801,
+   "value": 0.9234411996842936,
+   "ci95": [
+    0.9122325648444495,
+    0.9342078786540543
+   ],
+   "invalid_replicates": 0
+  }
+ },
+ "openhands_qwen3_coder_480b": {
+  "edits_with_state": 5678,
+  "undo_edits": 0,
+  "edits_no_change": 0,
+  "type_cycles_progress": 4990,
+  "type_cycles_known": 5396,
+  "runs": 450,
+  "runs_with_return": 93,
+  "without_return_unresolved": 89,
+  "untracked_changes": 1630,
+  "untracked_returns": 251,
+  "type_cycles_return": 257,
+  "returns": 257,
+  "returns_not_recurrence": 220,
+  "with_return_resolved": 52,
+  "stuck_attempts": 150,
+  "stuck_not_recurrence": 135,
+  "type_cycles_failed": 149,
+  "without_return_resolved": 267,
+  "with_return_unresolved": 41,
+  "edits_unrecognised": 20,
+  "type_cycles_unknown": 2,
+  "S1_returns_not_recurrence": {
+   "num": 220,
+   "den": 257,
+   "value": 0.8560311284046692,
+   "ci95": [
+    0.8016698414649134,
+    0.9080522511669928
+   ],
+   "invalid_replicates": 0
+  },
+  "S2_stuck_not_recurrence": {
+   "num": 135,
+   "den": 150,
+   "value": 0.9,
+   "ci95": [
+    0.8415235493104346,
+    0.9565295589615265
+   ],
+   "invalid_replicates": 0
+  },
+  "S3_type_cycles_progress": {
+   "num": 4990,
+   "den": 5396,
+   "value": 0.924759080800593,
+   "ci95": [
+    0.9130193231906543,
+    0.9360211094806777
+   ],
+   "invalid_replicates": 0
+  }
+ }
+}

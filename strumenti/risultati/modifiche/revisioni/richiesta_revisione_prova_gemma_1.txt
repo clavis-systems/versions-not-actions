@@ -1,0 +1,599 @@
+Sei il revisore indipendente di questo progetto. Rispondi in italiano, in modo conciso. Non usare skill di revisione automatica: fai tu la revisione richiesta.
+
+Compito: rivedere PRIMA della prova di funzionamento la bozza di premessa della prova dal vivo (Gemma 4 E4B come agente su HumanEvalFix, guardiano dell'host acceso/spento) e il banco che la applica (agente_gemma.py, con le sue prove). Il guardiano nasce dai risultati dello studio sulle traiettorie (H1-H6 e analisi esplorativa: il 77-95% del testo "mai visto" e' una copia approssimata di testo gia' visto).
+
+Cerca in particolare:
+1. Differenze fra le due condizioni oltre alle note del guardiano (devono essere identiche in tutto il resto).
+2. Errori nella semantica degli strumenti (view, str_replace in stile OpenHands, run_tests, finish), nella costruzione dei compiti (file allungati) o nella valutazione finale (prove nascoste nella sandbox).
+3. Fughe: il modello non deve vedere soluzione canonica, prove nascoste o esiti dell'altra condizione.
+4. Regole di decisione L1-L3 ben definite e ricalcolabili; statistica (McNemar, bootstrap sui compiti); esclusioni.
+5. Rischi di sicurezza: tutto il codice del dataset e del modello deve girare solo nella sandbox WASM.
+6. Cautele mancanti importanti per un articolo.
+
+Formato: BLOCCANTI (B1...), NON BLOCCANTI (N1...), VERDETTO "PRONTA PER LA PROVA DI FUNZIONAMENTO" oppure "NON PRONTA".
+
+===== PREMESSA_PROVA_GEMMA.md =====
+# Premessa: prova dal vivo con Gemma come agente, guardiano acceso e spento
+
+**Stato: BOZZA**, da far rivedere a Codex e da congelare con un commit prima della corsa sui compiti tenuti da parte.
+Prima del congelamento serve una prova di funzionamento su 2 compiti di sviluppo.
+
+## 1. Domanda
+
+Gli avvisi dell'host, ricavati dallo studio sulle traiettorie (`RISULTATI_MODIFICHE.md`), aiutano un modello piccolo
+che lavora come agente a correggere il codice?
+
+## 2. Materiale
+
+**Modello.** `gemma4:e4b-it-qat` in Ollama, sul PC dell'utente.
+- Parametri: temperatura 0, seme 1, contesto 16.384 token, al massimo 1.024 token per risposta, ragionamento
+  spento.
+- Funziona con il lucchetto della GPU.
+
+**Compiti.** HumanEvalFix Python (bigcode/humanevalpack, licenza MIT, 164 compiti; impronta in
+`esterni/humanevalpack/MANIFEST.md`).
+- Ogni compito diventa un file `solution.py`: la funzione con l'errore (dichiarazione, docstring e corpo difettoso)
+  in mezzo a 6 funzioni HumanEval corrette.
+  - Le funzioni corrette sono quelle degli indici (i + 7·j) mod 164, senza nomi ripetuti.
+  - Servono a dare alle modifiche occasioni di sbagliare: è una scelta dichiarata, non il formato originale.
+- **Sviluppo:** compiti 0–19, usati solo per controllare il banco.
+- **Prova:** compiti 20–163, cioè 144.
+
+**Agente.** `agente_gemma.py` (impronta registrata al congelamento).
+- Strumenti: `view`, `str_replace` (semantica OpenHands), `run_tests` (le prove d'esempio del compito, nella
+  sandbox WASM) e `finish`.
+- Al massimo 20 chiamate. Una risposta senza strumenti conta come chiamata e riceve un invito a usarli.
+
+**Esito.** Alla fine le prove complete e nascoste del compito girano nella sandbox: il compito è «risolto» se
+passano. Il codice del modello e del dataset gira solo nella sandbox.
+
+## 3. Condizioni
+
+| Condizione | Risultati degli strumenti |
+|---|---|
+| Spento | Messaggi in stile OpenHands |
+| Acceso | Stessi messaggi, più una nota dell'host |
+
+Le note dell'host con il guardiano acceso:
+- **modifica nulla:** «l'hai già fatta al passo N» se il testo sta in una modifica riuscita precedente e nel file;
+  altrimenti «sono identici: scrivi come devono diventare le righe»;
+- **testo mancante:** il testo vero più simile nel file, con le righe (finestra di uguale lunghezza, somiglianza
+  difflib);
+- **più occorrenze:** ogni riga, con la funzione che la contiene;
+- **ritorno:** dopo una modifica riuscita il cui testo, di almeno una riga da 8 caratteri, era già nel file durante
+  una prova fallita ed era poi stato tolto: «era già nel file al passo N; allora la prova fallì con: …». Se anche il
+  testo sostituito era nel file durante una prova fallita con un altro errore, si mostrano i due errori insieme.
+
+Per ogni compito girano entrambe le condizioni, in ordine casuale (seme 20261011). Tutto il resto è identico.
+
+## 4. Misure e ipotesi (sui 144 compiti di prova, appaiati per compito)
+
+| | Misura | Ipotesi | Regola |
+|---|---|---|---|
+| L1 | Compiti risolti | Acceso ≥ spento | Test di McNemar esatto bilaterale, p < 0,05, con differenza positiva. Si riportano la differenza e l'intervallo bootstrap sui compiti |
+| L2 | Chiamate «di recupero»: dopo una `str_replace` fallita, le chiamate fino alla successiva `str_replace` riuscita sullo stesso file, o fino alla fine | Acceso < spento | Intervallo bootstrap al 95% della differenza media per compito tutto sotto 0 |
+| L3 | Fallimenti di `str_replace` ripetuti: un fallimento dello stesso tipo subito dopo un altro | Acceso < spento | Come L2 |
+
+**Parti descrittive:**
+- tipi di fallimento di Gemma, con `rilevatori.py`: le sue traiettorie usano la stessa forma comune;
+- note dell'host per tipo;
+- compiti risolti da spento ma non da acceso (possibili danni);
+- tempo e token.
+
+**Statistica:**
+- bootstrap sui compiti, 2.000 repliche, seme 20261011;
+- McNemar esatto sulle coppie discordanti;
+- un compito con un errore della sandbox o del server in una delle due condizioni si esclude dal confronto e si
+  conta.
+
+## 5. Cautele
+
+- **Contaminazione.** HumanEval è noto e probabilmente visto in addestramento; HumanEvalFix non è codice reale a
+  più file.
+- **Un solo modello, un solo campione per condizione** (temperatura 0).
+- **I file allungati** sono una scelta per mettere alla prova le modifiche.
+- **Potenza.** Con 144 compiti si vedono solo effetti di qualche punto, quindi un risultato nullo non prova
+  l'assenza di effetto.
+
+## 6. Procedura
+
+1. Prova di funzionamento su 2 compiti di sviluppo, con le due condizioni.
+2. Correzioni solo del banco, con nuove prove su dati inventati, poi la revisione di Codex.
+3. Congelamento con un commit; impronte del codice e del dataset.
+4. Corsa sui compiti 20–163, con il lucchetto della GPU, in una o più notti.
+   - Ogni risultato è un file separato, aperto in modalità «x».
+   - Se la corsa si interrompe, riprende saltando i file già scritti, ed è dichiarato.
+5. Analisi secondo §4; ricalcolo indipendente di Codex.
+
+## Scostamenti
+
+Nessuno.
+
+===== agente_gemma.py =====
+"""Gemma as a coding agent on HumanEvalFix, with the host guard ON or OFF (live test).
+
+    python -I agente_gemma.py --tasks 0-19 --guard off --out <folder>     # needs Ollama and the GPU lock
+
+Each task is a file solution.py holding the buggy function of one HumanEvalFix item (declaration, docstring and
+buggy body) among a few correct HumanEval functions used as context, so that edits have room to go wrong. The agent
+has four tools:
+  view(path, view_range)              the file with line numbers, as `cat -n` (OpenHands wording);
+  str_replace(path, old_str, new_str) OpenHands semantics: old_str must occur exactly once, and differ from new_str;
+  run_tests()                         the item's visible example tests, run in the WASM sandbox only;
+  finish()                            ends the task.
+At the end the item's full hidden tests run in the sandbox: the task is solved if they pass.
+
+Guard OFF returns the plain OpenHands-style messages. Guard ON adds, after the same message, a note from the host:
+  noop      it was already applied at step N, or old and new are identical, so the new text must say what changes;
+  missing   the closest real text in the file, with its line numbers (most "never seen" text is a near copy);
+  multiple  every occurrence, with its line and the function that encloses it;
+  revisit   after a successful edit: this block was already in the file at step N, and while it was there the
+            tests failed with <line>; if the block it replaces had failed too with another error, both errors.
+Nothing else differs between the two conditions. Code from the model or the dataset never runs outside the sandbox.
+"""
+
+from __future__ import annotations
+
+import argparse
+import difflib
+import json
+import os
+import random
+import re
+import sys
+import time
+import urllib.request
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+ROOT = os.path.abspath(os.path.join(HERE, "..", "..", ".."))
+sys.path.insert(0, HERE)
+sys.path.insert(0, os.path.join(ROOT, "strumenti", "valutazione"))
+
+DATA = os.path.join(ROOT, "esterni", "humanevalpack", "python", "test-00000-of-00001.parquet")
+OLLAMA = "http://127.0.0.1:11434/api/chat"
+MODEL = "gemma4:e4b-it-qat"
+FILE = "solution.py"
+CONTEXT_FUNCTIONS = 6
+MAX_CALLS = 20
+SNIPPET = 4
+OUTPUT_CUT = 2500
+
+SYSTEM = """You are a careful coding agent. Your job: fix the bug in one function of solution.py.
+Tools:
+- view(path, view_range): shows the file with line numbers. view_range = [first, last] is optional.
+- str_replace(path, old_str, new_str): replaces old_str with new_str. old_str must match the file EXACTLY, once,
+  without the line numbers that view shows.
+- run_tests(): runs the example tests of the function.
+- finish(): call it when the tests pass.
+Change only the buggy function. Do not change the docstring or the other functions."""
+
+TOOLS = [
+    {"type": "function", "function": {
+        "name": "view", "description": "Show a file with line numbers.",
+        "parameters": {"type": "object", "properties": {
+            "path": {"type": "string"},
+            "view_range": {"type": "array", "items": {"type": "integer"}}}, "required": ["path"]}}},
+    {"type": "function", "function": {
+        "name": "str_replace", "description": "Replace one exact occurrence of old_str with new_str in a file.",
+        "parameters": {"type": "object", "properties": {
+            "path": {"type": "string"}, "old_str": {"type": "string"}, "new_str": {"type": "string"}},
+            "required": ["path", "old_str", "new_str"]}}},
+    {"type": "function", "function": {
+        "name": "run_tests", "description": "Run the example tests.", "parameters": {"type": "object", "properties": {}}}},
+    {"type": "function", "function": {
+        "name": "finish", "description": "End the task.", "parameters": {"type": "object", "properties": {}}}},
+]
+
+
+# ---------- tasks ----------
+
+def load_rows(path=DATA):
+    import pyarrow.parquet as pq
+    return pq.read_table(path).to_pylist()
+
+
+def split_imports(prompt):
+    """(import lines, the rest) of a HumanEval prompt."""
+    imports, rest = [], []
+    for line in prompt.splitlines():
+        (imports if re.match(r"^(from \S+ import |import )", line) and not rest else rest).append(line)
+    return imports, "\n".join(rest).strip("\n")
+
+
+def build_task(rows, index, n_context=CONTEXT_FUNCTIONS):
+    """solution.py for item `index`: the buggy function in the middle of n_context correct ones."""
+    target = rows[index]
+    others, j = [], 1
+    while len(others) < n_context:
+        other = rows[(index + 7 * j) % len(rows)]
+        j += 1
+        if other["entry_point"] != target["entry_point"] and \
+                all(o["entry_point"] != other["entry_point"] for o in others):
+            others.append(other)
+    imports, blocks = [], []
+    for k, row in enumerate(others[:n_context // 2] + [target] + others[n_context // 2:]):
+        imp, body = split_imports(row["prompt"])
+        imports += [x for x in imp if x not in imports]
+        code = row["buggy_solution"] if row is target else row["canonical_solution"]
+        blocks.append(body + "\n" + code.rstrip("\n"))
+    text = "\n".join(imports) + ("\n\n\n" if imports else "") + "\n\n\n".join(blocks) + "\n"
+    return {"id": target["task_id"], "entry_point": target["entry_point"], "files": {FILE: text},
+            "visible_test": target["example_test"], "hidden_test": target["test"],
+            "test_setup": target.get("test_setup") or "",
+            "statement": f"The function `{target['entry_point']}` in {FILE} has a bug: it does not do what its "
+                         f"docstring says. Fix it. Use run_tests to check your fix, then call finish."}
+
+
+def test_program(test_code, entry_point, label, setup=""):
+    return ("import sys, traceback\nsys.path.insert(0, '/sandbox/progetto')\nfrom solution import *\n"
+            + setup + "\n" + test_code + "\n"
+            + f"try:\n    check({entry_point})\n    print('{label} PASSED')\n"
+            + "except Exception:\n    traceback.print_exc()\n    raise SystemExit(1)\n")
+
+
+def sandbox_run(program, files, timeout=20):
+    import sandbox_wasm
+    ok, out, err = sandbox_wasm.run(program, "python", timeout=timeout, files=files)
+    return ok, (out or "") + (err or "")
+
+
+# ---------- the workspace and its tools ----------
+
+def numbered(text, first=1):
+    return "\n".join(f"{n:6d}\t{line}" for n, line in enumerate(text.splitlines(), first))
+
+
+def enclosing_function(lines, index):
+    for j in range(index, -1, -1):
+        m = re.match(r"\s*def (\w+)", lines[j])
+        if m:
+            return m.group(1)
+    return None
+
+
+def norm(text):
+    return "\n".join(x.rstrip() for x in text.strip("\n").splitlines())
+
+
+class Workspace:
+    def __init__(self, task, guard, runner=sandbox_run):
+        self.task, self.guard, self.runner = task, guard, runner
+        self.files = dict(task["files"])
+        self.applied = {}            # new_str -> step of a successful edit
+        self.tests = []              # (step, file text at that time, failed, failing line)
+        self.step = 0
+
+    def call(self, name, args):
+        self.step += 1
+        try:
+            if name == "view":
+                return self.view(args.get("path", FILE), args.get("view_range"))
+            if name == "str_replace":
+                return self.str_replace(args.get("path", FILE), args.get("old_str"), args.get("new_str"))
+            if name == "run_tests":
+                return self.run_tests()
+            if name == "finish":
+                return "Task finished."
+            return f"ERROR:\nUnknown tool {name!r}."
+        except (TypeError, ValueError) as exc:
+            return f"ERROR:\nInvalid arguments: {exc}"
+
+    def view(self, path, view_range=None):
+        if path not in self.files:
+            return f"ERROR:\nInvalid `path` parameter: {path}. The path {path} does not exist."
+        lines = self.files[path].splitlines()
+        first, last = 1, len(lines)
+        if view_range:
+            first, last = int(view_range[0]), int(view_range[-1]) if int(view_range[-1]) > 0 else len(lines)
+        body = "\n".join(numbered("\n".join(lines[first - 1:last]), first).splitlines())
+        return f"Here's the result of running `cat -n` on {path}:\n{body}\n"
+
+    def str_replace(self, path, old, new):
+        if path not in self.files:
+            return f"ERROR:\nInvalid `path` parameter: {path}. The path {path} does not exist."
+        if old is None or new is None:
+            raise ValueError("old_str and new_str are required")
+        text = self.files[path]
+        if old == new:
+            msg = (f"ERROR:\nInvalid `new_str` parameter: {new}. No replacement was performed. `new_str` and "
+                   "`old_str` must be different.")
+            return msg + self.guard_noop(old) if self.guard else msg
+        count = text.count(old)
+        if count == 0:
+            msg = f"ERROR:\nNo replacement was performed, old_str `{old}` did not appear verbatim in {path}."
+            return msg + self.guard_missing(text, old) if self.guard else msg
+        if count > 1:
+            lines = [text[:m.start()].count("\n") + 1 for m in re.finditer(re.escape(old), text)]
+            msg = (f"ERROR:\nNo replacement was performed. Multiple occurrences of old_str `{old}` in lines "
+                   f"{lines}. Please ensure it is unique.")
+            return msg + self.guard_multiple(text, lines) if self.guard else msg
+        before = text
+        start_line = text[:text.index(old)].count("\n")
+        self.files[path] = text.replace(old, new, 1)
+        self.applied.setdefault(new, self.step)
+        lines = self.files[path].splitlines()
+        first = max(0, start_line - SNIPPET)
+        last = min(len(lines), start_line + new.count("\n") + 1 + SNIPPET)
+        msg = (f"The file {path} has been edited. Here's the result of running `cat -n` on a snippet of {path}:\n"
+               + numbered("\n".join(lines[first:last]), first + 1)
+               + "\nReview the changes and make sure they are as expected. Edit the file again if necessary.")
+        return msg + self.guard_revisit(before, old, new) if self.guard else msg
+
+    def run_tests(self):
+        program = test_program(self.task["visible_test"], self.task["entry_point"], "TESTS",
+                               self.task.get("test_setup", ""))
+        ok, out = self.runner(program, dict(self.files))
+        failed = not ok
+        lines = [x.strip() for x in out.splitlines() if x.strip()]
+        failing = ""
+        if failed:
+            asserts = [x for x in lines if x.startswith("assert ")]
+            errors = [x for x in lines if re.search(r"Error|Exception", x)]
+            failing = " / ".join(([asserts[-1]] if asserts else []) + ([errors[-1]] if errors else []))
+        self.tests.append((self.step, self.files[FILE], failed, failing[:160]))
+        out = out if len(out) <= OUTPUT_CUT else out[:OUTPUT_CUT] + "\n[output cut]"
+        return out + f"\n[The command completed with exit code {1 if failed else 0}.]"
+
+    # ---------- the guard ----------
+
+    def guard_noop(self, old):
+        target = norm(old)
+        for new, step in sorted(self.applied.items(), key=lambda x: x[1]):
+            if target and target in norm(new) and target in norm(self.files[FILE]):
+                return (f"\n[Host note] You already made this change at step {step}: the file already contains this "
+                        "text. If the tests still fail, the bug is somewhere else.")
+        return ("\n[Host note] old_str and new_str are identical, so nothing would change. Put in new_str the lines "
+                "as they must become after your fix.")
+
+    def guard_missing(self, text, old):
+        lines, want = text.splitlines(), [x.strip() for x in old.strip("\n").splitlines()]
+        size, best, where = max(1, len(want)), 0.0, 0
+        for start in range(0, max(1, len(lines) - size + 1)):
+            window = [x.strip() for x in lines[start:start + size]]
+            ratio = difflib.SequenceMatcher(None, "\n".join(want), "\n".join(window), autojunk=False).ratio()
+            if ratio > best:
+                best, where = ratio, start
+        exact = "\n".join(lines[where:where + size])
+        return (f"\n[Host note] The closest text in the file is at lines {where + 1}-{where + size} (similarity "
+                f"{best:.2f}):\n{exact}\nCopy old_str exactly from the file.")
+
+    def guard_multiple(self, text, line_numbers):
+        lines = text.splitlines()
+        where = ", ".join(f"line {n} (in function `{enclosing_function(lines, n - 1)}`)" for n in line_numbers)
+        return f"\n[Host note] The text appears at {where}. Add nearby lines to old_str so that it is unique."
+
+    def failure_while_present(self, block, before_step):
+        """The last test that failed while `block` was in the file, before `before_step`, if the block was
+        removed after it."""
+        hits = [t for t in self.tests if t[2] and t[0] < before_step and block and block in norm(t[1])]
+        return hits[-1] if hits else None
+
+    def guard_revisit(self, before, old, new):
+        block, gone = norm(new), norm(old)
+        if not any(len(x.strip()) >= 8 for x in block.splitlines()) or block in norm(before):
+            return ""
+        earlier = self.failure_while_present(block, self.step)
+        if not earlier:
+            return ""
+        note = (f"\n[Host note] This text is identical to a version that was already in the file at step "
+                f"{earlier[0]}. While it was there, the tests failed with: {earlier[3]}")
+        other = self.failure_while_present(gone, self.step)
+        if other and other[3] != earlier[3]:
+            note += (f"\nThe version you just replaced also failed, with: {other[3]}. A correct fix must avoid both "
+                     "errors.")
+        return note
+
+
+# ---------- the agent loop ----------
+
+def ollama_chat(messages, think=False, model=MODEL):
+    body = {"model": model, "messages": messages, "tools": TOOLS, "stream": False, "think": think,
+            "options": {"temperature": 0, "seed": 1, "num_ctx": 16384, "num_predict": 1024}}
+    req = urllib.request.Request(OLLAMA, data=json.dumps(body).encode(), headers={"Content-Type": "application/json"})
+    with urllib.request.urlopen(req, timeout=600) as r:
+        return json.load(r)
+
+
+def run_task(task, guard, chat=ollama_chat, runner=sandbox_run, max_calls=MAX_CALLS):
+    """Trajectory in the common message shape of formati.py, plus the outcome."""
+    ws = Workspace(task, guard, runner)
+    sent = [{"role": "system", "content": SYSTEM}, {"role": "user", "content": task["statement"]}]
+    log = [dict(m) for m in sent]
+    calls, finished, started = 0, False, time.time()
+    while calls < max_calls and not finished:
+        t0 = time.time()
+        reply = chat(sent)
+        msg = reply.get("message") or {}
+        tokens = {"prompt": reply.get("prompt_eval_count"), "completion": reply.get("eval_count")}
+        tool_calls = msg.get("tool_calls") or []
+        if not tool_calls:
+            sent.append({"role": "assistant", "content": msg.get("content") or ""})
+            log.append({"role": "assistant", "content": msg.get("content") or "",
+                        "meta": {"tokens": tokens, "seconds": round(time.time() - t0, 2)}})
+            nudge = "Use the tools. Call finish when the tests pass."
+            sent.append({"role": "user", "content": nudge})
+            log.append({"role": "user", "content": nudge})
+            calls += 1
+            continue
+        sent.append({"role": "assistant", "content": msg.get("content") or "", "tool_calls": tool_calls})
+        for n, tc in enumerate(tool_calls):
+            fn = tc.get("function") or {}
+            name, args = fn.get("name"), fn.get("arguments") or {}
+            if isinstance(args, str):
+                try:
+                    args = json.loads(args)
+                except ValueError:
+                    args = {}
+            raw_name = "str_replace_editor" if name in ("view", "str_replace") else (
+                "execute_bash" if name == "run_tests" else name)
+            raw_args = dict(args, command=name) if name in ("view", "str_replace") else (
+                {"command": "python -m pytest (example tests)"} if name == "run_tests" else args)
+            call_id = f"c{calls}_{n}"
+            result = ws.call(name, args)
+            sent.append({"role": "tool", "content": result})
+            meta = {"seconds": round(time.time() - t0, 2)}
+            if n == 0:
+                meta["tokens"] = tokens
+            else:
+                meta["shared_response"] = True
+            log.append({"role": "assistant", "content": msg.get("content") or "", "meta": meta,
+                        "tool_calls": [{"id": call_id, "function": {"name": raw_name,
+                                                                    "arguments": json.dumps(raw_args)}}]})
+            log.append({"role": "tool", "content": result, "tool_call_id": call_id})
+            calls += 1
+            if name == "finish":
+                finished = True
+                break
+    program = test_program(task["hidden_test"], task["entry_point"], "HIDDEN TESTS", task.get("test_setup", ""))
+    ok, out = runner(program, dict(ws.files))
+    return {"task": task["id"], "guard": guard, "solved": bool(ok), "finished": finished, "calls": calls,
+            "seconds": round(time.time() - started, 1), "hidden_test_output": out[-400:],
+            "final_file": ws.files[FILE], "messages": log}
+
+
+def parse_range(text):
+    first, _, last = text.partition("-")
+    return list(range(int(first), int(last or first) + 1))
+
+
+def main():
+    p = argparse.ArgumentParser()
+    p.add_argument("--tasks", required=True, help="item indices, e.g. 0-19")
+    p.add_argument("--guard", choices=("on", "off", "both"), required=True)
+    p.add_argument("--out", required=True)
+    p.add_argument("--seed", type=int, default=20261011, help="order of the conditions in --guard both")
+    a = p.parse_args()
+    rows = load_rows()
+    os.makedirs(a.out, exist_ok=True)
+    rnd = random.Random(a.seed)
+    for index in parse_range(a.tasks):
+        task = build_task(rows, index)
+        conditions = ["off", "on"] if a.guard == "both" else [a.guard]
+        if a.guard == "both":
+            rnd.shuffle(conditions)
+        for cond in conditions:
+            path = os.path.join(a.out, f"{index:03d}_{cond}.json")
+            if os.path.exists(path):
+                continue
+            result = run_task(task, cond == "on")
+            with open(path, "x", encoding="utf-8") as fh:
+                json.dump(result, fh, ensure_ascii=False, indent=1)
+            print(f"{task['id']} guard {cond}: solved {result['solved']}, calls {result['calls']}, "
+                  f"{result['seconds']} s", flush=True)
+
+
+if __name__ == "__main__":
+    main()
+
+===== test_agente_gemma.py =====
+"""Tests for agente_gemma.py: a scripted fake model and a fake test runner, plus one check in the real WASM sandbox
+(skipped if the sandbox or the dataset is missing). No model, no GPU, no network.
+
+    python -m unittest test_agente_gemma
+"""
+
+import json
+import os
+import unittest
+
+import agente_gemma as A
+
+TASK = {"id": "T/0", "entry_point": "add", "files": {A.FILE: (
+    "def helper(x):\n    return x + 1\n\n\ndef add(a, b):\n    \"\"\"Return a + b.\"\"\"\n    return a - b\n\n\n"
+    "def other(a, b):\n    return a - b\n")},
+    "visible_test": "def check(f):\n    assert f(2, 3) == 5\n", "hidden_test": "def check(f):\n    assert f(1, 1) == 2\n",
+    "test_setup": "", "statement": "Fix add."}
+
+
+def fake_runner(program, files):
+    ok = "return a + b" in files[A.FILE]
+    return ok, ("TESTS PASSED" if ok else "Traceback (most recent call last):\n    assert f(2, 3) == 5\nAssertionError")
+
+
+def call(name, **args):
+    return {"message": {"content": "", "tool_calls": [{"function": {"name": name, "arguments": args}}]},
+            "prompt_eval_count": 10, "eval_count": 2}
+
+
+class Tools(unittest.TestCase):
+    def test_plain_messages(self):
+        ws = A.Workspace(TASK, guard=False, runner=fake_runner)
+        self.assertTrue(ws.view(A.FILE).startswith("Here's the result of running `cat -n` on solution.py:\n     1\tdef"))
+        self.assertIn("must be different", ws.str_replace(A.FILE, "x", "x"))
+        self.assertIn("did not appear verbatim", ws.str_replace(A.FILE, "return a * b", "return a + b"))
+        self.assertIn("Multiple occurrences of old_str `return a - b` in lines [7, 11]",
+                      ws.str_replace(A.FILE, "return a - b", "return a + b"))
+        self.assertNotIn("[Host note]", ws.str_replace(A.FILE, "return a * b", "y"))
+        ok = ws.str_replace(A.FILE, '    """Return a + b."""\n    return a - b', '    """Return a + b."""\n    return a + b')
+        self.assertTrue(ok.startswith("The file solution.py has been edited."))
+        self.assertIn("exit code 0", ws.run_tests())
+
+    def test_guard_notes(self):
+        ws = A.Workspace(TASK, guard=True, runner=fake_runner)
+
+        def replace(old, new):
+            return ws.call("str_replace", {"path": A.FILE, "old_str": old, "new_str": new})
+
+        self.assertIn("[Host note] The closest text in the file is at lines",
+                      replace("    return a -  b  # sum", "    return a + b"))
+        self.assertIn("line 7 (in function `add`), line 11 (in function `other`)",
+                      replace("return a - b", "return a + b"))
+        replace('"""Return a + b."""\n    return a - b', '"""Return a + b."""\n    return a + b')
+        self.assertIn("You already made this change at step 3", replace("return a + b", "return a + b"))
+        self.assertIn("old_str and new_str are identical", replace("nothing = 1", "nothing = 1"))
+
+    def test_revisit_note_recalls_the_failing_test(self):
+        ws = A.Workspace(TASK, guard=True, runner=fake_runner)
+
+        def replace(old, new):
+            return ws.call("str_replace", {"path": A.FILE, "old_str": old, "new_str": new})
+
+        wrong = '"""Return a + b."""\n    return b - a + 0'
+        replace('"""Return a + b."""\n    return a - b', wrong)
+        ws.call("run_tests", {})
+        replace(wrong, '"""Return a + b."""\n    return a * b')
+        note = replace('"""Return a + b."""\n    return a * b', wrong)
+        self.assertIn("identical to a version that was already in the file at step 2", note)
+        self.assertIn("assert f(2, 3) == 5 / AssertionError", note)
+
+
+class Loop(unittest.TestCase):
+    def test_a_scripted_run_is_logged_in_the_common_shape(self):
+        script = iter([call("view", path=A.FILE),
+                       call("str_replace", path=A.FILE, old_str='"""Return a + b."""\n    return a - b',
+                            new_str='"""Return a + b."""\n    return a + b'),
+                       call("run_tests"), call("finish")])
+        out = A.run_task(TASK, guard=False, chat=lambda messages: next(script), runner=fake_runner)
+        self.assertEqual((out["solved"], out["finished"], out["calls"]), (True, True, 4))
+        names = [json.loads(m["tool_calls"][0]["function"]["arguments"]).get("command")
+                 for m in out["messages"] if m.get("tool_calls")]
+        self.assertEqual(names[:3], ["view", "str_replace", "python -m pytest (example tests)"])
+        self.assertEqual([m["role"] for m in out["messages"][:4]], ["system", "user", "assistant", "tool"])
+
+    def test_text_without_tools_is_nudged_and_counted(self):
+        replies = iter([{"message": {"content": "I think the bug is the minus."}}, call("finish")])
+        out = A.run_task(TASK, guard=True, chat=lambda m: next(replies), runner=fake_runner)
+        self.assertEqual((out["calls"], out["finished"], out["solved"]), (2, True, False))
+
+
+@unittest.skipUnless(os.path.exists(A.DATA), "dataset not downloaded")
+class RealData(unittest.TestCase):
+    def test_tasks_and_the_sandbox(self):
+        rows = A.load_rows()
+        task = A.build_task(rows, 0)
+        text = task["files"][A.FILE]
+        self.assertEqual(text.count("def has_close_elements("), 1)
+        self.assertEqual(text.count(rows[0]["buggy_solution"].strip()), 1)
+        try:
+            ws = A.Workspace(task, guard=False)
+            self.assertIn("exit code 1", ws.run_tests())
+        except Exception as exc:                                    # sandbox not installed
+            self.skipTest(f"sandbox unavailable: {exc}")
+        fixed = text.replace(rows[0]["buggy_solution"].rstrip("\n"), rows[0]["canonical_solution"].rstrip("\n"))
+        program = A.test_program(task["hidden_test"], task["entry_point"], "HIDDEN TESTS", task["test_setup"])
+        ok, out = A.sandbox_run(program, {A.FILE: fixed})
+        self.assertTrue(ok, out)
+
+
+if __name__ == "__main__":
+    unittest.main()

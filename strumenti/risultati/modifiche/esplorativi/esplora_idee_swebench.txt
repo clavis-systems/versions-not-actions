@@ -1,0 +1,10 @@
+== openhands_qwen3_coder_30b
+  near copies: {'near_copy': 91, 'whitespace_only': 1}
+  differing lines: {'added_from_elsewhere': '1226 (52%)', 'dropped': '962 (41%)', 'other_from_elsewhere': '56 (2%)', 'added_new': '39 (2%)', 'identifier': '20 (1%)', 'added_blank': '13 (1%)', 'other_new': '9 (0%)', 'comment': '7 (0%)', 'dropped_blank': '3 (0%)', 'quotes': '1 (0%)', 'literal': '1 (0%)'}
+  repeats: {'failed': 186, 'identical_repeat_same_version': 24, 'right_after_a_failure': 22, 'right_after_a_failure_identical': 13}
+  regressions: {'runs': 500, 'runs_with_a_passing_test': 426, 'lost_a_passing_state': 9, 'lost_and_resolved=resolved': 2, 'lost_and_resolved=unresolved': 7, 'lost_and_resolved=no_logs': 0}
+== openhands_qwen3_coder_480b
+  near copies: {'near_copy': 22}
+  differing lines: {'other_new': '55 (29%)', 'other_from_elsewhere': '39 (20%)', 'added_from_elsewhere': '34 (18%)', 'dropped': '22 (11%)', 'identifier': '17 (9%)', 'added_new': '10 (5%)', 'indent': '5 (3%)', 'added_blank': '4 (2%)', 'dropped_blank': '2 (1%)', 'literal': '2 (1%)', 'comment': '1 (1%)', 'blank_indent': '1 (1%)'}
+  repeats: {'failed': 175, 'identical_repeat_same_version': 11, 'right_after_a_failure': 12, 'right_after_a_failure_identical': 5}
+  regressions: {'runs': 500, 'runs_with_a_passing_test': 413, 'lost_a_passing_state': 12, 'lost_and_resolved=resolved': 5, 'lost_and_resolved=unresolved': 7}

@@ -1,0 +1,11 @@
+Sei il revisore indipendente di questo progetto. Rispondi in italiano, in modo conciso. Non usare skill di revisione automatica: fai tu la revisione richiesta.
+
+Compito: revisione 4, solo sul diff fra il commit f5b1cb8 (bozza 3, tua revisione 3 in strumenti/risultati/modifiche/revisione_prova_gemma_3.md: NON PRONTA per un solo bloccante B2, la cancellazione non fail-safe) e il commit 91d627c (bozza 4). Usa `git diff f5b1cb8 91d627c` (git in sola lettura) oppure leggi i file:
+- strumenti/agenti/modifiche/agente_gemma.py: test_program(hide=True) ora, se os.remove(__file__) fallisce, stampa NOT_REMOVED ed esce con SystemExit(3) PRIMA di importare la soluzione; run_task trasforma un output che inizia con NOT_REMOVED in InfraError (risultato escluso, la corsa si ferma); in main il lucchetto deve anche avere meno di 24 ore.
+- strumenti/agenti/modifiche/test_agente_gemma.py: test_a_test_file_that_was_not_removed_stops_the_run.
+- strumenti/agenti/modifiche/PREMESSA_PROVA_GEMMA.md: §2 Esito, §6 punto 2, §7 tabella "Revisione 3".
+Domanda: B2 e' chiuso? Il diff introduce errori o differenze fra le condizioni ON/OFF? La premessa e' coerente col codice?
+
+NON aprire strumenti/risultati/modifiche/misura_heldout.json ne' altri risultati tenuti da parte dello studio sulle traiettorie.
+
+Formato: BLOCCANTI, NON BLOCCANTI, VERDETTO "PRONTA PER IL CONGELAMENTO" oppure "NON PRONTA". Revisione statica: non avviare modelli, sandbox o la GPU.

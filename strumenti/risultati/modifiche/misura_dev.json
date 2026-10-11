@@ -1,0 +1,743 @@
+{
+ "part": "dev",
+ "written": "2026-10-10T20:13:56",
+ "bootstrap": {
+  "replicates": 2000,
+  "seed": 20261009,
+  "unit": "run (task for H2)"
+ },
+ "code_sha256": {
+  "formati.py": "ac9479c8a98c494f630c39e278f4b6914a76a05be15cee67eaf14e4e27600c24",
+  "rilevatori.py": "67736642fa833775858219cfafbf244a8855106b197d03d92beb7442321b4165",
+  "misura.py": "ab9ddaa3c80f5982bbbc7bfdcf0978cf9e4a54ad9872a780e6a4bc3d7370156c"
+ },
+ "structural_problems": [],
+ "sets": {
+  "swehero_dev": {
+   "runs": 10000,
+   "receipts_balanced": true,
+   "runs_not_balanced": 0,
+   "receipt_totals": {
+    "events": 1204256,
+    "written": 1204256,
+    "calls": 597128,
+    "calls_rebuilt": 0,
+    "edits_checked": 0,
+    "edits_differing": 0,
+    "exit_lines_restored": 0,
+    "malformed_calls": 0,
+    "results_kept_raw": 0
+   },
+   "set_aside": {},
+   "editor_failure_rate": {
+    "num": 1193,
+    "den": 36101,
+    "value": 0.03304617600620481,
+    "ci95": [
+     0.031121007427627332,
+     0.034938608447114085
+    ],
+    "invalid_replicates": 0
+   },
+   "editor_noop_share": {
+    "num": 696,
+    "den": 1193,
+    "value": 0.5834031852472757,
+    "ci95": [
+     0.5538034246810851,
+     0.6133054036084499
+    ],
+    "invalid_replicates": 0
+   },
+   "runs_with_noop": {
+    "num": 633,
+    "den": 10000,
+    "value": 0.0633,
+    "ci95": [
+     0.0583975,
+     0.0678
+    ],
+    "invalid_replicates": 0
+   },
+   "failed_str_replace_per_call": {
+    "num": 1195,
+    "den": 36103,
+    "value": 0.03309974240367836,
+    "ci95": [
+     0.031197860278678612,
+     0.03498839087957095
+    ],
+    "invalid_replicates": 0
+   },
+   "str_replace_unknown_outcome": 0,
+   "failure_type_share": {
+    "noop": {
+     "num": 696,
+     "den": 1195,
+     "value": 0.5824267782426779,
+     "ci95": [
+      0.5527451180345285,
+      0.6125228381394678
+     ],
+     "invalid_replicates": 0
+    },
+    "missing": {
+     "num": 307,
+     "den": 1195,
+     "value": 0.2569037656903766,
+     "ci95": [
+      0.2323690487702672,
+      0.28312921464882246
+     ],
+     "invalid_replicates": 0
+    },
+    "multiple": {
+     "num": 190,
+     "den": 1195,
+     "value": 0.1589958158995816,
+     "ci95": [
+      0.13655988923088436,
+      0.18266984916565512
+     ],
+     "invalid_replicates": 0
+    },
+    "other": {
+     "num": 2,
+     "den": 1195,
+     "value": 0.0016736401673640166,
+     "ci95": [
+      0.0,
+      0.004340277777777778
+     ],
+     "invalid_replicates": 0
+    }
+   },
+   "noop_share_of_failures": {
+    "num": 696,
+    "den": 1195,
+    "value": 0.5824267782426779,
+    "ci95": [
+     0.5527451180345285,
+     0.6125228381394678
+    ],
+    "invalid_replicates": 0
+   },
+   "missing_class_share": {
+    "stale": {
+     "num": 49,
+     "den": 307,
+     "value": 0.15960912052117263,
+     "ci95": [
+      0.11837754999497538,
+      0.2028482644798597
+     ],
+     "invalid_replicates": 0
+    },
+    "copy_error": {
+     "num": 48,
+     "den": 307,
+     "value": 0.1563517915309446,
+     "ci95": [
+      0.11607142857142858,
+      0.19818221683929163
+     ],
+     "invalid_replicates": 0
+    },
+    "seen_not_modified": {
+     "num": 3,
+     "den": 307,
+     "value": 0.009771986970684038,
+     "ci95": [
+      0.0,
+      0.022223991507430988
+     ],
+     "invalid_replicates": 0
+    },
+    "never_seen": {
+     "num": 207,
+     "den": 307,
+     "value": 0.6742671009771987,
+     "ci95": [
+      0.6179328708227477,
+      0.7281623189304879
+     ],
+     "invalid_replicates": 0
+    }
+   },
+   "noop_cause_share": {
+    "already_applied": {
+     "num": 191,
+     "den": 696,
+     "value": 0.2744252873563218,
+     "ci95": [
+      0.2398841679721967,
+      0.31117541002118765
+     ],
+     "invalid_replicates": 0
+    },
+    "repeat_attempt": {
+     "num": 7,
+     "den": 696,
+     "value": 0.010057471264367816,
+     "ci95": [
+      0.0029411764705882353,
+      0.018081823109471443
+     ],
+     "invalid_replicates": 0
+    },
+    "after_failure": {
+     "num": 159,
+     "den": 696,
+     "value": 0.22844827586206898,
+     "ci95": [
+      0.19798666183171204,
+      0.26038853301015696
+     ],
+     "invalid_replicates": 0
+    },
+    "other": {
+     "num": 339,
+     "den": 696,
+     "value": 0.4870689655172414,
+     "ci95": [
+      0.4491213002114165,
+      0.525499827120815
+     ],
+     "invalid_replicates": 0
+    }
+   },
+   "noop_fate_share": {
+    "same_spot": {
+     "num": 348,
+     "den": 696,
+     "value": 0.5,
+     "ci95": [
+      0.46236787863544626,
+      0.5382462908376823
+     ],
+     "invalid_replicates": 0
+    },
+    "elsewhere": {
+     "num": 100,
+     "den": 696,
+     "value": 0.14367816091954022,
+     "ci95": [
+      0.11634066642120766,
+      0.17135398737808374
+     ],
+     "invalid_replicates": 0
+    },
+    "never": {
+     "num": 248,
+     "den": 696,
+     "value": 0.3563218390804598,
+     "ci95": [
+      0.3198885264578149,
+      0.39462642387750063
+     ],
+     "invalid_replicates": 0
+    }
+   },
+   "noop_calls_to_next_good_edit": {
+    "n_fixed": 448,
+    "n_never": 248,
+    "median": 2.0
+   },
+   "revisits": {
+    "back_to_original": 509,
+    "retry_own": 387,
+    "uncertain_provenance": 374
+   },
+   "revisits_life_uncertain": 431,
+   "runs_with_known_bad_retry": {
+    "num": 130,
+    "den": 10000,
+    "value": 0.013,
+    "ci95": [
+     0.0107,
+     0.0153
+    ],
+    "invalid_replicates": 0
+   },
+   "known_bad_retry_error_named": {
+    "num": 2,
+    "den": 123,
+    "value": 0.016260162601626018,
+    "ci95": [
+     0.0,
+     0.039690476190476144
+    ],
+    "invalid_replicates": 0
+   },
+   "known_bad_retry_error_named_per_run": {
+    "runs": 113,
+    "runs_with_a_naming": 2,
+    "value": 0.017699115044247787,
+    "ci95_clopper_pearson": [
+     0.0021506783159855325,
+     0.062474152145144124
+    ]
+   },
+   "known_bad_retry_error_named_same_conditions": {
+    "num": 1,
+    "den": 85,
+    "value": 0.011764705882352941,
+    "ci95": [
+     0.0,
+     0.03847402597402591
+    ],
+    "invalid_replicates": 0
+   },
+   "known_bad_retry_project_changed": {
+    "num": 44,
+    "den": 142,
+    "value": 0.30985915492957744,
+    "ci95": [
+     0.23140341680029605,
+     0.39552238805970147
+    ],
+    "invalid_replicates": 0
+   },
+   "retry_own_excluded_from_h3": {
+    "uncertain_presence": 70,
+    "never_tested": 16,
+    "tested_and_passed": 131,
+    "infra_or_unknown_failure": 28,
+    "no_names": 19
+   },
+   "retry_own_eligible_for_h3": 123,
+   "pairing": {
+    "position": 587128,
+    "id": 10000
+   },
+   "runs_with_circle": {
+    "num": 113,
+    "den": 10000,
+    "value": 0.0113,
+    "ci95": [
+     0.0092,
+     0.0133
+    ],
+    "invalid_replicates": 0
+   },
+   "circles_two_errors_both_named": {
+    "num": 0,
+    "den": 33,
+    "value": 0.0,
+    "ci95": [
+     0.0,
+     0.0
+    ],
+    "invalid_replicates": 0
+   },
+   "circles_two_errors_both_named_per_run": {
+    "runs": 31,
+    "runs_with_a_naming": 0,
+    "value": 0.0,
+    "ci95_clopper_pearson": [
+     0.0,
+     0.11218874692236998
+    ]
+   },
+   "runs_with_flip_flop": {
+    "num": 651,
+    "den": 10000,
+    "value": 0.0651,
+    "ci95": [
+     0.0603,
+     0.07
+    ],
+    "invalid_replicates": 0
+   },
+   "whitespace_only_share": {
+    "num": 37,
+    "den": 34908,
+    "value": 0.001059928956113212,
+    "ci95": [
+     0.0007131014568632333,
+     0.001466601529539121
+    ],
+    "invalid_replicates": 0
+   },
+   "counts": {
+    "str_replace": 36103,
+    "str_replace_unknown": 0,
+    "failed": 1195,
+    "noops": 696,
+    "retry_bad": 142,
+    "retry_bad_infra_or_unknown": 28,
+    "circles": 137,
+    "circles_two_errors": 33,
+    "flip_flop": 989,
+    "debug_reverts": 115,
+    "undo": 26,
+    "malformed": 0
+   },
+   "framework_versions": {},
+   "by_collection": {
+    "R2E-Gym/R2E-Gym-Subset": {
+     "runs": 10000,
+     "receipts_balanced": true,
+     "runs_not_balanced": 0,
+     "receipt_totals": {
+      "events": 1204256,
+      "written": 1204256,
+      "calls": 597128,
+      "calls_rebuilt": 0,
+      "edits_checked": 0,
+      "edits_differing": 0,
+      "exit_lines_restored": 0,
+      "malformed_calls": 0,
+      "results_kept_raw": 0
+     },
+     "set_aside": {},
+     "editor_failure_rate": {
+      "num": 1193,
+      "den": 36101,
+      "value": 0.03304617600620481,
+      "ci95": [
+       0.031121007427627332,
+       0.034938608447114085
+      ],
+      "invalid_replicates": 0
+     },
+     "editor_noop_share": {
+      "num": 696,
+      "den": 1193,
+      "value": 0.5834031852472757,
+      "ci95": [
+       0.5538034246810851,
+       0.6133054036084499
+      ],
+      "invalid_replicates": 0
+     },
+     "runs_with_noop": {
+      "num": 633,
+      "den": 10000,
+      "value": 0.0633,
+      "ci95": [
+       0.0583975,
+       0.0678
+      ],
+      "invalid_replicates": 0
+     },
+     "failed_str_replace_per_call": {
+      "num": 1195,
+      "den": 36103,
+      "value": 0.03309974240367836,
+      "ci95": [
+       0.031197860278678612,
+       0.03498839087957095
+      ],
+      "invalid_replicates": 0
+     },
+     "str_replace_unknown_outcome": 0,
+     "failure_type_share": {
+      "noop": {
+       "num": 696,
+       "den": 1195,
+       "value": 0.5824267782426779,
+       "ci95": [
+        0.5527451180345285,
+        0.6125228381394678
+       ],
+       "invalid_replicates": 0
+      },
+      "missing": {
+       "num": 307,
+       "den": 1195,
+       "value": 0.2569037656903766,
+       "ci95": [
+        0.2323690487702672,
+        0.28312921464882246
+       ],
+       "invalid_replicates": 0
+      },
+      "multiple": {
+       "num": 190,
+       "den": 1195,
+       "value": 0.1589958158995816,
+       "ci95": [
+        0.13655988923088436,
+        0.18266984916565512
+       ],
+       "invalid_replicates": 0
+      },
+      "other": {
+       "num": 2,
+       "den": 1195,
+       "value": 0.0016736401673640166,
+       "ci95": [
+        0.0,
+        0.004340277777777778
+       ],
+       "invalid_replicates": 0
+      }
+     },
+     "noop_share_of_failures": {
+      "num": 696,
+      "den": 1195,
+      "value": 0.5824267782426779,
+      "ci95": [
+       0.5527451180345285,
+       0.6125228381394678
+      ],
+      "invalid_replicates": 0
+     },
+     "missing_class_share": {
+      "stale": {
+       "num": 49,
+       "den": 307,
+       "value": 0.15960912052117263,
+       "ci95": [
+        0.11837754999497538,
+        0.2028482644798597
+       ],
+       "invalid_replicates": 0
+      },
+      "copy_error": {
+       "num": 48,
+       "den": 307,
+       "value": 0.1563517915309446,
+       "ci95": [
+        0.11607142857142858,
+        0.19818221683929163
+       ],
+       "invalid_replicates": 0
+      },
+      "seen_not_modified": {
+       "num": 3,
+       "den": 307,
+       "value": 0.009771986970684038,
+       "ci95": [
+        0.0,
+        0.022223991507430988
+       ],
+       "invalid_replicates": 0
+      },
+      "never_seen": {
+       "num": 207,
+       "den": 307,
+       "value": 0.6742671009771987,
+       "ci95": [
+        0.6179328708227477,
+        0.7281623189304879
+       ],
+       "invalid_replicates": 0
+      }
+     },
+     "noop_cause_share": {
+      "already_applied": {
+       "num": 191,
+       "den": 696,
+       "value": 0.2744252873563218,
+       "ci95": [
+        0.2398841679721967,
+        0.31117541002118765
+       ],
+       "invalid_replicates": 0
+      },
+      "repeat_attempt": {
+       "num": 7,
+       "den": 696,
+       "value": 0.010057471264367816,
+       "ci95": [
+        0.0029411764705882353,
+        0.018081823109471443
+       ],
+       "invalid_replicates": 0
+      },
+      "after_failure": {
+       "num": 159,
+       "den": 696,
+       "value": 0.22844827586206898,
+       "ci95": [
+        0.19798666183171204,
+        0.26038853301015696
+       ],
+       "invalid_replicates": 0
+      },
+      "other": {
+       "num": 339,
+       "den": 696,
+       "value": 0.4870689655172414,
+       "ci95": [
+        0.4491213002114165,
+        0.525499827120815
+       ],
+       "invalid_replicates": 0
+      }
+     },
+     "noop_fate_share": {
+      "same_spot": {
+       "num": 348,
+       "den": 696,
+       "value": 0.5,
+       "ci95": [
+        0.46236787863544626,
+        0.5382462908376823
+       ],
+       "invalid_replicates": 0
+      },
+      "elsewhere": {
+       "num": 100,
+       "den": 696,
+       "value": 0.14367816091954022,
+       "ci95": [
+        0.11634066642120766,
+        0.17135398737808374
+       ],
+       "invalid_replicates": 0
+      },
+      "never": {
+       "num": 248,
+       "den": 696,
+       "value": 0.3563218390804598,
+       "ci95": [
+        0.3198885264578149,
+        0.39462642387750063
+       ],
+       "invalid_replicates": 0
+      }
+     },
+     "noop_calls_to_next_good_edit": {
+      "n_fixed": 448,
+      "n_never": 248,
+      "median": 2.0
+     },
+     "revisits": {
+      "back_to_original": 509,
+      "retry_own": 387,
+      "uncertain_provenance": 374
+     },
+     "revisits_life_uncertain": 431,
+     "runs_with_known_bad_retry": {
+      "num": 130,
+      "den": 10000,
+      "value": 0.013,
+      "ci95": [
+       0.0107,
+       0.0153
+      ],
+      "invalid_replicates": 0
+     },
+     "known_bad_retry_error_named": {
+      "num": 2,
+      "den": 123,
+      "value": 0.016260162601626018,
+      "ci95": [
+       0.0,
+       0.039690476190476144
+      ],
+      "invalid_replicates": 0
+     },
+     "known_bad_retry_error_named_per_run": {
+      "runs": 113,
+      "runs_with_a_naming": 2,
+      "value": 0.017699115044247787,
+      "ci95_clopper_pearson": [
+       0.0021506783159855325,
+       0.062474152145144124
+      ]
+     },
+     "known_bad_retry_error_named_same_conditions": {
+      "num": 1,
+      "den": 85,
+      "value": 0.011764705882352941,
+      "ci95": [
+       0.0,
+       0.03847402597402591
+      ],
+      "invalid_replicates": 0
+     },
+     "known_bad_retry_project_changed": {
+      "num": 44,
+      "den": 142,
+      "value": 0.30985915492957744,
+      "ci95": [
+       0.23140341680029605,
+       0.39552238805970147
+      ],
+      "invalid_replicates": 0
+     },
+     "retry_own_excluded_from_h3": {
+      "uncertain_presence": 70,
+      "never_tested": 16,
+      "tested_and_passed": 131,
+      "infra_or_unknown_failure": 28,
+      "no_names": 19
+     },
+     "retry_own_eligible_for_h3": 123,
+     "pairing": {
+      "position": 587128,
+      "id": 10000
+     },
+     "runs_with_circle": {
+      "num": 113,
+      "den": 10000,
+      "value": 0.0113,
+      "ci95": [
+       0.0092,
+       0.0133
+      ],
+      "invalid_replicates": 0
+     },
+     "circles_two_errors_both_named": {
+      "num": 0,
+      "den": 33,
+      "value": 0.0,
+      "ci95": [
+       0.0,
+       0.0
+      ],
+      "invalid_replicates": 0
+     },
+     "circles_two_errors_both_named_per_run": {
+      "runs": 31,
+      "runs_with_a_naming": 0,
+      "value": 0.0,
+      "ci95_clopper_pearson": [
+       0.0,
+       0.11218874692236998
+      ]
+     },
+     "runs_with_flip_flop": {
+      "num": 651,
+      "den": 10000,
+      "value": 0.0651,
+      "ci95": [
+       0.0603,
+       0.07
+      ],
+      "invalid_replicates": 0
+     },
+     "whitespace_only_share": {
+      "num": 37,
+      "den": 34908,
+      "value": 0.001059928956113212,
+      "ci95": [
+       0.0007131014568632333,
+       0.001466601529539121
+      ],
+      "invalid_replicates": 0
+     },
+     "counts": {
+      "str_replace": 36103,
+      "str_replace_unknown": 0,
+      "failed": 1195,
+      "noops": 696,
+      "retry_bad": 142,
+      "retry_bad_infra_or_unknown": 28,
+      "circles": 137,
+      "circles_two_errors": 33,
+      "flip_flop": 989,
+      "debug_reverts": 115,
+      "undo": 26,
+      "malformed": 0
+     },
+     "framework_versions": {}
+    }
+   }
+  }
+ }
+}

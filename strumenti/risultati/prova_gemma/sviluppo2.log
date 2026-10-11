@@ -1,0 +1,44 @@
+{
+ "model": "gemma4:e4b-it-qat",
+ "model_digest": "ee665637121887cf3befff38abbb1be4ee117c7db867d97a67e29049ecd7e15f",
+ "ollama_version": "0.32.13",
+ "options": {
+  "temperature": 0,
+  "seed": 1,
+  "num_ctx": 16384,
+  "num_predict": 1024
+ },
+ "think": false,
+ "max_calls": 20,
+ "context_functions": 6,
+ "seed": 20261011,
+ "agent_sha256": "d009fd17fdc2cc2975d510e84a1a73db62d1fe9d77c15187f2db0200f71770af",
+ "dataset_sha256": "ed5f15d789156e21222bfcd556c425a39042355c84ae1e8b058abd6a3d7f8075",
+ "sandbox_sha256": "0bc3f432d400a5fb4d58f16f8b245f8a20627f0b84af00bb90ff5c9042fc18d1",
+ "wasmtime": "strumenti/valutazione/runtime/wasmtime/wasmtime-v49.0.1-x86_64-windows/wasmtime.exe",
+ "python_wasm_sha256": "d24bd98d3071af6b17d51d53a08700b9acef59172a0afcb6adb733645c2a1715"
+}
+Python/0 guard off: solved True, calls 13, 16.4 s
+Python/0 guard on: solved True, calls 13, 16.9 s
+Python/1 guard off: solved True, calls 12, 54.5 s
+Python/1 guard on: solved True, calls 9, 51.0 s
+Python/2 guard off: solved True, calls 6, 6.0 s
+Python/2 guard on: solved True, calls 6, 6.0 s
+Python/3 guard off: solved True, calls 6, 11.6 s
+Python/3 guard on: solved True, calls 6, 10.0 s
+Python/4 guard on: solved True, calls 13, 18.0 s
+Python/4 guard off: solved True, calls 13, 17.9 s
+Python/5 guard off: solved False, calls 16, 40.0 s
+Python/5 guard on: solved False, calls 16, 39.8 s
+Python/6 guard off: solved True, calls 15, 36.7 s
+Python/6 guard on: solved True, calls 15, 36.7 s
+Python/7 guard on: solved True, calls 6, 9.3 s
+Python/7 guard off: solved True, calls 12, 23.2 s
+Python/8 guard on: solved True, calls 14, 18.8 s
+Python/8 guard off: solved True, calls 14, 18.7 s
+Python/9 guard on: solved True, calls 7, 7.5 s
+Python/9 guard off: solved True, calls 7, 7.1 s
+Python/10 guard on: solved True, calls 5, 18.6 s
+Python/10 guard off: solved True, calls 5, 18.4 s
+Python/11 guard on: solved True, calls 5, 16.9 s
+Python/11 guard off: solved True, calls 13, 36.1 s

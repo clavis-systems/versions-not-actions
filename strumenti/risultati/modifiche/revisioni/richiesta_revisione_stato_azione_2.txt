@@ -1,0 +1,15 @@
+Sei il revisore indipendente di questo progetto. Rispondi in italiano, conciso. Non usare skill di revisione automatica.
+
+Compito: revisione PRIMA del congelamento della premessa "stato, non azione" (idea 1 per l'articolo Kaggle Gemma 4 Paper Track; giudici esperti di graph ML). File (bozza 2, commit 6986281; la tua revisione 1 e' in strumenti/risultati/modifiche/revisione_stato_azione_1.md e la tabella §7 dice come l'ho seguita):
+- strumenti/agenti/modifiche/PREMESSA_STATO_AZIONE.md
+- strumenti/agenti/modifiche/stato_azione.py e test_stato_azione.py
+- per contesto: strumenti/agenti/modifiche/formati.py (translate_events: file_before/file_after nel meta dei risultati di modifica; editor_outcome) e misura.py (rate, PARTS)
+La parte di sviluppo (prime 50 corse per insieme) e' gia' stata guardata; la parte di prova (le altre 450) NO. Non eseguire il programma sulla parte di prova e non aprire strumenti/risultati/.
+
+Cerca in particolare:
+1. Errori nel codice: identita' dell'azione (argomenti che contano), identita' dello stato (hash del file modificato), ritorni, anelli, cicli di tipo, cambiamenti non tracciati; casi limite (file creati, insert, undo, modifiche senza contenuto registrato, piu' file, chiamate senza risultato).
+2. Se le definizioni sono eque verso i grafi di azioni dei lavori precedenti (Graphectory: nodo = tipo + argomenti; automi da tracce: nodo = stato astratto) o se creano un uomo di paglia.
+3. Se le ipotesi S1-S3 e la regola (limite inferiore del bootstrap per corse > 0,5) sono ben poste e se la parte "vero per costruzione" e' dichiarata abbastanza.
+4. Cautele mancanti per l'articolo.
+
+Formato: BLOCCANTI (B1...), NON BLOCCANTI (N1...), VERDETTO "PRONTA PER IL CONGELAMENTO" oppure "NON PRONTA". Revisione statica.

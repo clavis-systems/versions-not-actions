@@ -1,0 +1,22 @@
+[
+ {
+  "path": "esterni\\SWE-Hero-openhands-trajectories\\data\\train-00000-of-00014.parquet",
+  "bytes": 151791408,
+  "sha256": "5149ba06dc7bcfe2fc01a20036e35cd535fde91840253c15bc070d95cf217be6"
+ },
+ {
+  "path": "esterni\\SWE-Hero-openhands-trajectories\\data\\train-00001-of-00014.parquet",
+  "bytes": 151548338,
+  "sha256": "93eea922fc3b77176541ff51e4a7774a910332008c99a885ec9dfe6c3a501803"
+ },
+ {
+  "path": "esterni\\SWE-Hero-openhands-trajectories\\data\\train-00002-of-00014.parquet",
+  "bytes": 151438507,
+  "sha256": "82fa1c11dcb959bf7442a013202a0e2d0e13b010fa8f43a8374961734759fc59"
+ },
+ {
+  "path": "esterni\\SWE-Hero-openhands-trajectories\\data\\train-00003-of-00014.parquet",
+  "bytes": 157662607,
+  "sha256": "8951f4d4d2e3fc4c3355fbce296a774320be92d9a1a06fc4fe40ed5c9efca58a"
+ }
+]

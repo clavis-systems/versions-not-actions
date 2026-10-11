@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+esterni/*
+!esterni/humanevalpack/
+esterni/humanevalpack/*
+!esterni/humanevalpack/MANIFEST.md
+*.part
+*.started
+strumenti/valutazione/runtime/
+strumenti/risultati/.gpu_lock

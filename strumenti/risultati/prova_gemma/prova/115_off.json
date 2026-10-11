@@ -1,0 +1,210 @@
+{
+ "task": "Python/115",
+ "guard": false,
+ "solved": true,
+ "hidden": "passed",
+ "infra_error": null,
+ "finished": true,
+ "calls": 8,
+ "dropped_calls": 0,
+ "seconds": 19.7,
+ "hidden_test_output": "HIDDEN TESTS PASSED 12486a5ff6b30130\n",
+ "suspicious_additions": [],
+ "final_file": "def add_elements(arr, k):\n    \"\"\"\n    Given a non-empty array of integers arr and an integer k, return\n    the sum of the elements with at most two digits from the first k elements of arr.\n\n    Example:\n\n        Input: arr = [111,21,3,4000,5,6,7,8,9], k = 4\n        Output: 24 # sum of 21 + 3\n\n    Constraints:\n        1. 1 <= len(arr) <= 100\n        2. 1 <= k <= len(arr)\n    \"\"\"\n    return sum(elem for elem in arr[:k] if len(str(elem)) <= 2)\n\n\ndef minPath(grid, k):\n    \"\"\"\n    Given a grid with N rows and N columns (N >= 2) and a positive integer k, \n    each cell of the grid contains a value. Every integer in the range [1, N * N]\n    inclusive appears exactly once on the cells of the grid.\n\n    You have to find the minimum path of length k in the grid. You can start\n    from any cell, and in each step you can move to any of the neighbor cells,\n    in other words, you can go to cells which share an edge with you current\n    cell.\n    Please note that a path of length k means visiting exactly k cells (not\n    necessarily distinct).\n    You CANNOT go off the grid.\n    A path A (of length k) is considered less than a path B (of length k) if\n    after making the ordered lists of the values on the cells that A and B go\n    through (let's call them lst_A and lst_B), lst_A is lexicographically less\n    than lst_B, in other words, there exist an integer index i (1 <= i <= k)\n    such that lst_A[i] < lst_B[i] and for any j (1 <= j < i) we have\n    lst_A[j] = lst_B[j].\n    It is guaranteed that the answer is unique.\n    Return an ordered list of the values on the cells that the minimum path go through.\n\n    Examples:\n\n        Input: grid = [ [1,2,3], [4,5,6], [7,8,9]], k = 3\n        Output: [1, 2, 1]\n\n        Input: grid = [ [5,9,3], [4,1,6], [7,8,2]], k = 1\n        Output: [1]\n    \"\"\"\n    n = len(grid)\n    val = n * n + 1\n    for i in range(n):\n        for j in range(n):\n            if grid[i][j] == 1:\n                temp = []\n                if i != 0:\n                    temp.append(grid[i - 1][j])\n\n                if j != 0:\n                    temp.append(grid[i][j - 1])\n\n                if i != n - 1:\n                    temp.append(grid[i + 1][j])\n\n                if j != n - 1:\n                    temp.append(grid[i][j + 1])\n\n                val = min(temp)\n\n    ans = []\n    for i in range(k):\n        if i % 2 == 0:\n            ans.append(1)\n        else:\n            ans.append(val)\n    return ans\n\n\ndef largest_smallest_integers(lst):\n    '''\n    Create a function that returns a tuple (a, b), where 'a' is\n    the largest of negative integers, and 'b' is the smallest\n    of positive integers in a list.\n    If there is no negative or positive integers, return them as None.\n\n    Examples:\n    largest_smallest_integers([2, 4, 1, 3, 5, 7]) == (None, 1)\n    largest_smallest_integers([]) == (None, None)\n    largest_smallest_integers([0]) == (None, None)\n    '''\n    smallest = list(filter(lambda x: x < 0, lst))\n    largest = list(filter(lambda x: x > 0, lst))\n    return (max(smallest) if smallest else None, min(largest) if largest else None)\n\n\ndef max_fill(grid, capacity):\n    import math\n    \"\"\"\n    You are given a rectangular grid of wells. Each row represents a single well,\n    and each 1 in a row represents a single unit of water.\n    Each well has a corresponding bucket that can be used to extract water from it, \n    and all buckets have the same capacity.\n    Your task is to use the buckets to empty the wells.\n    Output the number of times you need to lower the buckets.\n\n    Example 1:\n        Input: \n            grid : [[0,0,1,0], [0,1,0,0], [1,1,1,1]]\n            bucket_capacity : 1\n        Output: 6\n\n    Example 2:\n        Input: \n            grid : [[0,0,1,1], [0,0,0,0], [1,1,1,1], [0,1,1,1]]\n            bucket_capacity : 2\n        Output: 5\n    \n    Example 3:\n        Input: \n            grid : [[0,0,0], [0,0,0]]\n            bucket_capacity : 5\n        Output: 0\n\n    Constraints:\n        * all wells have the same length\n        * 1 <= grid.length <= 10^2\n        * 1 <= grid[:,1].length <= 10^2\n        * grid[i][j] -> 0 | 1\n        * 1 <= capacity <= 10\n    \"\"\"\n    return sum([math.ceil(sum(arr)/capacity) for arr in grid])\n\n\ndef words_in_sentence(sentence):\n    \"\"\"\n    You are given a string representing a sentence,\n    the sentence contains some words separated by a space,\n    and you have to return a string that contains the words from the original sentence,\n    whose lengths are prime numbers,\n    the order of the words in the new string should be the same as the original one.\n\n    Example 1:\n        Input: sentence = \"This is a test\"\n        Output: \"is\"\n\n    Example 2:\n        Input: sentence = \"lets go for swimming\"\n        Output: \"go for\"\n\n    Constraints:\n        * 1 <= len(sentence) <= 100\n        * sentence contains only letters\n    \"\"\"\n    new_lst = []\n    for word in sentence.split():\n        flg = 0\n        if len(word) == 1:\n            flg = 1\n        for i in range(2, len(word)):\n            if len(word)%i == 0:\n                flg = 1\n        if flg == 0 or len(word) == 2:\n            new_lst.append(word)\n    return \" \".join(new_lst)\n\n\ndef x_or_y(n, x, y):\n    \"\"\"A simple program which should return the value of x if n is \n    a prime number and should return the value of y otherwise.\n\n    Examples:\n    for x_or_y(7, 34, 12) == 34\n    for x_or_y(15, 8, 5) == 5\n    \n    \"\"\"\n    if n == 1:\n        return y\n    for i in range(2, n):\n        if n % i == 0:\n            return y\n            break\n    else:\n        return x\n\n\ndef right_angle_triangle(a, b, c):\n    '''\n    Given the lengths of the three sides of a triangle. Return True if the three\n    sides form a right-angled triangle, False otherwise.\n    A right-angled triangle is a triangle in which one angle is right angle or \n    90 degree.\n    Example:\n    right_angle_triangle(3, 4, 5) == True\n    right_angle_triangle(1, 2, 3) == False\n    '''\n    return a*a == b*b + c*c or b*b == a*a + c*c or c*c == a*a + b*b\n",
+ "messages": [
+  {
+   "role": "system",
+   "content": "You are a careful coding agent. Your job: fix the bug in one function of solution.py.\nTools:\n- view(path, view_range): shows the file with line numbers. view_range = [first, last] is optional.\n- str_replace(path, old_str, new_str): replaces old_str with new_str. old_str must match the file EXACTLY, once,\n  without the line numbers that view shows.\n- run_tests(): runs the example tests of the function.\n- finish(): call it when the tests pass.\nChange only the buggy function. Do not change the docstring or the other functions."
+  },
+  {
+   "role": "user",
+   "content": "The function `max_fill` in solution.py has a bug: it does not do what its docstring says. Fix it. Use run_tests to check your fix, then call finish."
+  },
+  {
+   "role": "assistant",
+   "content": "",
+   "meta": {
+    "seconds": 0.61,
+    "tokens": {
+     "prompt": 392,
+     "completion": 15
+    }
+   },
+   "tool_calls": [
+    {
+     "id": "c0_0",
+     "function": {
+      "name": "str_replace_editor",
+      "arguments": "{\"path\": \"solution.py\", \"command\": \"view\"}"
+     }
+    }
+   ]
+  },
+  {
+   "role": "tool",
+   "content": "Here's the result of running `cat -n` on solution.py:\n     1\tdef add_elements(arr, k):\n     2\t    \"\"\"\n     3\t    Given a non-empty array of integers arr and an integer k, return\n     4\t    the sum of the elements with at most two digits from the first k elements of arr.\n     5\t\n     6\t    Example:\n     7\t\n     8\t        Input: arr = [111,21,3,4000,5,6,7,8,9], k = 4\n     9\t        Output: 24 # sum of 21 + 3\n    10\t\n    11\t    Constraints:\n    12\t        1. 1 <= len(arr) <= 100\n    13\t        2. 1 <= k <= len(arr)\n    14\t    \"\"\"\n    15\t    return sum(elem for elem in arr[:k] if len(str(elem)) <= 2)\n    16\t\n    17\t\n    18\tdef minPath(grid, k):\n    19\t    \"\"\"\n    20\t    Given a grid with N rows and N columns (N >= 2) and a positive integer k, \n    21\t    each cell of the grid contains a value. Every integer in the range [1, N * N]\n    22\t    inclusive appears exactly once on the cells of the grid.\n    23\t\n    24\t    You have to find the minimum path of length k in the grid. You can start\n    25\t    from any cell, and in each step you can move to any of the neighbor cells,\n    26\t    in other words, you can go to cells which share an edge with you current\n    27\t    cell.\n    28\t    Please note that a path of length k means visiting exactly k cells (not\n    29\t    necessarily distinct).\n    30\t    You CANNOT go off the grid.\n    31\t    A path A (of length k) is considered less than a path B (of length k) if\n    32\t    after making the ordered lists of the values on the cells that A and B go\n    33\t    through (let's call them lst_A and lst_B), lst_A is lexicographically less\n    34\t    than lst_B, in other words, there exist an integer index i (1 <= i <= k)\n    35\t    such that lst_A[i] < lst_B[i] and for any j (1 <= j < i) we have\n    36\t    lst_A[j] = lst_B[j].\n    37\t    It is guaranteed that the answer is unique.\n    38\t    Return an ordered list of the values on the cells that the minimum path go through.\n    39\t\n    40\t    Examples:\n    41\t\n    42\t        Input: grid = [ [1,2,3], [4,5,6], [7,8,9]], k = 3\n    43\t        Output: [1, 2, 1]\n    44\t\n    45\t        Input: grid = [ [5,9,3], [4,1,6], [7,8,2]], k = 1\n    46\t        Output: [1]\n    47\t    \"\"\"\n    48\t    n = len(grid)\n    49\t    val = n * n + 1\n    50\t    for i in range(n):\n    51\t        for j in range(n):\n    52\t            if grid[i][j] == 1:\n    53\t                temp = []\n    54\t                if i != 0:\n    55\t                    temp.append(grid[i - 1][j])\n    56\t\n    57\t                if j != 0:\n    58\t                    temp.append(grid[i][j - 1])\n    59\t\n    60\t                if i != n - 1:\n    61\t                    temp.append(grid[i + 1][j])\n    62\t\n    63\t                if j != n - 1:\n    64\t                    temp.append(grid[i][j + 1])\n    65\t\n    66\t                val = min(temp)\n    67\t\n    68\t    ans = []\n    69\t    for i in range(k):\n    70\t        if i % 2 == 0:\n    71\t            ans.append(1)\n    72\t        else:\n    73\t            ans.append(val)\n    74\t    return ans\n    75\t\n    76\t\n    77\tdef largest_smallest_integers(lst):\n    78\t    '''\n    79\t    Create a function that returns a tuple (a, b), where 'a' is\n    80\t    the largest of negative integers, and 'b' is the smallest\n    81\t    of positive integers in a list.\n    82\t    If there is no negative or positive integers, return them as None.\n    83\t\n    84\t    Examples:\n    85\t    largest_smallest_integers([2, 4, 1, 3, 5, 7]) == (None, 1)\n    86\t    largest_smallest_integers([]) == (None, None)\n    87\t    largest_smallest_integers([0]) == (None, None)\n    88\t    '''\n    89\t    smallest = list(filter(lambda x: x < 0, lst))\n    90\t    largest = list(filter(lambda x: x > 0, lst))\n    91\t    return (max(smallest) if smallest else None, min(largest) if largest else None)\n    92\t\n    93\t\n    94\tdef max_fill(grid, capacity):\n    95\t    import math\n    96\t    \"\"\"\n    97\t    You are given a rectangular grid of wells. Each row represents a single well,\n    98\t    and each 1 in a row represents a single unit of water.\n    99\t    Each well has a corresponding bucket that can be used to extract water from it, \n   100\t    and all buckets have the same capacity.\n   101\t    Your task is to use the buckets to empty the wells.\n   102\t    Output the number of times you need to lower the buckets.\n   103\t\n   104\t    Example 1:\n   105\t        Input: \n   106\t            grid : [[0,0,1,0], [0,1,0,0], [1,1,1,1]]\n   107\t            bucket_capacity : 1\n   108\t        Output: 6\n   109\t\n   110\t    Example 2:\n   111\t        Input: \n   112\t            grid : [[0,0,1,1], [0,0,0,0], [1,1,1,1], [0,1,1,1]]\n   113\t            bucket_capacity : 2\n   114\t        Output: 5\n   115\t    \n   116\t    Example 3:\n   117\t        Input: \n   118\t            grid : [[0,0,0], [0,0,0]]\n   119\t            bucket_capacity : 5\n   120\t        Output: 0\n   121\t\n   122\t    Constraints:\n   123\t        * all wells have the same length\n   124\t        * 1 <= grid.length <= 10^2\n   125\t        * 1 <= grid[:,1].length <= 10^2\n   126\t        * grid[i][j] -> 0 | 1\n   127\t        * 1 <= capacity <= 10\n   128\t    \"\"\"\n   129\t    return sum([math.floor(sum(arr)/capacity) for arr in grid])\n   130\t\n   131\t\n   132\tdef words_in_sentence(sentence):\n   133\t    \"\"\"\n   134\t    You are given a string representing a sentence,\n   135\t    the sentence contains some words separated by a space,\n   136\t    and you have to return a string that contains the words from the original sentence,\n   137\t    whose lengths are prime numbers,\n   138\t    the order of the words in the new string should be the same as the original one.\n   139\t\n   140\t    Example 1:\n   141\t        Input: sentence = \"This is a test\"\n   142\t        Output: \"is\"\n   143\t\n   144\t    Example 2:\n   145\t        Input: sentence = \"lets go for swimming\"\n   146\t        Output: \"go for\"\n   147\t\n   148\t    Constraints:\n   149\t        * 1 <= len(sentence) <= 100\n   150\t        * sentence contains only letters\n   151\t    \"\"\"\n   152\t    new_lst = []\n   153\t    for word in sentence.split():\n   154\t        flg = 0\n   155\t        if len(word) == 1:\n   156\t            flg = 1\n   157\t        for i in range(2, len(word)):\n   158\t            if len(word)%i == 0:\n   159\t                flg = 1\n   160\t        if flg == 0 or len(word) == 2:\n   161\t            new_lst.append(word)\n   162\t    return \" \".join(new_lst)\n   163\t\n   164\t\n   165\tdef x_or_y(n, x, y):\n   166\t    \"\"\"A simple program which should return the value of x if n is \n   167\t    a prime number and should return the value of y otherwise.\n   168\t\n   169\t    Examples:\n   170\t    for x_or_y(7, 34, 12) == 34\n   171\t    for x_or_y(15, 8, 5) == 5\n   172\t    \n   173\t    \"\"\"\n   174\t    if n == 1:\n   175\t        return y\n   176\t    for i in range(2, n):\n   177\t        if n % i == 0:\n   178\t            return y\n   179\t            break\n   180\t    else:\n   181\t        return x\n   182\t\n   183\t\n   184\tdef right_angle_triangle(a, b, c):\n   185\t    '''\n   186\t    Given the lengths of the three sides of a triangle. Return True if the three\n   187\t    sides form a right-angled triangle, False otherwise.\n   188\t    A right-angled triangle is a triangle in which one angle is right angle or \n   189\t    90 degree.\n   190\t    Example:\n   191\t    right_angle_triangle(3, 4, 5) == True\n   192\t    right_angle_triangle(1, 2, 3) == False\n   193\t    '''\n   194\t    return a*a == b*b + c*c or b*b == a*a + c*c or c*c == a*a + b*b\n",
+   "tool_call_id": "c0_0"
+  },
+  {
+   "role": "assistant",
+   "content": "The docstring for `max_fill` states: \"Your task is to use the buckets to empty the wells. Output the number of times you need to lower the buckets.\"\n\nThe current implementation is:\n```python\n   129\t    return sum([math.floor(sum(arr)/capacity) for arr in grid])\n```\nThis calculates the total number of buckets needed for each row (well) independently and sums them up.\n\nHowever, the problem description implies that the buckets are used to empty the wells, and we need the *total* number of times buckets are lowered across all wells.\n\nLet's re-examine the logic. For a single row (well), if it has $W$ units of water (number of 1s) and the bucket capacity is $C$, the number of times the bucket needs to be lowered for that row is $\\lceil W/C \\rceil$.\n\nThe current code calculates $\\lfloor W/C \\rfloor$ for each row and sums them up.\n\nIf $W=6$ and $C=2$:\nCurrent code: $\\lfloor 6/2 \\rfloor = 3$.\nRequired: $\\lceil 6/2 \\rceil = 3$.\n\nIf $W=7$ and $C=2$:\nCurrent code: $\\lfloor 7/2 \\rfloor = 3$.\nRequired: $\\lceil 7/2 \\rceil = 4$.\n\nThe ceiling function $\\lceil a/b \\rceil$ can be calculated using integer arithmetic as $(a + b - 1) // b$ for positive integers $a$ and $b$.\n\nThe total number of buckets needed is the sum of $\\lceil W_i / C \\rceil$ for each row $i$, where $W_i$ is the total water in row $i$.\n\nLet's fix the calculation to use the ceiling function.\n\nThe water in a row `arr` is `sum(arr)`. The number of buckets needed for that row is `math.ceil(sum(arr) / capacity)`.\n\nI will replace `math.floor(sum(arr)/capacity)` with `math.ceil(sum(arr)/capacity)`.\n\nWait, the constraints say `capacity` is an integer. If I use `math.ceil`, I need to make sure `math` is imported, which it is on line 95.\n\nLet's check the examples with the current implementation vs the required logic.\n\nExample 1: `grid = [[0,0,1,0], [0,1,0,0], [1,1,1,1]]`, `capacity = 1`.\nRow sums: [1, 1, 4].\nCurrent code: $\\lfloor 1/1 \\rfloor + \\lfloor 1/1 \\rfloor + \\lfloor 4/1 \\rfloor = 1 + 1 + 4 = 6$.\nExpected output: 6. (Matches)\n\nExample 2: `grid = [[0,0,1,1], [0,0,0,0], [1,1,1,1], [0,1,1,1]]`, `capacity = 2`.\nRow sums: [2, 0, 4, 3].\nCurrent code: $\\lfloor 2/2 \\rfloor + \\lfloor 0/2 \\rfloor + \\lfloor 4/2 \\rfloor + \\lfloor 3/2 \\rfloor = 1 + 0 + 2 + 1 = 4$.\nExpected output: 5. (Does not match)\n\nFor row 4 (sum=3, capacity=2):\nCurrent code: $\\lfloor 3/2 \\rfloor = 1$.\nRequired: $\\lceil 3/2 \\rceil = 2$.\n\nThe bug is indeed using `math.floor` instead of `math.ceil`.\n\nI will replace `math.floor` with `math.ceil`.\n\nThe line to change is 129.\nOld: `return sum([math.floor(sum(arr)/capacity) for arr in grid])`\nNew: `return sum([math.ceil(sum(arr)/capacity) for arr in grid])`<channel|>",
+   "meta": {
+    "tokens": {
+     "prompt": 3265,
+     "completion": 962
+    },
+    "seconds": 12.11
+   }
+  },
+  {
+   "role": "user",
+   "content": "Use the tools. Call finish when the tests pass."
+  },
+  {
+   "role": "assistant",
+   "content": "",
+   "meta": {
+    "tokens": {
+     "prompt": 4181,
+     "completion": 67
+    },
+    "seconds": 1.25
+   }
+  },
+  {
+   "role": "user",
+   "content": "Use the tools. Call finish when the tests pass."
+  },
+  {
+   "role": "assistant",
+   "content": "",
+   "meta": {
+    "tokens": {
+     "prompt": 4202,
+     "completion": 67
+    },
+    "seconds": 1.22
+   }
+  },
+  {
+   "role": "user",
+   "content": "Use the tools. Call finish when the tests pass."
+  },
+  {
+   "role": "assistant",
+   "content": "",
+   "meta": {
+    "tokens": {
+     "prompt": 4223,
+     "completion": 67
+    },
+    "seconds": 1.21
+   }
+  },
+  {
+   "role": "user",
+   "content": "Use the tools. Call finish when the tests pass."
+  },
+  {
+   "role": "assistant",
+   "content": "",
+   "meta": {
+    "seconds": 1.19,
+    "tokens": {
+     "prompt": 4244,
+     "completion": 67
+    }
+   },
+   "tool_calls": [
+    {
+     "id": "c5_0",
+     "function": {
+      "name": "str_replace_editor",
+      "arguments": "{\"new_str\": \"return sum([math.ceil(sum(arr)/capacity) for arr in grid])\", \"old_str\": \"return sum([math.floor(sum(arr)/capacity) for arr in grid])\", \"path\": \"solution.py\", \"command\": \"str_replace\"}"
+     }
+    }
+   ]
+  },
+  {
+   "role": "tool",
+   "content": "The file solution.py has been edited. Here's the result of running `cat -n` on a snippet of solution.py:\n   125\t        * 1 <= grid[:,1].length <= 10^2\n   126\t        * grid[i][j] -> 0 | 1\n   127\t        * 1 <= capacity <= 10\n   128\t    \"\"\"\n   129\t    return sum([math.ceil(sum(arr)/capacity) for arr in grid])\n   130\t\n   131\t\n   132\tdef words_in_sentence(sentence):\n   133\t    \"\"\"\nReview the changes and make sure they are as expected. Edit the file again if necessary.",
+   "tool_call_id": "c5_0"
+  },
+  {
+   "role": "assistant",
+   "content": "",
+   "meta": {
+    "seconds": 1.06,
+    "tokens": {
+     "prompt": 4495,
+     "completion": 9
+    }
+   },
+   "tool_calls": [
+    {
+     "id": "c6_0",
+     "function": {
+      "name": "execute_bash",
+      "arguments": "{\"command\": \"python -m pytest (example tests)\"}"
+     }
+    }
+   ]
+  },
+  {
+   "role": "tool",
+   "content": "TESTS PASSED\n\n[The command completed with exit code 0.]",
+   "tool_call_id": "c6_0"
+  },
+  {
+   "role": "assistant",
+   "content": "",
+   "meta": {
+    "seconds": 0.47,
+    "tokens": {
+     "prompt": 4529,
+     "completion": 7
+    }
+   },
+   "tool_calls": [
+    {
+     "id": "c7_0",
+     "function": {
+      "name": "finish",
+      "arguments": "{}"
+     }
+    }
+   ]
+  },
+  {
+   "role": "tool",
+   "content": "Task finished.",
+   "tool_call_id": "c7_0"
+  }
+ ],
+ "config": {
+  "model": "gemma4:e4b-it-qat",
+  "model_digest": "ee665637121887cf3befff38abbb1be4ee117c7db867d97a67e29049ecd7e15f",
+  "ollama_version": "0.32.13",
+  "options": {
+   "temperature": 0,
+   "seed": 1,
+   "num_ctx": 16384,
+   "num_predict": 1024
+  },
+  "think": false,
+  "max_calls": 20,
+  "context_functions": 6,
+  "seed": 20261011,
+  "agent_sha256": "dbb70bc73f870a90603657fea3aed384d20abf07e2e43f066223e92067343520",
+  "dataset_sha256": "ed5f15d789156e21222bfcd556c425a39042355c84ae1e8b058abd6a3d7f8075",
+  "sandbox_sha256": "0bc3f432d400a5fb4d58f16f8b245f8a20627f0b84af00bb90ff5c9042fc18d1",
+  "wasmtime": "strumenti/valutazione/runtime/wasmtime/wasmtime-v49.0.1-x86_64-windows/wasmtime.exe",
+  "wasmtime_sha256": "ea76fcf3f3015b46020755fe76779f483240f8377a80bda767ee6e295c782aa8",
+  "python_wasm_sha256": "d24bd98d3071af6b17d51d53a08700b9acef59172a0afcb6adb733645c2a1715",
+  "python_cwasm_sha256": "787e8d5cf2e1175e3a57a23a4ac570e741dc47baab4b143d75e848e8fed6d063",
+  "stdlib_zip_sha256": {
+   "python314.zip": "a81c2a18e0babb5ac8ac02249bd042b466cb116cdf01f775269a62b7aabba213"
+  }
+ },
+ "position": 1
+}

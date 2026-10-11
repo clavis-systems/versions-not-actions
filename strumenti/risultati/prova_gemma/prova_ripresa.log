@@ -1,0 +1,169 @@
+{
+ "model": "gemma4:e4b-it-qat",
+ "model_digest": "ee665637121887cf3befff38abbb1be4ee117c7db867d97a67e29049ecd7e15f",
+ "ollama_version": "0.32.13",
+ "options": {
+  "temperature": 0,
+  "seed": 1,
+  "num_ctx": 16384,
+  "num_predict": 1024
+ },
+ "think": false,
+ "max_calls": 20,
+ "context_functions": 6,
+ "seed": 20261011,
+ "agent_sha256": "dbb70bc73f870a90603657fea3aed384d20abf07e2e43f066223e92067343520",
+ "dataset_sha256": "ed5f15d789156e21222bfcd556c425a39042355c84ae1e8b058abd6a3d7f8075",
+ "sandbox_sha256": "0bc3f432d400a5fb4d58f16f8b245f8a20627f0b84af00bb90ff5c9042fc18d1",
+ "wasmtime": "strumenti/valutazione/runtime/wasmtime/wasmtime-v49.0.1-x86_64-windows/wasmtime.exe",
+ "wasmtime_sha256": "ea76fcf3f3015b46020755fe76779f483240f8377a80bda767ee6e295c782aa8",
+ "python_wasm_sha256": "d24bd98d3071af6b17d51d53a08700b9acef59172a0afcb6adb733645c2a1715",
+ "python_cwasm_sha256": "787e8d5cf2e1175e3a57a23a4ac570e741dc47baab4b143d75e848e8fed6d063",
+ "stdlib_zip_sha256": {
+  "python314.zip": "a81c2a18e0babb5ac8ac02249bd042b466cb116cdf01f775269a62b7aabba213"
+ }
+}
+Python/92 guard off: solved True, calls 7, 42.3 s
+Python/92 guard on: solved True, calls 5, 16.3 s
+Python/93 guard off: solved True, calls 16, 60.6 s
+Python/93 guard on: solved True, calls 12, 52.4 s
+Python/94 guard off: solved False, calls 20, 64.0 s
+Python/94 guard on: solved True, calls 6, 20.1 s
+Python/95 guard off: solved False, calls 20, 109.5 s
+Python/95 guard on: solved True, calls 14, 68.2 s
+Python/96 guard on: solved True, calls 9, 33.6 s
+Python/96 guard off: solved True, calls 9, 34.3 s
+Python/97 guard on: solved True, calls 10, 16.1 s
+Python/97 guard off: solved True, calls 10, 16.2 s
+Python/98 guard off: solved True, calls 12, 19.1 s
+Python/98 guard on: solved True, calls 12, 18.8 s
+Python/99 guard off: solved False, calls 20, 54.9 s
+Python/99 guard on: solved False, calls 20, 38.6 s
+Python/100 guard off: solved True, calls 8, 19.7 s
+Python/100 guard on: solved True, calls 8, 19.5 s
+Python/101 guard off: solved False, calls 20, 64.6 s
+Python/101 guard on: solved False, calls 20, 54.6 s
+Python/102 guard off: solved True, calls 5, 18.3 s
+Python/102 guard on: solved True, calls 5, 17.8 s
+Python/103 guard off: solved True, calls 7, 16.4 s
+Python/103 guard on: solved True, calls 5, 13.3 s
+Python/104 guard on: solved True, calls 6, 17.2 s
+Python/104 guard off: solved True, calls 20, 29.6 s
+Python/105 guard off: solved True, calls 5, 16.3 s
+Python/105 guard on: solved True, calls 5, 16.3 s
+Python/106 guard off: solved True, calls 12, 32.0 s
+Python/106 guard on: solved True, calls 20, 73.8 s
+Python/107 guard off: solved True, calls 20, 26.0 s
+Python/107 guard on: solved False, calls 20, 26.9 s
+Python/108 guard off: solved True, calls 5, 17.9 s
+Python/108 guard on: solved True, calls 5, 18.1 s
+Python/109 guard off: solved True, calls 7, 32.5 s
+Python/109 guard on: solved True, calls 7, 32.2 s
+Python/110 guard off: solved True, calls 6, 19.1 s
+Python/110 guard on: solved True, calls 6, 19.2 s
+Python/111 guard on: solved False, calls 18, 76.7 s
+Python/111 guard off: solved False, calls 15, 61.2 s
+Python/112 guard off: solved True, calls 15, 17.5 s
+Python/112 guard on: solved True, calls 15, 17.4 s
+Python/113 guard off: solved True, calls 14, 40.3 s
+Python/113 guard on: solved False, calls 20, 69.2 s
+Python/114 guard on: solved True, calls 9, 29.8 s
+Python/114 guard off: solved True, calls 9, 31.5 s
+Python/115 guard on: solved True, calls 8, 20.0 s
+Python/115 guard off: solved True, calls 8, 19.7 s
+Python/116 guard off: solved True, calls 4, 8.3 s
+Python/116 guard on: solved True, calls 4, 8.3 s
+Python/117 guard on: solved True, calls 12, 22.6 s
+Python/117 guard off: solved True, calls 12, 22.7 s
+Python/118 guard off: solved True, calls 18, 36.9 s
+Python/118 guard on: solved True, calls 13, 25.2 s
+Python/119 guard on: solved True, calls 20, 48.5 s
+Python/119 guard off: solved False, calls 20, 45.4 s
+Python/120 guard off: solved True, calls 10, 30.2 s
+Python/120 guard on: solved True, calls 8, 27.5 s
+Python/121 guard on: solved True, calls 6, 21.8 s
+Python/121 guard off: solved True, calls 6, 21.2 s
+Python/122 guard off: solved True, calls 13, 19.2 s
+Python/122 guard on: solved True, calls 13, 19.2 s
+Python/123 guard off: solved True, calls 6, 18.4 s
+Python/123 guard on: solved True, calls 6, 17.8 s
+Python/124 guard off: solved True, calls 10, 32.0 s
+Python/124 guard on: solved True, calls 8, 28.8 s
+Python/125 guard on: solved False, calls 8, 22.0 s
+Python/125 guard off: solved False, calls 8, 21.8 s
+Python/126 guard on: solved True, calls 8, 34.4 s
+Python/126 guard off: solved True, calls 19, 66.0 s
+Python/127 guard on: solved True, calls 5, 19.2 s
+Python/127 guard off: solved True, calls 5, 18.7 s
+Python/128 guard off: solved True, calls 8, 22.0 s
+Python/128 guard on: solved True, calls 8, 21.7 s
+Python/129 guard off: solved False, calls 20, 132.4 s
+Python/129 guard on: solved False, calls 17, 97.6 s
+Python/130 guard off: solved False, calls 20, 196.2 s
+Python/130 guard on: solved False, calls 20, 189.2 s
+Python/131 guard on: solved True, calls 10, 13.5 s
+Python/131 guard off: solved True, calls 10, 13.0 s
+Python/132 guard on: solved False, calls 5, 19.3 s
+Python/132 guard off: solved False, calls 5, 19.2 s
+Python/133 guard off: solved True, calls 7, 19.6 s
+Python/133 guard on: solved True, calls 5, 14.0 s
+Python/134 guard off: solved True, calls 5, 17.0 s
+Python/134 guard on: solved True, calls 5, 16.9 s
+Python/135 guard off: solved True, calls 13, 27.7 s
+Python/135 guard on: solved True, calls 13, 28.4 s
+Python/136 guard on: solved True, calls 13, 25.3 s
+Python/136 guard off: solved True, calls 13, 25.6 s
+Python/137 guard on: solved True, calls 18, 42.8 s
+Python/137 guard off: solved True, calls 18, 42.6 s
+Python/138 guard off: solved False, calls 11, 25.6 s
+Python/138 guard on: solved True, calls 7, 17.8 s
+Python/139 guard off: solved True, calls 5, 18.9 s
+Python/139 guard on: solved True, calls 5, 18.6 s
+Python/140 guard off: solved False, calls 12, 62.3 s
+Python/140 guard on: solved True, calls 11, 62.8 s
+Python/141 guard off: solved True, calls 6, 15.8 s
+Python/141 guard on: solved True, calls 6, 15.5 s
+Python/142 guard off: solved True, calls 5, 18.7 s
+Python/142 guard on: solved True, calls 5, 18.4 s
+Python/143 guard off: solved True, calls 16, 62.4 s
+Python/143 guard on: solved True, calls 13, 60.7 s
+Python/144 guard on: solved True, calls 10, 35.6 s
+Python/144 guard off: solved True, calls 10, 35.4 s
+Python/145 guard off: solved False, calls 20, 90.2 s
+Python/145 guard on: solved False, calls 20, 83.3 s
+Python/146 guard on: solved False, calls 20, 35.3 s
+Python/146 guard off: solved False, calls 20, 35.3 s
+Python/147 guard off: solved True, calls 10, 24.5 s
+Python/147 guard on: solved True, calls 10, 25.5 s
+Python/148 guard on: solved True, calls 5, 18.3 s
+Python/148 guard off: solved True, calls 5, 17.6 s
+Python/149 guard off: solved True, calls 6, 21.1 s
+Python/149 guard on: solved True, calls 6, 21.4 s
+Python/150 guard on: solved True, calls 9, 20.3 s
+Python/150 guard off: solved True, calls 9, 20.5 s
+Python/151 guard off: solved True, calls 15, 50.0 s
+Python/151 guard on: solved True, calls 5, 17.8 s
+Python/152 guard off: solved True, calls 9, 13.6 s
+Python/152 guard on: solved True, calls 9, 13.3 s
+Python/153 guard off: solved False, calls 20, 98.3 s
+Python/153 guard on: solved True, calls 16, 56.9 s
+Python/154 guard off: solved True, calls 15, 53.0 s
+Python/154 guard on: solved True, calls 12, 49.6 s
+Python/155 guard off: solved False, calls 20, 62.1 s
+Python/155 guard on: solved False, calls 20, 60.4 s
+Python/156 guard off: solved True, calls 20, 78.7 s
+Python/156 guard on: solved False, calls 20, 86.8 s
+Python/157 guard on: solved True, calls 7, 14.1 s
+Python/157 guard off: solved True, calls 7, 14.3 s
+Python/158 guard off: solved True, calls 5, 18.7 s
+Python/158 guard on: solved True, calls 5, 17.8 s
+Python/159 guard off: solved True, calls 6, 19.4 s
+Python/159 guard on: solved True, calls 7, 21.7 s
+Python/160 guard on: solved True, calls 12, 22.5 s
+Python/160 guard off: solved True, calls 12, 22.1 s
+Python/161 guard off: solved False, calls 20, 79.6 s
+Python/161 guard on: solved False, calls 16, 65.4 s
+Python/162 guard off: solved True, calls 12, 21.9 s
+Python/162 guard on: solved True, calls 5, 8.1 s
+Python/163 guard on: solved False, calls 20, 90.9 s
+Python/163 guard off: solved False, calls 20, 76.8 s

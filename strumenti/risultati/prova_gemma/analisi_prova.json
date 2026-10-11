@@ -1,0 +1,120 @@
+{
+ "tasks_total": 144,
+ "tasks_compared": 144,
+ "excluded": [],
+ "L1": {
+  "solved_off": 117,
+  "solved_on": 124,
+  "wins": 10,
+  "losses": 3,
+  "p": 0.09228515625,
+  "supported": false,
+  "difference": {
+   "mean": 0.04861111111111111,
+   "low": 0.0,
+   "high": 0.09722222222222222
+  }
+ },
+ "L1_sensitivity_suspicious_as_unsolved": null,
+ "L2": {
+  "total_off": 426,
+  "total_on": 251,
+  "difference": {
+   "mean": -1.2152777777777777,
+   "low": -1.750173611111111,
+   "high": -0.7291666666666666
+  },
+  "supported": true
+ },
+ "L3": {
+  "total_off": 213,
+  "total_on": 90,
+  "difference": {
+   "mean": -0.8541666666666666,
+   "low": -1.3057291666666666,
+   "high": -0.4583333333333333
+  },
+  "supported": true
+ },
+ "describe": {
+  "off": {
+   "str_replace_outcomes": {
+    "edited": 164,
+    "missing": 245,
+    "noop": 7,
+    "multiple": 27,
+    "other_error": 8
+   },
+   "detector_failures": {
+    "missing/stale": 149,
+    "noop/None": 7,
+    "missing/copy_error": 48,
+    "multiple/None": 27,
+    "missing/never_seen": 48,
+    "other/None": 8
+   },
+   "host_notes": {},
+   "tokens": {
+    "prompt": 6446346,
+    "completion": 281939
+   },
+   "calls": 1584,
+   "finished": 121,
+   "dropped_calls": 0,
+   "seconds": 4450.2
+  },
+  "on": {
+   "str_replace_outcomes": {
+    "edited": 180,
+    "missing": 128,
+    "noop": 9,
+    "multiple": 29,
+    "other_error": 4
+   },
+   "detector_failures": {
+    "missing/stale": 78,
+    "noop/None": 9,
+    "missing/copy_error": 20,
+    "multiple/None": 29,
+    "missing/never_seen": 30,
+    "other/None": 4
+   },
+   "host_notes": {
+    "already_made_edit": 36,
+    "revisit": 4,
+    "noop_identical": 4,
+    "noop_applied": 5,
+    "closest": 46,
+    "repeated_call": 77,
+    "multiple": 29,
+    "removed_by_edit": 46
+   },
+   "tokens": {
+    "prompt": 5679954,
+    "completion": 256332
+   },
+   "calls": 1441,
+   "finished": 129,
+   "dropped_calls": 0,
+   "seconds": 4026.8
+  }
+ },
+ "solved_off_not_on": [
+  107,
+  113,
+  156
+ ],
+ "solved_on_not_off": [
+  39,
+  54,
+  74,
+  75,
+  94,
+  95,
+  119,
+  138,
+  140,
+  153
+ ],
+ "suspicious": []
+}

@@ -1,0 +1,20 @@
+Sei il revisore indipendente di questo progetto. Rispondi in italiano, in modo conciso. Non usare skill di revisione automatica: fai tu la revisione richiesta.
+
+Compito: revisione 2, mirata, della prova dal vivo (Gemma 4 E4B come agente su HumanEvalFix, guardiano dell'host acceso/spento) PRIMA del congelamento. La tua revisione 1 e' in strumenti/risultati/modifiche/revisione_prova_gemma_1.md (NON PRONTA, B1-B5).
+
+File da leggere (tutti nel repository, commit 950e885 o successivo):
+- strumenti/agenti/modifiche/PREMESSA_PROVA_GEMMA.md (bozza 2; la tabella in §7 dice come ho corretto B1-B5 e i non bloccanti)
+- strumenti/agenti/modifiche/agente_gemma.py e test_agente_gemma.py
+- strumenti/agenti/modifiche/analisi_prova_gemma.py e test_analisi_prova_gemma.py (definizioni esatte di L1-L3, esclusioni, bootstrap)
+- strumenti/agenti/modifiche/formati.py, solo la funzione editor_outcome (classificazione degli esiti di str_replace)
+- risultati di SVILUPPO (compiti 0-19, entrambe le condizioni, solo per controllare il banco): strumenti/risultati/prova_gemma/sviluppo/ (note della bozza 2 prima di due aggiunte: chiamata ripetuta e righe intere nelle piu' occorrenze, nate dal compito 15) e la sua analisi strumenti/risultati/prova_gemma/analisi_sviluppo.json; il nuovo controllo con le note definitive e' strumenti/risultati/prova_gemma/sviluppo2/ (potrebbe essere ancora in corso mentre leggi: guarda i file gia' scritti); la prova di funzionamento iniziale e' in strumenti/risultati/prova_gemma/fumo/ (note vecchie)
+NON aprire strumenti/risultati/modifiche/misura_heldout.json ne' altri risultati tenuti da parte dello studio sulle traiettorie (servono cieco per C1).
+
+Cerca in particolare:
+1. Se B1-B5 sono davvero chiusi (limite di 20 chiamate; nonce e controllo di sensibilita' per le prove nascoste; errori di infrastruttura ed esiti incerti registrati ed esclusi; L2/L3/bootstrap/esclusioni definiti senza ambiguita' e uguali fra premessa e codice; ripresa sicura e configurazione registrata).
+2. Le note nuove: chiamata ripetuta (stessa chiamata gia' fallita sulla stessa versione del file); testo mancante (modifica identica gia' fatta; testo tolto da una modifica precedente; righe che differiscono, con spazi visibili); piu' occorrenze con la riga intera. Sono corrette, possono ingannare il modello, cambiano qualcosa oltre al messaggio dell'host? Le due condizioni devono restare identiche salvo le note.
+3. Nei risultati di sviluppo: comportamenti del banco sbagliati o sospetti (note fuori luogo, conteggi, esiti nascosti, tempi, chiamate scartate).
+4. Errori nell'analisi rispetto alla premessa (per esempio come si contano le risposte senza strumenti, i fallimenti dopo l'ultima modifica, i compiti esclusi).
+5. Cautele ancora mancanti per un articolo.
+
+Formato: BLOCCANTI (B1...), NON BLOCCANTI (N1...), VERDETTO "PRONTA PER IL CONGELAMENTO" oppure "NON PRONTA". Revisione statica: non avviare modelli, sandbox o la GPU.

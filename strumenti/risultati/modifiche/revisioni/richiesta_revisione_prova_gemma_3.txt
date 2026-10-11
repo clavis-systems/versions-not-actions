@@ -1,0 +1,16 @@
+Sei il revisore indipendente di questo progetto. Rispondi in italiano, in modo conciso. Non usare skill di revisione automatica: fai tu la revisione richiesta.
+
+Compito: revisione 3, molto mirata, della prova dal vivo (Gemma 4 E4B come agente su HumanEvalFix, guardiano acceso/spento) PRIMA del congelamento. La tua revisione 2 e' in strumenti/risultati/modifiche/revisione_prova_gemma_2.md (NON PRONTA: B2 e B5, piu' margini delle note).
+
+Controlla SOLO se le correzioni della bozza 3 (commit f5b1cb8) chiudono B2, B5 e i margini, e se hanno introdotto errori nuovi:
+- strumenti/agenti/modifiche/PREMESSA_PROVA_GEMMA.md: §2 Esito, §5 cautela sull'esito, §6 configurazione, §7 tabella "Revisione 2"
+- strumenti/agenti/modifiche/agente_gemma.py: test_program(hide=True) e run_task; run_config (impronte di wasmtime.exe, python.cwasm, libreria standard; preflight della sandbox); guard_noop, guard_repeat, line_spans, guard_missing; controllo del lucchetto in main
+- strumenti/agenti/modifiche/test_agente_gemma.py: test_edge_cases_of_the_notes, test_a_repeated_failed_call_is_named_first e la prova reale con il codice "spia" (RealData)
+- strumenti/agenti/modifiche/analisi_prova_gemma.py: esclusioni (anche diretta per infra_error o esito incerto) e i tipi di rilevatori.edit_failures nelle parti descrittive
+- risultati di SVILUPPO con il banco definitivo: strumenti/risultati/prova_gemma/sviluppo3/ e sviluppo3.log (potrebbe essere ancora in corso: guarda i file gia' scritti). sviluppo2/ e' un controllo interrotto, superato.
+
+Su B2 la scelta e' quella che proponevi come alternativa: il file delle prove si cancella prima che il codice del modello parta (verificato nella sandbox), e il limite che resta (introspezione in memoria) e' dichiarato come cautela, con elenco delle parole sospette, controllo di sensibilita' e lettura a mano delle corse risolte con parole sospette. Dimmi se cosi' e' accettabile per congelare.
+
+NON aprire strumenti/risultati/modifiche/misura_heldout.json ne' altri risultati tenuti da parte dello studio sulle traiettorie.
+
+Formato: BLOCCANTI (B1...), NON BLOCCANTI (N1...), VERDETTO "PRONTA PER IL CONGELAMENTO" oppure "NON PRONTA". Revisione statica: non avviare modelli, sandbox o la GPU.

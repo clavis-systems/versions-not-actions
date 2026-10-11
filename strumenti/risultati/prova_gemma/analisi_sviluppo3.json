@@ -1,0 +1,99 @@
+{
+ "tasks_total": 20,
+ "tasks_compared": 20,
+ "excluded": [],
+ "L1": {
+  "solved_off": 17,
+  "solved_on": 18,
+  "wins": 1,
+  "losses": 0,
+  "p": 1.0,
+  "supported": false,
+  "difference": {
+   "mean": 0.05,
+   "low": 0.0,
+   "high": 0.15
+  }
+ },
+ "L1_sensitivity_suspicious_as_unsolved": null,
+ "L2": {
+  "total_off": 45,
+  "total_on": 22,
+  "difference": {
+   "mean": -1.15,
+   "low": -2.2,
+   "high": -0.3
+  },
+  "supported": true
+ },
+ "L3": {
+  "total_off": 19,
+  "total_on": 1,
+  "difference": {
+   "mean": -0.9,
+   "low": -1.9012499999999999,
+   "high": -0.05
+  },
+  "supported": true
+ },
+ "describe": {
+  "off": {
+   "str_replace_outcomes": {
+    "edited": 27,
+    "missing": 18,
+    "noop": 1,
+    "multiple": 9
+   },
+   "detector_failures": {
+    "missing/copy_error": 1,
+    "missing/stale": 17,
+    "noop/None": 1,
+    "multiple/None": 9
+   },
+   "host_notes": {},
+   "tokens": {
+    "prompt": 583934,
+    "completion": 24600
+   },
+   "calls": 202,
+   "finished": 19,
+   "dropped_calls": 0,
+   "seconds": 428.2
+  },
+  "on": {
+   "str_replace_outcomes": {
+    "edited": 29,
+    "missing": 10,
+    "noop": 1,
+    "multiple": 1
+   },
+   "detector_failures": {
+    "missing/copy_error": 1,
+    "missing/stale": 9,
+    "noop/None": 1,
+    "multiple/None": 1
+   },
+   "host_notes": {
+    "closest": 1,
+    "already_made_edit": 7,
+    "noop_identical": 1,
+    "multiple": 1,
+    "removed_by_edit": 2,
+    "repeated_call": 1
+   },
+   "tokens": {
+    "prompt": 498834,
+    "completion": 22084
+   },
+   "calls": 181,
+   "finished": 19,
+   "dropped_calls": 0,
+   "seconds": 387.5
+  }
+ },
+ "solved_off_not_on": [],
+ "solved_on_not_off": [
+  15
+ ],
+ "suspicious": []
+}
