@@ -6,10 +6,13 @@
 **Corsa.** `misura.py heldout`, una sola volta, dalle 20:23:14 alle 20:26:11.
 - Controlli strutturali: nessun problema. Le ricevute sono tutte in pareggio, gli identificativi riconciliati e il
   numero di esecuzioni è quello atteso (24.269, 500, 500, 489).
-- Impronte: `misura_heldout.json` ec4ba34f…, campione di verifica `verifica_campione.json` 58c7a728…
+- Impronte: `misura_heldout.json` ec4ba34f…, campione di verifica `verifica_campione.json` 58c7a728… (il campione
+  completo, con il testo dei messaggi, non è pubblicato; il repository pubblico ha una copia senza le finestre dei
+  messaggi).
 
-**Scostamenti dalla premessa:** nessuno. Lo script `riassunto.py`, aggiunto dopo il congelamento, legge soltanto
-il file dei risultati.
+**Scostamenti dalla premessa:** nessuno nella corsa. Lo script `riassunto.py`, aggiunto dopo il congelamento, legge
+soltanto il file dei risultati. La verifica a campione e il ricalcolo indipendente, fatti dopo, hanno tre
+scostamenti, elencati in fondo alla premessa.
 
 ## Ipotesi
 
@@ -60,11 +63,21 @@ comprende lo 0.
 
 **Tasso di risoluzione dei compiti giudicati:** 30B 51,7%, 480B 69,7%, Opus 78,6%.
 
-## Prossimi passi della premessa
+## Passi successivi della premessa (aggiornato il 12/10/2026)
 
-- §7.4, verifica a campione: 120 incidenti, giudicati separatamente da Claude e da Codex (C2).
-- §7.5: ricalcolo indipendente di Codex (C1).
-- §7.6: prova dal vivo, che decide l'utente.
+- §7.4, verifica a campione: fatta.
+  - Etichette di Claude e di Codex, entrambi sistemi di IA.
+  - Nessun errore chiaro dei rilevatori nelle finestre; 58 casi su 120 confermati da tutti e due.
+  - Esito in `verifica_confronto.json` e `verifica_aggiudicazione.json`.
+- §7.5, ricalcolo indipendente di Codex (C1): fatto.
+  - Le decisioni di H1, H2, H5 e H6 coincidono.
+  - H3 e H4 su SWE-Hero non sono state ricalcolate.
+  - Differiscono i conteggi di H3 e H4 negli altri insiemi e sulle 221 esecuzioni R2E-Gym, e una misura di H6
+    (esecuzioni con un cerchio: 1/221 contro 5/221). Vedi lo scostamento 3 della premessa.
+  - Resta da spiegare.
+- §7.6, prova dal vivo: i confronti separati previsti qui non sono stati fatti.
+  - È stata fatta una prova più piccola, con una sua premessa (`PREMESSA_PROVA_GEMMA.md`).
+  - Lì le note sono spente o accese, tutte insieme.
 
 ## Analisi esplorativa dopo la corsa (non prevista dalla premessa)
 

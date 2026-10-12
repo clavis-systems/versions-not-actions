@@ -1,0 +1,83 @@
+{
+  "n_coppie_complete": 144,
+  "escluse": {},
+  "L1": {
+    "risolti_acceso": 124,
+    "risolti_spento": 117,
+    "vittorie_guardiano": 10,
+    "sconfitte_guardiano": 3,
+    "p_mcnemar_bilaterale": 0.09228515625,
+    "ic_bootstrap_differenza_quote": [
+      0.0,
+      0.09722222222222222
+    ],
+    "sostenuta": false,
+    "sensitivity_vittorie": 10,
+    "sensitivity_sconfitte": 3,
+    "sensitivity_p_mcnemar_bilaterale": 0.09228515625,
+    "sensitivity_sostenuta": false,
+    "compiti_sospetti": []
+  },
+  "L2": {
+    "media_differenza": -1.2152777777777777,
+    "ic_bootstrap": [
+      -1.750173611111111,
+      -0.7291666666666666
+    ],
+    "sostenuta": true
+  },
+  "L3": {
+    "media_differenza": -0.8541666666666666,
+    "ic_bootstrap": [
+      -1.3057291666666666,
+      -0.4583333333333333
+    ],
+    "sostenuta": true
+  },
+  "descrittive": {
+    "acceso": {
+      "esiti_str_replace": {
+        "edited": 180,
+        "missing": 128,
+        "multiple": 29,
+        "noop": 9,
+        "other_error": 4
+      },
+      "note_host": {
+        "already_made_edit": 36,
+        "closest": 46,
+        "multiple": 29,
+        "noop_applied": 5,
+        "noop_identical": 4,
+        "removed_by_edit": 46,
+        "repeated_call": 77,
+        "revisit": 4
+      },
+      "chiamate": 1441,
+      "finish": 129,
+      "dropped_calls": 0,
+      "tempo_secondi": 4026.8,
+      "token": 5936286
+    },
+    "spento": {
+      "esiti_str_replace": {
+        "edited": 164,
+        "missing": 245,
+        "multiple": 27,
+        "noop": 7,
+        "other_error": 8
+      },
+      "note_host": {},
+      "chiamate": 1584,
+      "finish": 121,
+      "dropped_calls": 0,
+      "tempo_secondi": 4450.2,
+      "token": 6728285
+    }
+  },
+  "metadati_ricalcolo": {
+    "file_corsa": 288,
+    "sorgente": "log grezzi *_on/off.json",
+    "nessun_codice_modello_eseguito": true
+  }
+}

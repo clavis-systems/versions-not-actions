@@ -1,0 +1,1187 @@
+{
+ "summary": {
+  "noop_must_be_different": 20,
+  "multiple_message": 20,
+  "never_seen": {
+   "cases": 20,
+   "seen_in_full_anywhere": 1,
+   "all_lines_shown_before": 7,
+   "some_line_never_shown": 12
+  },
+  "failure_lines_found": 66,
+  "known_bad_kind": {
+   "repo_tests": 18,
+   "agent_script": 17,
+   "other": 2,
+   "inline": 3
+  },
+  "replaced_bad_kind": {
+   "agent_script": 6,
+   "repo_tests": 12,
+   "other": 4,
+   "inline": 4
+  },
+  "project_changed": 17
+ },
+ "items": [
+  {
+   "n": 1,
+   "category": "noop",
+   "must_be_different": true
+  },
+  {
+   "n": 2,
+   "category": "noop",
+   "must_be_different": true
+  },
+  {
+   "n": 3,
+   "category": "noop",
+   "must_be_different": true
+  },
+  {
+   "n": 4,
+   "category": "noop",
+   "must_be_different": true
+  },
+  {
+   "n": 5,
+   "category": "noop",
+   "must_be_different": true
+  },
+  {
+   "n": 6,
+   "category": "noop",
+   "must_be_different": true
+  },
+  {
+   "n": 7,
+   "category": "noop",
+   "must_be_different": true
+  },
+  {
+   "n": 8,
+   "category": "noop",
+   "must_be_different": true
+  },
+  {
+   "n": 9,
+   "category": "noop",
+   "must_be_different": true
+  },
+  {
+   "n": 10,
+   "category": "noop",
+   "must_be_different": true
+  },
+  {
+   "n": 11,
+   "category": "noop",
+   "must_be_different": true
+  },
+  {
+   "n": 12,
+   "category": "noop",
+   "must_be_different": true
+  },
+  {
+   "n": 13,
+   "category": "noop",
+   "must_be_different": true
+  },
+  {
+   "n": 14,
+   "category": "noop",
+   "must_be_different": true
+  },
+  {
+   "n": 15,
+   "category": "noop",
+   "must_be_different": true
+  },
+  {
+   "n": 16,
+   "category": "noop",
+   "must_be_different": true
+  },
+  {
+   "n": 17,
+   "category": "noop",
+   "must_be_different": true
+  },
+  {
+   "n": 18,
+   "category": "noop",
+   "must_be_different": true
+  },
+  {
+   "n": 19,
+   "category": "noop",
+   "must_be_different": true
+  },
+  {
+   "n": 20,
+   "category": "noop",
+   "must_be_different": true
+  },
+  {
+   "n": 21,
+   "category": "stale",
+   "did_not_appear_verbatim": true
+  },
+  {
+   "n": 22,
+   "category": "stale",
+   "did_not_appear_verbatim": true
+  },
+  {
+   "n": 23,
+   "category": "stale",
+   "did_not_appear_verbatim": true
+  },
+  {
+   "n": 24,
+   "category": "stale",
+   "did_not_appear_verbatim": true
+  },
+  {
+   "n": 25,
+   "category": "stale",
+   "did_not_appear_verbatim": true
+  },
+  {
+   "n": 26,
+   "category": "stale",
+   "did_not_appear_verbatim": true
+  },
+  {
+   "n": 27,
+   "category": "stale",
+   "did_not_appear_verbatim": true
+  },
+  {
+   "n": 28,
+   "category": "stale",
+   "did_not_appear_verbatim": true
+  },
+  {
+   "n": 29,
+   "category": "stale",
+   "did_not_appear_verbatim": true
+  },
+  {
+   "n": 30,
+   "category": "stale",
+   "did_not_appear_verbatim": true
+  },
+  {
+   "n": 31,
+   "category": "stale",
+   "did_not_appear_verbatim": true
+  },
+  {
+   "n": 32,
+   "category": "stale",
+   "did_not_appear_verbatim": true
+  },
+  {
+   "n": 33,
+   "category": "stale",
+   "did_not_appear_verbatim": true
+  },
+  {
+   "n": 34,
+   "category": "stale",
+   "did_not_appear_verbatim": true
+  },
+  {
+   "n": 35,
+   "category": "stale",
+   "did_not_appear_verbatim": true
+  },
+  {
+   "n": 36,
+   "category": "stale",
+   "did_not_appear_verbatim": true
+  },
+  {
+   "n": 37,
+   "category": "stale",
+   "did_not_appear_verbatim": true
+  },
+  {
+   "n": 38,
+   "category": "stale",
+   "did_not_appear_verbatim": true
+  },
+  {
+   "n": 39,
+   "category": "stale",
+   "did_not_appear_verbatim": true
+  },
+  {
+   "n": 40,
+   "category": "stale",
+   "did_not_appear_verbatim": true
+  },
+  {
+   "n": 41,
+   "category": "never_seen",
+   "in_tool_output": false,
+   "in_written": false,
+   "squashed_in_tool_output_or_written": false,
+   "same_as_earlier_failed_old_str": false,
+   "lines": 43,
+   "lines_never_shown_before": 0,
+   "examples_never_shown": []
+  },
+  {
+   "n": 42,
+   "category": "never_seen",
+   "in_tool_output": true,
+   "in_written": true,
+   "squashed_in_tool_output_or_written": true,
+   "same_as_earlier_failed_old_str": false,
+   "lines": 8,
+   "lines_never_shown_before": 0,
+   "examples_never_shown": []
+  },
+  {
+   "n": 43,
+   "category": "never_seen",
+   "in_tool_output": false,
+   "in_written": false,
+   "squashed_in_tool_output_or_written": false,
+   "same_as_earlier_failed_old_str": false,
+   "lines": 64,
+   "lines_never_shown_before": 0,
+   "examples_never_shown": []
+  },
+  {
+   "n": 44,
+   "category": "never_seen",
+   "in_tool_output": false,
+   "in_written": false,
+   "squashed_in_tool_output_or_written": false,
+   "same_as_earlier_failed_old_str": false,
+   "lines": 27,
+   "lines_never_shown_before": 14,
+   "examples_never_shown": [
+    "base_url=None,",
+    "capitalize_float_margin=False,",
+    "css_text=None,"
+   ]
+  },
+  {
+   "n": 45,
+   "category": "never_seen",
+   "in_tool_output": false,
+   "in_written": false,
+   "squashed_in_tool_output_or_written": false,
+   "same_as_earlier_failed_old_str": false,
+   "lines": 41,
+   "lines_never_shown_before": 11,
+   "examples_never_shown": [
+    "\"col_names\": None,",
+    "\"header\": \"infer\",",
+    "\"index_col\": None,"
+   ]
+  },
+  {
+   "n": 46,
+   "category": "never_seen",
+   "in_tool_output": false,
+   "in_written": false,
+   "squashed_in_tool_output_or_written": false,
+   "same_as_earlier_failed_old_str": false,
+   "lines": 30,
+   "lines_never_shown_before": 1
+  },
+  {
+   "n": 47,
+   "category": "never_seen",
+   "in_tool_output": false,
+   "in_written": false,
+   "squashed_in_tool_output_or_written": false,
+   "same_as_earlier_failed_old_str": false,
+   "lines": 54,
+   "lines_never_shown_before": 4,
+   "examples_never_shown": [
+    "# - Need to handle case insensitivity properly",
+    "# - Need to handle directory names too",
+    "# - Need to handle path components"
+   ]
+  },
+  {
+   "n": 48,
+   "category": "never_seen",
+   "in_tool_output": false,
+   "in_written": false,
+   "squashed_in_tool_output_or_written": false,
+   "same_as_earlier_failed_old_str": false,
+   "lines": 8,
+   "lines_never_shown_before": 3,
+   "examples_never_shown": [
+    "def var(",
+    "query_compiler=self._query_compiler.expanding_var(",
+    "self.axis,"
+   ]
+  },
+  {
+   "n": 49,
+   "category": "never_seen",
+   "in_tool_output": false,
+   "in_written": false,
+   "squashed_in_tool_output_or_written": false,
+   "same_as_earlier_failed_old_str": false,
+   "lines": 11,
+   "lines_never_shown_before": 2,
+   "examples_never_shown": [
+    "is not supplied. The default is to use 'osfs', so that",
+    "the FS URL is treated as a system path if no protocol is given."
+   ]
+  },
+  {
+   "n": 50,
+   "category": "never_seen",
+   "in_tool_output": false,
+   "in_written": false,
+   "squashed_in_tool_output_or_written": false,
+   "same_as_earlier_failed_old_str": false,
+   "lines": 9,
+   "lines_never_shown_before": 0,
+   "examples_never_shown": []
+  },
+  {
+   "n": 51,
+   "category": "never_seen",
+   "in_tool_output": false,
+   "in_written": false,
+   "squashed_in_tool_output_or_written": false,
+   "same_as_earlier_failed_old_str": false,
+   "lines": 12,
+   "lines_never_shown_before": 2,
+   "examples_never_shown": [
+    "\"async\",",
+    "autorun)"
+   ]
+  },
+  {
+   "n": 52,
+   "category": "never_seen",
+   "in_tool_output": false,
+   "in_written": false,
+   "squashed_in_tool_output_or_written": false,
+   "same_as_earlier_failed_old_str": false,
+   "lines": 2,
+   "lines_never_shown_before": 0,
+   "examples_never_shown": []
+  },
+  {
+   "n": 53,
+   "category": "never_seen",
+   "in_tool_output": false,
+   "in_written": false,
+   "squashed_in_tool_output_or_written": false,
+   "same_as_earlier_failed_old_str": false,
+   "lines": 3,
+   "lines_never_shown_before": 3,
+   "examples_never_shown": [
+    "# Check for filesystem issues in old behavior",
+    "old_has_backslash = '\\\\' in old_filename_base",
+    "old_has_slash = '/' in old_filename_base"
+   ]
+  },
+  {
+   "n": 54,
+   "category": "never_seen",
+   "in_tool_output": false,
+   "in_written": false,
+   "squashed_in_tool_output_or_written": false,
+   "same_as_earlier_failed_old_str": false,
+   "lines": 1,
+   "lines_never_shown_before": 1,
+   "examples_never_shown": [
+    "from pandas.core.dtypes.common import is_integer"
+   ]
+  },
+  {
+   "n": 55,
+   "category": "never_seen",
+   "in_tool_output": false,
+   "in_written": false,
+   "squashed_in_tool_output_or_written": false,
+   "same_as_earlier_failed_old_str": false,
+   "lines": 10,
+   "lines_never_shown_before": 0,
+   "examples_never_shown": []
+  },
+  {
+   "n": 56,
+   "category": "never_seen",
+   "in_tool_output": false,
+   "in_written": false,
+   "squashed_in_tool_output_or_written": false,
+   "same_as_earlier_failed_old_str": false,
+   "lines": 23,
+   "lines_never_shown_before": 1,
+   "examples_never_shown": [
+    "iso.attrs[\"units\"] = \"%    return iso"
+   ]
+  },
+  {
+   "n": 57,
+   "category": "never_seen",
+   "in_tool_output": false,
+   "in_written": false,
+   "squashed_in_tool_output_or_written": false,
+   "same_as_earlier_failed_old_str": false,
+   "lines": 1,
+   "lines_never_shown_before": 0,
+   "examples_never_shown": []
+  },
+  {
+   "n": 58,
+   "category": "never_seen",
+   "in_tool_output": false,
+   "in_written": false,
+   "squashed_in_tool_output_or_written": false,
+   "same_as_earlier_failed_old_str": false,
+   "lines": 23,
+   "lines_never_shown_before": 1,
+   "examples_never_shown": [
+    "print(f\"\\n--- Turn {i} ---"
+   ]
+  },
+  {
+   "n": 59,
+   "category": "never_seen",
+   "in_tool_output": false,
+   "in_written": false,
+   "squashed_in_tool_output_or_written": false,
+   "same_as_earlier_failed_old_str": false,
+   "lines": 31,
+   "lines_never_shown_before": 1,
+   "examples_never_shown": [
+    "response_explicit_sync = client.get(\"https.com/api/data\")"
+   ]
+  },
+  {
+   "n": 60,
+   "category": "never_seen",
+   "in_tool_output": false,
+   "in_written": false,
+   "squashed_in_tool_output_or_written": false,
+   "same_as_earlier_failed_old_str": false,
+   "lines": 21,
+   "lines_never_shown_before": 0,
+   "examples_never_shown": []
+  },
+  {
+   "n": 61,
+   "category": "multiple",
+   "multiple_occurrences": true
+  },
+  {
+   "n": 62,
+   "category": "multiple",
+   "multiple_occurrences": true
+  },
+  {
+   "n": 63,
+   "category": "multiple",
+   "multiple_occurrences": true
+  },
+  {
+   "n": 64,
+   "category": "multiple",
+   "multiple_occurrences": true
+  },
+  {
+   "n": 65,
+   "category": "multiple",
+   "multiple_occurrences": true
+  },
+  {
+   "n": 66,
+   "category": "multiple",
+   "multiple_occurrences": true
+  },
+  {
+   "n": 67,
+   "category": "multiple",
+   "multiple_occurrences": true
+  },
+  {
+   "n": 68,
+   "category": "multiple",
+   "multiple_occurrences": true
+  },
+  {
+   "n": 69,
+   "category": "multiple",
+   "multiple_occurrences": true
+  },
+  {
+   "n": 70,
+   "category": "multiple",
+   "multiple_occurrences": true
+  },
+  {
+   "n": 71,
+   "category": "multiple",
+   "multiple_occurrences": true
+  },
+  {
+   "n": 72,
+   "category": "multiple",
+   "multiple_occurrences": true
+  },
+  {
+   "n": 73,
+   "category": "multiple",
+   "multiple_occurrences": true
+  },
+  {
+   "n": 74,
+   "category": "multiple",
+   "multiple_occurrences": true
+  },
+  {
+   "n": 75,
+   "category": "multiple",
+   "multiple_occurrences": true
+  },
+  {
+   "n": 76,
+   "category": "multiple",
+   "multiple_occurrences": true
+  },
+  {
+   "n": 77,
+   "category": "multiple",
+   "multiple_occurrences": true
+  },
+  {
+   "n": 78,
+   "category": "multiple",
+   "multiple_occurrences": true
+  },
+  {
+   "n": 79,
+   "category": "multiple",
+   "multiple_occurrences": true
+  },
+  {
+   "n": 80,
+   "category": "multiple",
+   "multiple_occurrences": true
+  },
+  {
+   "n": 81,
+   "category": "known_bad_retry",
+   "known_bad": {
+    "message": 58,
+    "command": "cd /workspace/pints-team__pints__0.5 && python -m pytest pints/tests/test_logger.py -v",
+    "kind": "repo_tests",
+    "line_in_result": true
+   },
+   "replaced_bad": null,
+   "project_changed": false
+  },
+  {
+   "n": 82,
+   "category": "known_bad_retry",
+   "known_bad": {
+    "message": 80,
+    "command": "cd /workspace/pandas-dev__pandas__2.1 && python test_factorize_readonly_fresh.py",
+    "kind": "agent_script",
+    "line_in_result": true
+   },
+   "replaced_bad": {
+    "message": 132,
+    "command": "cd /workspace/pandas-dev__pandas__2.1 && python test_factorize_readonly_fresh.py",
+    "kind": "agent_script",
+    "line_in_result": true
+   },
+   "project_changed": true
+  },
+  {
+   "n": 83,
+   "category": "known_bad_retry",
+   "known_bad": {
+    "message": 80,
+    "command": "cd /workspace/iterative__dvc__0.92 && python -m pytest tests/unit/remote/test_local.py::test_is_protected -v -s -k \"symlink\"",
+    "kind": "repo_tests",
+    "line_in_result": true
+   },
+   "replaced_bad": null,
+   "project_changed": false
+  },
+  {
+   "n": 84,
+   "category": "known_bad_retry",
+   "known_bad": {
+    "message": 154,
+    "command": "cd /workspace/iterative__dvc__0.92 && python -m pytest tests/func/test_unprotect.py -v",
+    "kind": "repo_tests",
+    "line_in_result": true
+   },
+   "replaced_bad": null,
+   "project_changed": false
+  },
+  {
+   "n": 85,
+   "category": "known_bad_retry",
+   "known_bad": {
+    "message": 124,
+    "command": "cd /workspace/omni-us__jsonargparse__3.17 && python -m pytest jsonargparse_tests/core_tests.py -x",
+    "kind": "repo_tests",
+    "line_in_result": true
+   },
+   "replaced_bad": {
+    "message": 128,
+    "command": "cd /workspace/omni-us__jsonargparse__3.17 && python -m pytest jsonargparse_tests/core_tests.py::ConfigFilesTests::test_get_default_with_default_config_file -v",
+    "kind": "repo_tests",
+    "line_in_result": true
+   },
+   "project_changed": false
+  },
+  {
+   "n": 86,
+   "category": "known_bad_retry",
+   "known_bad": {
+    "message": 84,
+    "command": "cd /workspace/pandas-dev__pandas__2.0 && python -m pytest pandas/tests/groupby/test_groupby_dropna.py -v",
+    "kind": "repo_tests",
+    "line_in_result": true
+   },
+   "replaced_bad": null,
+   "project_changed": false
+  },
+  {
+   "n": 87,
+   "category": "known_bad_retry",
+   "known_bad": {
+    "message": 84,
+    "command": "cd /workspace/pandas-dev__pandas__2.0 && python -m pytest pandas/tests/groupby/test_categorical.py -x",
+    "kind": "repo_tests",
+    "line_in_result": true
+   },
+   "replaced_bad": null,
+   "project_changed": true
+  },
+  {
+   "n": 88,
+   "category": "known_bad_retry",
+   "known_bad": {
+    "message": 140,
+    "command": "cd /workspace/bokeh__bokeh__3.3 && python -m pytest tests/unit/bokeh/models/test_sources.py -v",
+    "kind": "repo_tests",
+    "line_in_result": true
+   },
+   "replaced_bad": null,
+   "project_changed": false
+  },
+  {
+   "n": 89,
+   "category": "known_bad_retry",
+   "known_bad": {
+    "message": 150,
+    "command": "cd /workspace/deschler__django-modeltranslation__0.18 && python -m pytest debug_detailed.py::DetailedDebugTest::test_debug_step_by_step -v -s",
+    "kind": "agent_script",
+    "line_in_result": true
+   },
+   "replaced_bad": null,
+   "project_changed": false
+  },
+  {
+   "n": 90,
+   "category": "known_bad_retry",
+   "known_bad": {
+    "message": 26,
+    "command": "cd /workspace/facebookresearch__hydra__1.1/examples/advanced/config_search_path && python my_app.py --info defaults",
+    "kind": "other",
+    "line_in_result": true
+   },
+   "replaced_bad": {
+    "message": 122,
+    "command": "cd /workspace/facebookresearch__hydra__1.1/examples/advanced/config_search_path && python my_app.py dataset=imagenet --info defaults",
+    "kind": "other",
+    "line_in_result": true
+   },
+   "project_changed": true
+  },
+  {
+   "n": 91,
+   "category": "known_bad_retry",
+   "known_bad": {
+    "message": 154,
+    "command": "cd /workspace/pydantic__pydantic__2.02 && python exact_issue_test.py",
+    "kind": "agent_script",
+    "line_in_result": true
+   },
+   "replaced_bad": {
+    "message": 158,
+    "command": "cd /workspace/pydantic__pydantic__2.02 && python exact_issue_test.py",
+    "kind": "agent_script",
+    "line_in_result": true
+   },
+   "project_changed": false
+  },
+  {
+   "n": 92,
+   "category": "known_bad_retry",
+   "known_bad": {
+    "message": 166,
+    "command": "cd /workspace/python__mypy__1.4 && python -c \"from mypy.type_visitor import ALL_STRATEGY; print('Import successful')\"",
+    "kind": "inline",
+    "line_in_result": true
+   },
+   "replaced_bad": {
+    "message": 172,
+    "command": "cd /workspace/python__mypy__1.4 && python -c \"from mypy.type_visitor import ALL_STRATEGY; print('Import successful')\"",
+    "kind": "inline",
+    "line_in_result": true
+   },
+   "project_changed": false
+  },
+  {
+   "n": 93,
+   "category": "known_bad_retry",
+   "known_bad": {
+    "message": 98,
+    "kind": "repo_tests",
+    "line_in_result": true
+   },
+   "replaced_bad": null,
+   "project_changed": false
+  },
+  {
+   "n": 94,
+   "category": "known_bad_retry",
+   "known_bad": {
+    "message": 84,
+    "command": "cd /workspace/numpy__numpy__1.0 && python -c \"\nimport numpy as np\nfrom numpy.core.tests import test_defchararray\nfrom numpy.testing import Tester\n# Try to run t",
+    "kind": "inline",
+    "line_in_result": true
+   },
+   "replaced_bad": null,
+   "project_changed": false
+  },
+  {
+   "n": 95,
+   "category": "known_bad_retry",
+   "known_bad": {
+    "message": 132,
+    "command": "cd /workspace/getmoto__moto__3.1 && python original_example.py",
+    "kind": "agent_script",
+    "line_in_result": true
+   },
+   "replaced_bad": null,
+   "project_changed": false
+  },
+  {
+   "n": 96,
+   "category": "known_bad_retry",
+   "known_bad": {
+    "message": 112,
+    "command": "cd /workspace/pymor__pymor__2019.2 && python -m pytest src/pymortests/algorithms/stuff.py -v",
+    "kind": "repo_tests",
+    "line_in_result": true
+   },
+   "replaced_bad": {
+    "message": 122,
+    "command": "cd /workspace/pymor__pymor__2019.2 && python -m pytest src/pymortests/algorithms/stuff.py::test_newton_with_line_search src/pymortests/algorithms/stuff.py::test",
+    "kind": "repo_tests",
+    "line_in_result": true
+   },
+   "project_changed": false
+  },
+  {
+   "n": 97,
+   "category": "known_bad_retry",
+   "known_bad": {
+    "message": 102,
+    "command": "cd /workspace/narwhals-dev__narwhals__0.8 && python -m pytest tests/test_series.py::test_filter -v",
+    "kind": "repo_tests",
+    "line_in_result": true
+   },
+   "replaced_bad": null,
+   "project_changed": true
+  },
+  {
+   "n": 98,
+   "category": "known_bad_retry",
+   "known_bad": {
+    "message": 78,
+    "command": "cd /workspace/matthewwithanm__python-markdownify__1.0 && python -m pytest tests/test_conversions.py::test_dl -v",
+    "kind": "repo_tests",
+    "line_in_result": true
+   },
+   "replaced_bad": null,
+   "project_changed": true
+  },
+  {
+   "n": 99,
+   "category": "known_bad_retry",
+   "known_bad": {
+    "message": 68,
+    "kind": "agent_script",
+    "line_in_result": true
+   },
+   "replaced_bad": null,
+   "project_changed": true
+  },
+  {
+   "n": 100,
+   "category": "known_bad_retry",
+   "known_bad": {
+    "message": 82,
+    "command": "cd /workspace/PennyLaneAI__pennylane__0.27 && python -m pytest tests/transforms/test_insert_ops.py -v",
+    "kind": "repo_tests",
+    "line_in_result": true
+   },
+   "replaced_bad": null,
+   "project_changed": false
+  },
+  {
+   "n": 101,
+   "category": "circle",
+   "known_bad": {
+    "message": 54,
+    "command": "python -c \"\nimport django.utils.log\nimport inspect\n# Look for log_response method\nfor name, method in inspect.getmembers(django.utils.log):\n    if 'log_response",
+    "kind": "inline",
+    "line_in_result": true
+   },
+   "replaced_bad": {
+    "message": 86,
+    "command": "cd /workspace/rollbar__pyrollbar__0.14 && python -m pytest rollbar/test/test_loghandler.py -v",
+    "kind": "repo_tests",
+    "line_in_result": true
+   },
+   "project_changed": true
+  },
+  {
+   "n": 102,
+   "category": "circle",
+   "known_bad": {
+    "message": 84,
+    "command": "cd /workspace/Ouranosinc__xclim__0.13 && python debug_gsl.py",
+    "kind": "agent_script",
+    "line_in_result": true
+   },
+   "replaced_bad": {
+    "message": 102,
+    "command": "cd /workspace/Ouranosinc__xclim__0.13 && python -m pytest tests/test_indices.py::TestGrowingSeasonLength::test_simple -v",
+    "kind": "repo_tests",
+    "line_in_result": true
+   },
+   "project_changed": false
+  },
+  {
+   "n": 103,
+   "category": "circle",
+   "known_bad": {
+    "message": 48,
+    "command": "cd /workspace/pepkit__eido__0.2 && python -m eido convert -f csv tests/data/peps/multiline_output/config.yaml",
+    "kind": "other",
+    "line_in_result": true
+   },
+   "replaced_bad": {
+    "message": 56,
+    "command": "cd /workspace/pepkit__eido__0.2 && python -m eido convert -f csv tests/data/peps/multiline_output/config.yaml",
+    "kind": "other",
+    "line_in_result": true
+   },
+   "project_changed": true
+  },
+  {
+   "n": 104,
+   "category": "circle",
+   "known_bad": {
+    "message": 54,
+    "command": "cd /workspace/asottile__pyupgrade__1.25 && python debug_escapes.py",
+    "kind": "agent_script",
+    "line_in_result": true
+   },
+   "replaced_bad": {
+    "message": 92,
+    "command": "cd /workspace/asottile__pyupgrade__1.25 && python debug_failing_test.py",
+    "kind": "agent_script",
+    "line_in_result": true
+   },
+   "project_changed": true
+  },
+  {
+   "n": 105,
+   "category": "circle",
+   "known_bad": {
+    "message": 104,
+    "command": "cd /workspace/numpy__numpy__1.0 && python debug_fix.py",
+    "kind": "agent_script",
+    "line_in_result": true
+   },
+   "replaced_bad": {
+    "message": 116,
+    "command": "cd /workspace/numpy__numpy__1.0 && python -c \"\nimport numpy as np\narray_scalar = np.array((1.0, 2.1234567890123457, 3.0), dtype='f8, f8, f8')\nresult = np.array2",
+    "kind": "inline",
+    "line_in_result": true
+   },
+   "project_changed": false
+  },
+  {
+   "n": 106,
+   "category": "circle",
+   "known_bad": {
+    "message": 84,
+    "command": "cd /workspace/maxfischer2781__asyncstdlib__1.1 && python correct_debug.py",
+    "kind": "agent_script",
+    "line_in_result": true
+   },
+   "replaced_bad": {
+    "message": 96,
+    "command": "cd /workspace/maxfischer2781__asyncstdlib__1.1 && python test_like_existing.py",
+    "kind": "agent_script",
+    "line_in_result": true
+   },
+   "project_changed": true
+  },
+  {
+   "n": 107,
+   "category": "circle",
+   "known_bad": {
+    "message": 94,
+    "command": "cd /workspace/dchevell__flask-executor__0.9 && python exact_repro.py",
+    "kind": "agent_script",
+    "line_in_result": true
+   },
+   "replaced_bad": {
+    "message": 110,
+    "command": "cd /workspace/dchevell__flask-executor__0.9 && python -m pytest tests/ -x --tb=short",
+    "kind": "repo_tests",
+    "line_in_result": true
+   },
+   "project_changed": false
+  },
+  {
+   "n": 108,
+   "category": "circle",
+   "known_bad": {
+    "message": 116,
+    "command": "cd /workspace/asottile__pyupgrade__1.25 && python -m pytest tests/binary_literals_test.py",
+    "kind": "repo_tests",
+    "line_in_result": true
+   },
+   "replaced_bad": {
+    "message": 122,
+    "command": "cd /workspace/asottile__pyupgrade__1.25 && python -m pytest tests/ -k \"not (binary_literals and Ufoo)\" --tb=no -q",
+    "kind": "repo_tests",
+    "line_in_result": true
+   },
+   "project_changed": true
+  },
+  {
+   "n": 109,
+   "category": "circle",
+   "known_bad": {
+    "message": 276,
+    "kind": "agent_script",
+    "line_in_result": true
+   },
+   "replaced_bad": {
+    "message": 286,
+    "kind": "repo_tests",
+    "line_in_result": true
+   },
+   "project_changed": false
+  },
+  {
+   "n": 110,
+   "category": "circle",
+   "known_bad": {
+    "message": 138,
+    "command": "cd /workspace/python__mypy__1.0 && python -m pytest mypy/test/testsubtypes.py -v",
+    "kind": "repo_tests",
+    "line_in_result": true
+   },
+   "replaced_bad": {
+    "message": 144,
+    "command": "cd /workspace/python__mypy__1.0 && python -m mypy debug_test.py",
+    "kind": "other",
+    "line_in_result": true
+   },
+   "project_changed": false
+  },
+  {
+   "n": 111,
+   "category": "circle",
+   "known_bad": {
+    "message": 80,
+    "command": "cd /workspace/pandas-dev__pandas__2.1 && python reproduce_issue.py",
+    "kind": "agent_script",
+    "line_in_result": true
+   },
+   "replaced_bad": {
+    "message": 122,
+    "command": "cd /workspace/pandas-dev__pandas__2.1 && python -c \"\nimport pandas as pd\n\nindex = pd.DatetimeIndex(['20181101 1100', '20181101 1200'], name='datetime')\ndf = pd.",
+    "kind": "inline",
+    "line_in_result": true
+   },
+   "project_changed": false
+  },
+  {
+   "n": 112,
+   "category": "circle",
+   "known_bad": {
+    "message": 122,
+    "command": "cd /workspace/pandas-dev__pandas__3.0 && python test_reproduction.py",
+    "kind": "agent_script",
+    "line_in_result": true
+   },
+   "replaced_bad": {
+    "message": 154,
+    "command": "cd /testbed && python -m pytest pandas/tests/groupby/transform/test_numba.py -v",
+    "kind": "repo_tests",
+    "line_in_result": true
+   },
+   "project_changed": true
+  },
+  {
+   "n": 113,
+   "category": "circle",
+   "known_bad": {
+    "message": 66,
+    "command": "cd /workspace/lundberg__respx__0.4 && python test_activate_functionality.py",
+    "kind": "agent_script",
+    "line_in_result": true
+   },
+   "replaced_bad": {
+    "message": 96,
+    "command": "cd /workspace/lundberg__respx__0.4 && git show HEAD:respx/__init__.py > temp_orig_init.py && python temp_orig_init.py",
+    "kind": "other",
+    "line_in_result": true
+   },
+   "project_changed": true
+  },
+  {
+   "n": 114,
+   "category": "circle",
+   "known_bad": {
+    "message": 34,
+    "command": "cd /workspace/jackdewinter__pymarkdown__0.9 && python -m pytest test/test_markdown_extra.py::test_extra_044fc -v -s",
+    "kind": "repo_tests",
+    "line_in_result": true
+   },
+   "replaced_bad": {
+    "message": 66,
+    "command": "cd /workspace/jackdewinter__pymarkdown__0.9 && python debug_issue.py",
+    "kind": "agent_script",
+    "line_in_result": true
+   },
+   "project_changed": true
+  },
+  {
+   "n": 115,
+   "category": "circle",
+   "known_bad": {
+    "message": 146,
+    "command": "cd /workspace/iterative__dvc__0.87 && python -m pytest tests/func/test_add.py::test_should_protect_on_repeated_add -v -s",
+    "kind": "repo_tests",
+    "line_in_result": true
+   },
+   "replaced_bad": {
+    "message": 154,
+    "command": "cd /workspace/iterative__dvc__0.87 && python -m pytest tests/func/test_add.py::test_should_protect_on_repeated_add -v",
+    "kind": "repo_tests",
+    "line_in_result": true
+   },
+   "project_changed": false
+  },
+  {
+   "n": 116,
+   "category": "circle",
+   "known_bad": {
+    "message": 72,
+    "command": "cd /workspace/google__mobly__1.11 && python reproduce_issue.py",
+    "kind": "agent_script",
+    "line_in_result": true
+   },
+   "replaced_bad": {
+    "message": 116,
+    "command": "cd /workspace/google__mobly__1.11 && python -m pytest tests/mobly/controllers/android_device_lib/snippet_client_v2_test.py::SnippetClientV2Test::test_the_whole_",
+    "kind": "repo_tests",
+    "line_in_result": true
+   },
+   "project_changed": true
+  },
+  {
+   "n": 117,
+   "category": "circle",
+   "known_bad": {
+    "message": 56,
+    "command": "cd /workspace/mie-lab__trackintel__1.2 && python -m pytest tests/preprocessing/test_positionfixes.py::TestGenerate_triplegs::test_str_userid -v",
+    "kind": "repo_tests",
+    "line_in_result": true
+   },
+   "replaced_bad": {
+    "message": 72,
+    "command": "cd /workspace/mie-lab__trackintel__1.2 && python -c \"\nimport pandas as pd\nimport geopandas as gpd\nfrom trackintel.io.dataset_reader import read_geolife\n\n# Load ",
+    "kind": "inline",
+    "line_in_result": true
+   },
+   "project_changed": true
+  },
+  {
+   "n": 118,
+   "category": "circle",
+   "known_bad": {
+    "message": 46,
+    "command": "cd /workspace/python-lsp__python-lsp-server__1.8 && python test_initialization_options.py",
+    "kind": "agent_script",
+    "line_in_result": true
+   },
+   "replaced_bad": {
+    "message": 74,
+    "command": "cd /workspace/python-lsp__python-lsp-server__1.8 && python -m pytest test/test_workspace.py -v",
+    "kind": "repo_tests",
+    "line_in_result": true
+   },
+   "project_changed": true
+  },
+  {
+   "n": 119,
+   "category": "circle",
+   "known_bad": {
+    "message": 128,
+    "command": "cd /workspace/pandas-dev__pandas__2.0 && python original_issue.py",
+    "kind": "agent_script",
+    "line_in_result": true
+   },
+   "replaced_bad": {
+    "message": 134,
+    "command": "cd /workspace/pandas-dev__pandas__2.0 && python original_issue.py",
+    "kind": "agent_script",
+    "line_in_result": true
+   },
+   "project_changed": false
+  },
+  {
+   "n": 120,
+   "category": "circle",
+   "known_bad": {
+    "message": 20,
+    "command": "cd /workspace/audeering__auglib__1.0 && python -m pytest tests/test_transform_pink_noise.py::test_pink_noise -v --no-cov",
+    "kind": "repo_tests",
+    "line_in_result": true
+   },
+   "replaced_bad": {
+    "message": 58,
+    "command": "cd /workspace/audeering__auglib__1.0 && python -m pytest tests/test_transform_pink_noise.py -v --no-cov",
+    "kind": "repo_tests",
+    "line_in_result": true
+   },
+   "project_changed": false
+  }
+ ]
+}

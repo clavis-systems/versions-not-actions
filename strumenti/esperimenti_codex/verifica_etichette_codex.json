@@ -1,0 +1,482 @@
+{
+  "1": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "La risposta visibile dice che old_str e new_str devono differire: prova diretta del noop."
+  },
+  "2": {
+    "giudizio": "incerto",
+    "motivo": "La risposta è tagliata prima della causa precisa; non conferma il noop."
+  },
+  "3": {
+    "giudizio": "incerto",
+    "motivo": "La risposta è tagliata prima della causa precisa; non conferma il noop."
+  },
+  "4": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "La risposta visibile dice che old_str e new_str devono differire: prova diretta del noop."
+  },
+  "5": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "La risposta visibile dice che old_str e new_str devono differire: prova diretta del noop."
+  },
+  "6": {
+    "giudizio": "incerto",
+    "motivo": "La risposta è tagliata prima della causa precisa; non conferma il noop."
+  },
+  "7": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "La risposta visibile dice che old_str e new_str devono differire: prova diretta del noop."
+  },
+  "8": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "La risposta visibile dice che old_str e new_str devono differire: prova diretta del noop."
+  },
+  "9": {
+    "giudizio": "incerto",
+    "motivo": "La risposta è tagliata prima della causa precisa; non conferma il noop."
+  },
+  "10": {
+    "giudizio": "incerto",
+    "motivo": "La risposta è tagliata prima della causa precisa; non conferma il noop."
+  },
+  "11": {
+    "giudizio": "incerto",
+    "motivo": "La risposta è tagliata prima della causa precisa; non conferma il noop."
+  },
+  "12": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "La risposta visibile dice che old_str e new_str devono differire: prova diretta del noop."
+  },
+  "13": {
+    "giudizio": "incerto",
+    "motivo": "La risposta è tagliata prima della causa precisa; non conferma il noop."
+  },
+  "14": {
+    "giudizio": "incerto",
+    "motivo": "La risposta è tagliata prima della causa precisa; non conferma il noop."
+  },
+  "15": {
+    "giudizio": "incerto",
+    "motivo": "La risposta è tagliata prima della causa precisa; non conferma il noop."
+  },
+  "16": {
+    "giudizio": "incerto",
+    "motivo": "La risposta è tagliata prima della causa precisa; non conferma il noop."
+  },
+  "17": {
+    "giudizio": "incerto",
+    "motivo": "La risposta è tagliata prima della causa precisa; non conferma il noop."
+  },
+  "18": {
+    "giudizio": "incerto",
+    "motivo": "La risposta è tagliata prima della causa precisa; non conferma il noop."
+  },
+  "19": {
+    "giudizio": "incerto",
+    "motivo": "La risposta è tagliata prima della causa precisa; non conferma il noop."
+  },
+  "20": {
+    "giudizio": "incerto",
+    "motivo": "La risposta è tagliata prima della causa precisa; non conferma il noop."
+  },
+  "21": {
+    "giudizio": "incerto",
+    "motivo": "La finestra non prova che il testo bersaglio fosse stato visto e poi cambiato."
+  },
+  "22": {
+    "giudizio": "incerto",
+    "motivo": "La finestra non prova che il testo bersaglio fosse stato visto e poi cambiato."
+  },
+  "23": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "Una modifica riuscita cambia il file e il successivo old_str ripropone il testo precedente."
+  },
+  "24": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "Una modifica riuscita cambia il file e il successivo old_str ripropone il testo precedente."
+  },
+  "25": {
+    "giudizio": "incerto",
+    "motivo": "La finestra non prova che il testo bersaglio fosse stato visto e poi cambiato."
+  },
+  "26": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "Una modifica riuscita cambia il file e il successivo old_str ripropone il testo precedente."
+  },
+  "27": {
+    "giudizio": "incerto",
+    "motivo": "La finestra non prova che il testo bersaglio fosse stato visto e poi cambiato."
+  },
+  "28": {
+    "giudizio": "incerto",
+    "motivo": "La finestra non prova che il testo bersaglio fosse stato visto e poi cambiato."
+  },
+  "29": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "Una modifica riuscita cambia il file e il successivo old_str ripropone il testo precedente."
+  },
+  "30": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "Una modifica riuscita cambia il file e il successivo old_str ripropone il testo precedente."
+  },
+  "31": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "Una modifica riuscita cambia il file e il successivo old_str ripropone il testo precedente."
+  },
+  "32": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "Una modifica riuscita cambia il file e il successivo old_str ripropone il testo precedente."
+  },
+  "33": {
+    "giudizio": "incerto",
+    "motivo": "La finestra non prova che il testo bersaglio fosse stato visto e poi cambiato."
+  },
+  "34": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "Una modifica riuscita cambia il file e il successivo old_str ripropone il testo precedente."
+  },
+  "35": {
+    "giudizio": "incerto",
+    "motivo": "La finestra non prova che il testo bersaglio fosse stato visto e poi cambiato."
+  },
+  "36": {
+    "giudizio": "incerto",
+    "motivo": "La finestra non prova che il testo bersaglio fosse stato visto e poi cambiato."
+  },
+  "37": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "Una modifica riuscita cambia il file e il successivo old_str ripropone il testo precedente."
+  },
+  "38": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "Una modifica riuscita cambia il file e il successivo old_str ripropone il testo precedente."
+  },
+  "39": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "Una modifica riuscita cambia il file e il successivo old_str ripropone il testo precedente."
+  },
+  "40": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "Una modifica riuscita cambia il file e il successivo old_str ripropone il testo precedente."
+  },
+  "41": {
+    "giudizio": "incerto",
+    "motivo": "Il contesto parziale non stabilisce se l’intero old_str fosse già stato osservato."
+  },
+  "42": {
+    "giudizio": "incerto",
+    "motivo": "Il contesto parziale non stabilisce se l’intero old_str fosse già stato osservato."
+  },
+  "43": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "Nella finestra non compare una lettura precedente del testo bersaglio rifiutato."
+  },
+  "44": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "Nella finestra non compare una lettura precedente del testo bersaglio rifiutato."
+  },
+  "45": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "Nella finestra non compare una lettura precedente del testo bersaglio rifiutato."
+  },
+  "46": {
+    "giudizio": "incerto",
+    "motivo": "Il contesto parziale non stabilisce se l’intero old_str fosse già stato osservato."
+  },
+  "47": {
+    "giudizio": "incerto",
+    "motivo": "Il contesto parziale non stabilisce se l’intero old_str fosse già stato osservato."
+  },
+  "48": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "Nella finestra non compare una lettura precedente del testo bersaglio rifiutato."
+  },
+  "49": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "Nella finestra non compare una lettura precedente del testo bersaglio rifiutato."
+  },
+  "50": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "Nella finestra non compare una lettura precedente del testo bersaglio rifiutato."
+  },
+  "51": {
+    "giudizio": "incerto",
+    "motivo": "Il contesto parziale non stabilisce se l’intero old_str fosse già stato osservato."
+  },
+  "52": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "Nella finestra non compare una lettura precedente del testo bersaglio rifiutato."
+  },
+  "53": {
+    "giudizio": "incerto",
+    "motivo": "Il contesto parziale non stabilisce se l’intero old_str fosse già stato osservato."
+  },
+  "54": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "Nella finestra non compare una lettura precedente del testo bersaglio rifiutato."
+  },
+  "55": {
+    "giudizio": "sbagliato",
+    "motivo": "La lettura precedente mostra già le righe centrali riproposte nell’old_str, quindi non erano mai viste."
+  },
+  "56": {
+    "giudizio": "incerto",
+    "motivo": "Il contesto parziale non stabilisce se l’intero old_str fosse già stato osservato."
+  },
+  "57": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "Nella finestra non compare una lettura precedente del testo bersaglio rifiutato."
+  },
+  "58": {
+    "giudizio": "incerto",
+    "motivo": "Il contesto parziale non stabilisce se l’intero old_str fosse già stato osservato."
+  },
+  "59": {
+    "giudizio": "incerto",
+    "motivo": "Il contesto parziale non stabilisce se l’intero old_str fosse già stato osservato."
+  },
+  "60": {
+    "giudizio": "incerto",
+    "motivo": "Il contesto parziale non stabilisce se l’intero old_str fosse già stato osservato."
+  },
+  "61": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "L’errore del tool dichiara esplicitamente occorrenze multiple e ne indica le posizioni."
+  },
+  "62": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "L’errore del tool dichiara esplicitamente occorrenze multiple e ne indica le posizioni."
+  },
+  "63": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "L’errore del tool dichiara esplicitamente occorrenze multiple e ne indica le posizioni."
+  },
+  "64": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "L’errore del tool dichiara esplicitamente occorrenze multiple e ne indica le posizioni."
+  },
+  "65": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "L’errore del tool dichiara esplicitamente occorrenze multiple e ne indica le posizioni."
+  },
+  "66": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "L’errore del tool dichiara esplicitamente occorrenze multiple e ne indica le posizioni."
+  },
+  "67": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "L’errore del tool dichiara esplicitamente occorrenze multiple e ne indica le posizioni."
+  },
+  "68": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "L’errore del tool dichiara esplicitamente occorrenze multiple e ne indica le posizioni."
+  },
+  "69": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "L’errore del tool dichiara esplicitamente occorrenze multiple e ne indica le posizioni."
+  },
+  "70": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "L’errore del tool dichiara esplicitamente occorrenze multiple e ne indica le posizioni."
+  },
+  "71": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "L’errore del tool dichiara esplicitamente occorrenze multiple e ne indica le posizioni."
+  },
+  "72": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "L’errore del tool dichiara esplicitamente occorrenze multiple e ne indica le posizioni."
+  },
+  "73": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "L’errore del tool dichiara esplicitamente occorrenze multiple e ne indica le posizioni."
+  },
+  "74": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "L’errore del tool dichiara esplicitamente occorrenze multiple e ne indica le posizioni."
+  },
+  "75": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "L’errore del tool dichiara esplicitamente occorrenze multiple e ne indica le posizioni."
+  },
+  "76": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "L’errore del tool dichiara esplicitamente occorrenze multiple e ne indica le posizioni."
+  },
+  "77": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "L’errore del tool dichiara esplicitamente occorrenze multiple e ne indica le posizioni."
+  },
+  "78": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "L’errore del tool dichiara esplicitamente occorrenze multiple e ne indica le posizioni."
+  },
+  "79": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "L’errore del tool dichiara esplicitamente occorrenze multiple e ne indica le posizioni."
+  },
+  "80": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "L’errore del tool dichiara esplicitamente occorrenze multiple e ne indica le posizioni."
+  },
+  "81": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "La sequenza mostra un controllo fallito e il successivo riuso o ripristino della modifica dell’agente."
+  },
+  "82": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "La sequenza mostra un controllo fallito e il successivo riuso o ripristino della modifica dell’agente."
+  },
+  "83": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "La sequenza mostra un controllo fallito e il successivo riuso o ripristino della modifica dell’agente."
+  },
+  "84": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "La sequenza mostra un controllo fallito e il successivo riuso o ripristino della modifica dell’agente."
+  },
+  "85": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "La sequenza mostra un controllo fallito e il successivo riuso o ripristino della modifica dell’agente."
+  },
+  "86": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "La sequenza mostra un controllo fallito e il successivo riuso o ripristino della modifica dell’agente."
+  },
+  "87": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "La sequenza mostra un controllo fallito e il successivo riuso o ripristino della modifica dell’agente."
+  },
+  "88": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "La sequenza mostra un controllo fallito e il successivo riuso o ripristino della modifica dell’agente."
+  },
+  "89": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "La sequenza mostra un controllo fallito e il successivo riuso o ripristino della modifica dell’agente."
+  },
+  "90": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "La sequenza mostra un controllo fallito e il successivo riuso o ripristino della modifica dell’agente."
+  },
+  "91": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "La sequenza mostra un controllo fallito e il successivo riuso o ripristino della modifica dell’agente."
+  },
+  "92": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "La sequenza mostra un controllo fallito e il successivo riuso o ripristino della modifica dell’agente."
+  },
+  "93": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "La sequenza mostra un controllo fallito e il successivo riuso o ripristino della modifica dell’agente."
+  },
+  "94": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "La sequenza mostra un controllo fallito e il successivo riuso o ripristino della modifica dell’agente."
+  },
+  "95": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "La sequenza mostra un controllo fallito e il successivo riuso o ripristino della modifica dell’agente."
+  },
+  "96": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "La sequenza mostra un controllo fallito e il successivo riuso o ripristino della modifica dell’agente."
+  },
+  "97": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "La sequenza mostra un controllo fallito e il successivo riuso o ripristino della modifica dell’agente."
+  },
+  "98": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "La sequenza mostra un controllo fallito e il successivo riuso o ripristino della modifica dell’agente."
+  },
+  "99": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "La sequenza mostra un controllo fallito e il successivo riuso o ripristino della modifica dell’agente."
+  },
+  "100": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "La sequenza mostra un controllo fallito e il successivo riuso o ripristino della modifica dell’agente."
+  },
+  "101": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "La finestra documenta modifiche successive che ripristinano o ripropongono una versione precedente."
+  },
+  "102": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "La finestra documenta modifiche successive che ripristinano o ripropongono una versione precedente."
+  },
+  "103": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "La finestra documenta modifiche successive che ripristinano o ripropongono una versione precedente."
+  },
+  "104": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "La finestra documenta modifiche successive che ripristinano o ripropongono una versione precedente."
+  },
+  "105": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "La finestra documenta modifiche successive che ripristinano o ripropongono una versione precedente."
+  },
+  "106": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "La finestra documenta modifiche successive che ripristinano o ripropongono una versione precedente."
+  },
+  "107": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "La finestra documenta modifiche successive che ripristinano o ripropongono una versione precedente."
+  },
+  "108": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "La finestra documenta modifiche successive che ripristinano o ripropongono una versione precedente."
+  },
+  "109": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "La finestra documenta modifiche successive che ripristinano o ripropongono una versione precedente."
+  },
+  "110": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "La finestra documenta modifiche successive che ripristinano o ripropongono una versione precedente."
+  },
+  "111": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "La finestra documenta modifiche successive che ripristinano o ripropongono una versione precedente."
+  },
+  "112": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "La finestra documenta modifiche successive che ripristinano o ripropongono una versione precedente."
+  },
+  "113": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "La finestra documenta modifiche successive che ripristinano o ripropongono una versione precedente."
+  },
+  "114": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "La finestra documenta modifiche successive che ripristinano o ripropongono una versione precedente."
+  },
+  "115": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "La finestra documenta modifiche successive che ripristinano o ripropongono una versione precedente."
+  },
+  "116": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "La finestra documenta modifiche successive che ripristinano o ripropongono una versione precedente."
+  },
+  "117": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "La finestra documenta modifiche successive che ripristinano o ripropongono una versione precedente."
+  },
+  "118": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "La finestra documenta modifiche successive che ripristinano o ripropongono una versione precedente."
+  },
+  "119": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "La finestra documenta modifiche successive che ripristinano o ripropongono una versione precedente."
+  },
+  "120": {
+    "giudizio": "rilevatore corretto",
+    "motivo": "La finestra documenta modifiche successive che ripristinano o ripropongono una versione precedente."
+  }
+}

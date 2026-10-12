@@ -1,0 +1,1438 @@
+{
+ "seed": 20261010,
+ "pool_sizes": {
+  "noop": 2307,
+  "stale": 169,
+  "never_seen": 862,
+  "multiple": 605,
+  "known_bad_retry": 321,
+  "circle": 368
+ },
+ "note": "No message windows; for SWE-bench items the failing lines are removed too. Rebuild the full sample with campione_verifica.py from the public sources (move this file away first).",
+ "items": [
+  {
+   "n": 1,
+   "category": "noop",
+   "set": "swehero_heldout",
+   "run": "988f69b1-4d7e-4e7b-9565-647cf969c1f7",
+   "step": 64,
+   "detail": {}
+  },
+  {
+   "n": 2,
+   "category": "noop",
+   "set": "swehero_heldout",
+   "run": "61b87141-2325-411e-bc79-4e6d9b5f7381",
+   "step": 126,
+   "detail": {}
+  },
+  {
+   "n": 3,
+   "category": "noop",
+   "set": "swehero_heldout",
+   "run": "028e01f9-669a-4ca6-9689-ee492f484cdd",
+   "step": 68,
+   "detail": {}
+  },
+  {
+   "n": 4,
+   "category": "noop",
+   "set": "swehero_heldout",
+   "run": "6d5166ea-4475-46bc-a535-66af8a27e6d6",
+   "step": 100,
+   "detail": {}
+  },
+  {
+   "n": 5,
+   "category": "noop",
+   "set": "swehero_heldout",
+   "run": "8f8d4976-efd0-486a-bc41-681d9355c004",
+   "step": 140,
+   "detail": {}
+  },
+  {
+   "n": 6,
+   "category": "noop",
+   "set": "swehero_heldout",
+   "run": "b24cb8e8-b9a2-45d0-8b81-e4c2ebe2718f",
+   "step": 126,
+   "detail": {}
+  },
+  {
+   "n": 7,
+   "category": "noop",
+   "set": "swehero_heldout",
+   "run": "8e962464-9e34-4f3d-9e66-3a0dbc9fde19",
+   "step": 62,
+   "detail": {}
+  },
+  {
+   "n": 8,
+   "category": "noop",
+   "set": "swehero_heldout",
+   "run": "9b20713e-7305-4f65-9101-b93425fcdbe6",
+   "step": 114,
+   "detail": {}
+  },
+  {
+   "n": 9,
+   "category": "noop",
+   "set": "swehero_heldout",
+   "run": "6bce1a62-c9fa-4b22-b18e-8aa438347e88",
+   "step": 78,
+   "detail": {}
+  },
+  {
+   "n": 10,
+   "category": "noop",
+   "set": "swehero_heldout",
+   "run": "43b5bedb-a8af-4846-b95c-a0144c31bedb",
+   "step": 98,
+   "detail": {}
+  },
+  {
+   "n": 11,
+   "category": "noop",
+   "set": "swehero_heldout",
+   "run": "4058c27d-a660-4512-bf3d-056d93569bc6",
+   "step": 108,
+   "detail": {}
+  },
+  {
+   "n": 12,
+   "category": "noop",
+   "set": "swehero_heldout",
+   "run": "aedb72c4-1c4b-4645-979b-979f2414fbb6",
+   "step": 124,
+   "detail": {}
+  },
+  {
+   "n": 13,
+   "category": "noop",
+   "set": "swehero_heldout",
+   "run": "cbba61c7-44fc-4236-97ce-0c29ec5591d2",
+   "step": 72,
+   "detail": {}
+  },
+  {
+   "n": 14,
+   "category": "noop",
+   "set": "openhands_qwen3_coder_30b",
+   "run": "django__django-15315",
+   "step": 108,
+   "detail": {}
+  },
+  {
+   "n": 15,
+   "category": "noop",
+   "set": "swehero_heldout",
+   "run": "e74c90cb-c0ba-445a-84d8-e4080f40f84e",
+   "step": 72,
+   "detail": {}
+  },
+  {
+   "n": 16,
+   "category": "noop",
+   "set": "swehero_heldout",
+   "run": "7fa985b7-d68a-4e88-a6a7-89642d29209a",
+   "step": 116,
+   "detail": {}
+  },
+  {
+   "n": 17,
+   "category": "noop",
+   "set": "swehero_heldout",
+   "run": "8ef6a2f6-914b-43a1-b150-200f63145b1f",
+   "step": 120,
+   "detail": {}
+  },
+  {
+   "n": 18,
+   "category": "noop",
+   "set": "swehero_heldout",
+   "run": "c4b4ce42-a117-453a-b9b0-ca7307603e00",
+   "step": 164,
+   "detail": {}
+  },
+  {
+   "n": 19,
+   "category": "noop",
+   "set": "swehero_heldout",
+   "run": "41db364b-59f9-40cd-8e72-cc8fd0acba1c",
+   "step": 72,
+   "detail": {}
+  },
+  {
+   "n": 20,
+   "category": "noop",
+   "set": "swehero_heldout",
+   "run": "4fa30f15-f2af-44be-a0c0-07cf6ef9295b",
+   "step": 92,
+   "detail": {}
+  },
+  {
+   "n": 21,
+   "category": "stale",
+   "set": "swehero_heldout",
+   "run": "6efd7a5f-ead1-4e70-b0b9-6466a78e8d60",
+   "step": 140,
+   "detail": {}
+  },
+  {
+   "n": 22,
+   "category": "stale",
+   "set": "swehero_heldout",
+   "run": "584ff2d0-6a9f-4652-a037-e9597040fb4d",
+   "step": 44,
+   "detail": {}
+  },
+  {
+   "n": 23,
+   "category": "stale",
+   "set": "swehero_heldout",
+   "run": "598eee3a-0545-41c4-914c-3b7030bf58a9",
+   "step": 92,
+   "detail": {}
+  },
+  {
+   "n": 24,
+   "category": "stale",
+   "set": "openhands_qwen3_coder_480b",
+   "run": "sympy__sympy-19040",
+   "step": 284,
+   "detail": {}
+  },
+  {
+   "n": 25,
+   "category": "stale",
+   "set": "openhands_qwen3_coder_480b",
+   "run": "django__django-16256",
+   "step": 70,
+   "detail": {}
+  },
+  {
+   "n": 26,
+   "category": "stale",
+   "set": "openhands_qwen3_coder_480b",
+   "run": "django__django-12774",
+   "step": 66,
+   "detail": {}
+  },
+  {
+   "n": 27,
+   "category": "stale",
+   "set": "openhands_qwen3_coder_480b",
+   "run": "django__django-15503",
+   "step": 188,
+   "detail": {}
+  },
+  {
+   "n": 28,
+   "category": "stale",
+   "set": "swehero_heldout",
+   "run": "523cc4f2-8184-4107-a15b-e04e2b8c2756",
+   "step": 122,
+   "detail": {}
+  },
+  {
+   "n": 29,
+   "category": "stale",
+   "set": "swehero_heldout",
+   "run": "5dd6fb91-dbbf-4c8d-8dfb-808a8c8bdb5b",
+   "step": 86,
+   "detail": {}
+  },
+  {
+   "n": 30,
+   "category": "stale",
+   "set": "swehero_heldout",
+   "run": "81401243-1a9d-4298-b24f-1e3b0a7a4b9b",
+   "step": 142,
+   "detail": {}
+  },
+  {
+   "n": 31,
+   "category": "stale",
+   "set": "swehero_heldout",
+   "run": "5931f1bd-c35b-4cc3-9dd8-3563ba5012d1",
+   "step": 124,
+   "detail": {}
+  },
+  {
+   "n": 32,
+   "category": "stale",
+   "set": "openhands_qwen3_coder_480b",
+   "run": "django__django-12039",
+   "step": 94,
+   "detail": {}
+  },
+  {
+   "n": 33,
+   "category": "stale",
+   "set": "swehero_heldout",
+   "run": "99fb90b3-352f-4f48-963b-80999820201e",
+   "step": 96,
+   "detail": {}
+  },
+  {
+   "n": 34,
+   "category": "stale",
+   "set": "swehero_heldout",
+   "run": "7e3b7054-9b54-4a95-a344-ff27ac390e97",
+   "step": 88,
+   "detail": {}
+  },
+  {
+   "n": 35,
+   "category": "stale",
+   "set": "swehero_heldout",
+   "run": "0cca4780-dbe7-4767-95a7-c676b094c0b6",
+   "step": 120,
+   "detail": {}
+  },
+  {
+   "n": 36,
+   "category": "stale",
+   "set": "swehero_heldout",
+   "run": "8212237b-528b-44f0-83f6-9182b7b82eeb",
+   "step": 90,
+   "detail": {}
+  },
+  {
+   "n": 37,
+   "category": "stale",
+   "set": "swehero_heldout",
+   "run": "cf4f6a41-f4ea-4bab-9dd4-8c3cc7f2a9f7",
+   "step": 72,
+   "detail": {}
+  },
+  {
+   "n": 38,
+   "category": "stale",
+   "set": "swehero_heldout",
+   "run": "c6d6df78-6d35-47d2-9c05-d7824cd09250",
+   "step": 72,
+   "detail": {}
+  },
+  {
+   "n": 39,
+   "category": "stale",
+   "set": "openhands_qwen3_coder_30b",
+   "run": "django__django-15814",
+   "step": 56,
+   "detail": {}
+  },
+  {
+   "n": 40,
+   "category": "stale",
+   "set": "swehero_heldout",
+   "run": "8bc0bcc5-36ac-47da-9f3e-eed9a299c57d",
+   "step": 46,
+   "detail": {}
+  },
+  {
+   "n": 41,
+   "category": "never_seen",
+   "set": "swehero_heldout",
+   "run": "10508753-7ba2-45bf-839e-2cfb330829ee",
+   "step": 132,
+   "detail": {}
+  },
+  {
+   "n": 42,
+   "category": "never_seen",
+   "set": "swehero_heldout",
+   "run": "fcfc6e8b-3dd1-4a66-96b9-00d75df6d3b3",
+   "step": 170,
+   "detail": {}
+  },
+  {
+   "n": 43,
+   "category": "never_seen",
+   "set": "swehero_heldout",
+   "run": "ad6938a6-a62e-41d2-a1a1-c732c091679c",
+   "step": 72,
+   "detail": {}
+  },
+  {
+   "n": 44,
+   "category": "never_seen",
+   "set": "swehero_heldout",
+   "run": "1e2d4010-c958-4ad0-a5db-63ae0a599915",
+   "step": 62,
+   "detail": {}
+  },
+  {
+   "n": 45,
+   "category": "never_seen",
+   "set": "swehero_heldout",
+   "run": "f0f3eabd-5a0b-4e15-980e-3eee944bf676",
+   "step": 106,
+   "detail": {}
+  },
+  {
+   "n": 46,
+   "category": "never_seen",
+   "set": "openhands_qwen3_coder_30b",
+   "run": "django__django-15563",
+   "step": 64,
+   "detail": {}
+  },
+  {
+   "n": 47,
+   "category": "never_seen",
+   "set": "swehero_heldout",
+   "run": "f4644ea0-4b5b-4256-80c3-a0ac0f008d14",
+   "step": 54,
+   "detail": {}
+  },
+  {
+   "n": 48,
+   "category": "never_seen",
+   "set": "swehero_heldout",
+   "run": "a139ee80-1b7f-4b68-b881-b7fc927b9313",
+   "step": 98,
+   "detail": {}
+  },
+  {
+   "n": 49,
+   "category": "never_seen",
+   "set": "swehero_heldout",
+   "run": "476281e0-d906-4088-abcd-b42c0d292ead",
+   "step": 44,
+   "detail": {}
+  },
+  {
+   "n": 50,
+   "category": "never_seen",
+   "set": "swehero_heldout",
+   "run": "ec2ad1e4-dcc1-4c3f-b222-44b232533733",
+   "step": 50,
+   "detail": {}
+  },
+  {
+   "n": 51,
+   "category": "never_seen",
+   "set": "swehero_heldout",
+   "run": "3e717ac4-6acd-4949-929f-596f6e240af5",
+   "step": 96,
+   "detail": {}
+  },
+  {
+   "n": 52,
+   "category": "never_seen",
+   "set": "swehero_heldout",
+   "run": "af4214e2-8aea-4cca-ab95-821e3e318435",
+   "step": 64,
+   "detail": {}
+  },
+  {
+   "n": 53,
+   "category": "never_seen",
+   "set": "swehero_heldout",
+   "run": "a9e355c9-cd4e-42f8-92be-d5bcbe54d726",
+   "step": 104,
+   "detail": {}
+  },
+  {
+   "n": 54,
+   "category": "never_seen",
+   "set": "swehero_heldout",
+   "run": "c5cc8410-d4f2-4cb8-9898-6470681a92c3",
+   "step": 120,
+   "detail": {}
+  },
+  {
+   "n": 55,
+   "category": "never_seen",
+   "set": "swehero_heldout",
+   "run": "b130efaa-ba30-4614-a1fd-4c75819b1ca7",
+   "step": 106,
+   "detail": {}
+  },
+  {
+   "n": 56,
+   "category": "never_seen",
+   "set": "swehero_heldout",
+   "run": "6cee6ed9-b3eb-4c9c-a516-c760bcf4e7ef",
+   "step": 76,
+   "detail": {}
+  },
+  {
+   "n": 57,
+   "category": "never_seen",
+   "set": "swehero_heldout",
+   "run": "90121054-5ee6-429e-8cda-ccfe4070648e",
+   "step": 140,
+   "detail": {}
+  },
+  {
+   "n": 58,
+   "category": "never_seen",
+   "set": "swehero_heldout",
+   "run": "1c88d258-4b88-4623-b099-2fcbb96bc48e",
+   "step": 68,
+   "detail": {}
+  },
+  {
+   "n": 59,
+   "category": "never_seen",
+   "set": "swehero_heldout",
+   "run": "c44a70d5-3873-4301-9db4-5065d403e9b5",
+   "step": 70,
+   "detail": {}
+  },
+  {
+   "n": 60,
+   "category": "never_seen",
+   "set": "swehero_heldout",
+   "run": "95abe5b2-4c70-4143-bf35-b3a261f73199",
+   "step": 90,
+   "detail": {}
+  },
+  {
+   "n": 61,
+   "category": "multiple",
+   "set": "swehero_heldout",
+   "run": "b33dda85-eca2-49ab-b6f3-4bf187821db3",
+   "step": 106,
+   "detail": {}
+  },
+  {
+   "n": 62,
+   "category": "multiple",
+   "set": "swehero_heldout",
+   "run": "c0be37f4-ede4-4bb8-b2e5-01d4acc06e76",
+   "step": 40,
+   "detail": {}
+  },
+  {
+   "n": 63,
+   "category": "multiple",
+   "set": "swehero_heldout",
+   "run": "23a25094-892e-4d9f-9498-cc25b809a765",
+   "step": 116,
+   "detail": {}
+  },
+  {
+   "n": 64,
+   "category": "multiple",
+   "set": "swehero_heldout",
+   "run": "876c47e0-fece-4744-a1ee-4adb1884747b",
+   "step": 92,
+   "detail": {}
+  },
+  {
+   "n": 65,
+   "category": "multiple",
+   "set": "openhands_qwen3_coder_30b",
+   "run": "sympy__sympy-16792",
+   "step": 82,
+   "detail": {}
+  },
+  {
+   "n": 66,
+   "category": "multiple",
+   "set": "swehero_heldout",
+   "run": "d8489a8b-1125-4063-a208-4752ce4b9fd2",
+   "step": 46,
+   "detail": {}
+  },
+  {
+   "n": 67,
+   "category": "multiple",
+   "set": "swehero_heldout",
+   "run": "d743fb09-6818-440a-afe2-4019f4c720e4",
+   "step": 102,
+   "detail": {}
+  },
+  {
+   "n": 68,
+   "category": "multiple",
+   "set": "swehero_heldout",
+   "run": "ee961e31-3e9f-4a8c-adf7-1c4cf15fec1c",
+   "step": 108,
+   "detail": {}
+  },
+  {
+   "n": 69,
+   "category": "multiple",
+   "set": "swehero_heldout",
+   "run": "79420b06-2ec0-48a4-8805-5dff46b0fb94",
+   "step": 88,
+   "detail": {}
+  },
+  {
+   "n": 70,
+   "category": "multiple",
+   "set": "swehero_heldout",
+   "run": "3cd805f1-82fd-4ad5-8627-686d1d675a30",
+   "step": 118,
+   "detail": {}
+  },
+  {
+   "n": 71,
+   "category": "multiple",
+   "set": "openhands_qwen3_coder_480b",
+   "run": "django__django-16950",
+   "step": 158,
+   "detail": {}
+  },
+  {
+   "n": 72,
+   "category": "multiple",
+   "set": "swehero_heldout",
+   "run": "eb241fcd-4feb-4fe7-ba00-c26189b3b253",
+   "step": 60,
+   "detail": {}
+  },
+  {
+   "n": 73,
+   "category": "multiple",
+   "set": "swehero_heldout",
+   "run": "1788ae93-2488-4c56-8afb-6d4b3d2bb723",
+   "step": 56,
+   "detail": {}
+  },
+  {
+   "n": 74,
+   "category": "multiple",
+   "set": "swehero_heldout",
+   "run": "b9d9f65a-41f1-4071-9fbf-8567cdb3cbfa",
+   "step": 176,
+   "detail": {}
+  },
+  {
+   "n": 75,
+   "category": "multiple",
+   "set": "swehero_heldout",
+   "run": "3a5afb3f-723c-4e4d-ac49-302fc8bac8c7",
+   "step": 102,
+   "detail": {}
+  },
+  {
+   "n": 76,
+   "category": "multiple",
+   "set": "swehero_heldout",
+   "run": "bc6564f3-f319-45a3-9b7c-36e6d2b33c05",
+   "step": 94,
+   "detail": {}
+  },
+  {
+   "n": 77,
+   "category": "multiple",
+   "set": "swehero_heldout",
+   "run": "d8bcba49-80e8-4105-a17d-2c5323d01667",
+   "step": 96,
+   "detail": {}
+  },
+  {
+   "n": 78,
+   "category": "multiple",
+   "set": "swehero_heldout",
+   "run": "f4b34a99-72ad-4a99-a486-ff240268cd47",
+   "step": 54,
+   "detail": {}
+  },
+  {
+   "n": 79,
+   "category": "multiple",
+   "set": "swehero_heldout",
+   "run": "74a222a9-f7fb-44d7-bfaf-14003b75d22f",
+   "step": 66,
+   "detail": {}
+  },
+  {
+   "n": 80,
+   "category": "multiple",
+   "set": "swehero_heldout",
+   "run": "f0ffed4a-f798-4f51-983b-e0efa6673279",
+   "step": 102,
+   "detail": {}
+  },
+  {
+   "n": 81,
+   "category": "known_bad_retry",
+   "set": "swehero_heldout",
+   "run": "4e32a8d5-293d-49cf-bc46-6ffc2455a437",
+   "step": 68,
+   "detail": {
+    "kind": "retry_own",
+    "removed_at": 62,
+    "known_bad": [
+     28,
+     true,
+     "FAILED pints/tests/test_logger.py::TestLogger::test_file_writing_no_screen_csv - AssertionError: Lists differ: ['\"#\"[96 "
+    ],
+    "replaced_bad": null
+   }
+  },
+  {
+   "n": 82,
+   "category": "known_bad_retry",
+   "set": "swehero_heldout",
+   "run": "e977f685-c6ea-4d61-bd6a-3b5926830b40",
+   "step": 138,
+   "detail": {
+    "kind": "retry_own",
+    "removed_at": 96,
+    "known_bad": [
+     39,
+     true,
+     "ValueError: buffer source array is read-only"
+    ],
+    "replaced_bad": [
+     65,
+     true,
+     "ValueError: Unknown dtype 'Int64'"
+    ]
+   }
+  },
+  {
+   "n": 83,
+   "category": "known_bad_retry",
+   "set": "swehero_heldout",
+   "run": "43bc717e-9de6-4047-9925-de80f55f8759",
+   "step": 100,
+   "detail": {
+    "kind": "retry_own",
+    "removed_at": 94,
+    "known_bad": [
+     39,
+     true,
+     "FAILED tests/unit/remote/test_local.py::test_is_protected[symlink] - AssertionError: assert not True"
+    ],
+    "replaced_bad": null
+   }
+  },
+  {
+   "n": 84,
+   "category": "known_bad_retry",
+   "set": "swehero_heldout",
+   "run": "9e2cfa8f-299f-4394-acd6-85dd8e6b799d",
+   "step": 164,
+   "detail": {
+    "kind": "retry_own",
+    "removed_at": 162,
+    "known_bad": [
+     76,
+     true,
+     "FAILED tests/func/test_unprotect.py::TestUnprotect::test - AssertionError: True is not false"
+    ],
+    "replaced_bad": null
+   }
+  },
+  {
+   "n": 85,
+   "category": "known_bad_retry",
+   "set": "swehero_heldout",
+   "run": "6516f064-86f8-44b0-9949-b58c13fe3d68",
+   "step": 130,
+   "detail": {
+    "kind": "retry_own",
+    "removed_at": 126,
+    "known_bad": [
+     61,
+     true,
+     "FAILED jsonargparse_tests/core_tests.py::ConfigFilesTests::test_get_default_with_default_config_file - jsonargparse.util"
+    ],
+    "replaced_bad": [
+     63,
+     true,
+     "FAILED jsonargparse_tests/core_tests.py::ConfigFilesTests::test_get_default_with_default_config_file - jsonargparse.util"
+    ]
+   }
+  },
+  {
+   "n": 86,
+   "category": "known_bad_retry",
+   "set": "swehero_heldout",
+   "run": "7d85d8ac-678b-4458-af21-42c9033c4fa4",
+   "step": 92,
+   "detail": {
+    "kind": "retry_own",
+    "removed_at": 88,
+    "known_bad": [
+     41,
+     true,
+     "FAILED pandas/tests/groupby/test_groupby_dropna.py::test_no_sort_keep_na[False-values11-Float64] - AssertionError: DataF"
+    ],
+    "replaced_bad": null
+   }
+  },
+  {
+   "n": 87,
+   "category": "known_bad_retry",
+   "set": "swehero_heldout",
+   "run": "55eb8afd-c214-4f5a-a220-15c04d778296",
+   "step": 144,
+   "detail": {
+    "kind": "retry_own",
+    "removed_at": 120,
+    "known_bad": [
+     41,
+     true,
+     "FAILED pandas/tests/groupby/test_categorical.py::test_preserve_categories - AssertionError: Index are different"
+    ],
+    "replaced_bad": null
+   }
+  },
+  {
+   "n": 88,
+   "category": "known_bad_retry",
+   "set": "swehero_heldout",
+   "run": "165c64e0-d03a-419e-b106-b35b6d788fd5",
+   "step": 158,
+   "detail": {
+    "kind": "retry_own",
+    "removed_at": 154,
+    "known_bad": [
+     69,
+     true,
+     "FAILED tests/unit/bokeh/models/test_sources.py::TestColumnDataSource::test__stream_good_dict_of_index_and_series_data_tr"
+    ],
+    "replaced_bad": null
+   }
+  },
+  {
+   "n": 89,
+   "category": "known_bad_retry",
+   "set": "swehero_heldout",
+   "run": "635fdfed-390a-4a75-86e9-294241d2fabb",
+   "step": 168,
+   "detail": {
+    "kind": "retry_own",
+    "removed_at": 152,
+    "known_bad": [
+     74,
+     true,
+     "FAILED debug_detailed.py::DetailedDebugTest::test_debug_step_by_step - KeyError: Cast(F(id))"
+    ],
+    "replaced_bad": null
+   }
+  },
+  {
+   "n": 90,
+   "category": "known_bad_retry",
+   "set": "swehero_heldout",
+   "run": "5e03e03a-9c81-4a40-a499-8f297a1b9ebf",
+   "step": 142,
+   "detail": {
+    "kind": "retry_own",
+    "removed_at": 28,
+    "known_bad": [
+     12,
+     true,
+     "hydra.errors.MissingConfigException: In 'config': Could not find 'dataset/imagenet'"
+    ],
+    "replaced_bad": [
+     60,
+     true,
+     "hydra.errors.MissingConfigException: In 'config': Could not find 'dataset/imagenet'"
+    ]
+   }
+  },
+  {
+   "n": 91,
+   "category": "known_bad_retry",
+   "set": "swehero_heldout",
+   "run": "5c11d1be-7f62-48db-ab7d-76785af05e69",
+   "step": 160,
+   "detail": {
+    "kind": "retry_own",
+    "removed_at": 156,
+    "known_bad": [
+     76,
+     true,
+     "AssertionError"
+    ],
+    "replaced_bad": [
+     78,
+     true,
+     "AssertionError"
+    ]
+   }
+  },
+  {
+   "n": 92,
+   "category": "known_bad_retry",
+   "set": "swehero_heldout",
+   "run": "09dbc781-8f88-4024-ac68-f19550d2b7a6",
+   "step": 176,
+   "detail": {
+    "kind": "retry_own",
+    "removed_at": 170,
+    "known_bad": [
+     82,
+     true,
+     "ImportError: cannot import name 'ALL_STRATEGY' from partially initialized module 'mypy.type_visitor' (most likely due to"
+    ],
+    "replaced_bad": [
+     85,
+     true,
+     "ImportError: cannot import name 'ALL_STRATEGY' from partially initialized module 'mypy.type_visitor' (most likely due to"
+    ]
+   }
+  },
+  {
+   "n": 93,
+   "category": "known_bad_retry",
+   "set": "openhands_qwen3_coder_480b",
+   "run": "sphinx-doc__sphinx-9658",
+   "step": 164,
+   "detail": {
+    "kind": "retry_own",
+    "removed_at": 156,
+    "known_bad": [
+     48,
+     true,
+     null
+    ],
+    "replaced_bad": null
+   }
+  },
+  {
+   "n": 94,
+   "category": "known_bad_retry",
+   "set": "swehero_heldout",
+   "run": "cebe27b3-61cb-4e95-ae75-3d7711cc0569",
+   "step": 112,
+   "detail": {
+    "kind": "retry_own",
+    "removed_at": 106,
+    "known_bad": [
+     41,
+     true,
+     "TypeError: test() got an unexpected keyword argument 'tests'"
+    ],
+    "replaced_bad": null
+   }
+  },
+  {
+   "n": 95,
+   "category": "known_bad_retry",
+   "set": "swehero_heldout",
+   "run": "2ed241d1-afa6-49ef-95db-49fdc9ea2cc6",
+   "step": 144,
+   "detail": {
+    "kind": "retry_own",
+    "removed_at": 140,
+    "known_bad": [
+     65,
+     true,
+     "AttributeError: 'NoneType' object has no attribute 'get'"
+    ],
+    "replaced_bad": null
+   }
+  },
+  {
+   "n": 96,
+   "category": "known_bad_retry",
+   "set": "swehero_heldout",
+   "run": "5112b9fd-d330-4bde-90d8-e7251357c4a3",
+   "step": 124,
+   "detail": {
+    "kind": "retry_own",
+    "removed_at": 118,
+    "known_bad": [
+     55,
+     true,
+     "FAILED src/pymortests/algorithms/stuff.py::test_newton_fail_without_line_search - Failed: DID NOT RAISE <class 'pymor.co"
+    ],
+    "replaced_bad": [
+     60,
+     true,
+     "FAILED src/pymortests/algorithms/stuff.py::test_newton_fail_without_line_search - Failed: DID NOT RAISE <class 'pymor.co"
+    ]
+   }
+  },
+  {
+   "n": 97,
+   "category": "known_bad_retry",
+   "set": "swehero_heldout",
+   "run": "5b7365f2-451f-4c2c-8e6b-5f9fd1ff62b7",
+   "step": 126,
+   "detail": {
+    "kind": "retry_own",
+    "removed_at": 106,
+    "known_bad": [
+     50,
+     true,
+     "FAILED tests/test_series.py::test_filter[df_raw1] - TypeError: len() takes 0 positional arguments but 1 was given"
+    ],
+    "replaced_bad": null
+   }
+  },
+  {
+   "n": 98,
+   "category": "known_bad_retry",
+   "set": "swehero_heldout",
+   "run": "00e351ae-ff6f-4349-a046-4ae07bee38f4",
+   "step": 116,
+   "detail": {
+    "kind": "retry_own",
+    "removed_at": 86,
+    "known_bad": [
+     38,
+     true,
+     "FAILED tests/test_conversions.py::test_dl - AssertionError: assert '\\n\\nterm\\n:   definition\\n\\n' == '\\nterm\\n:   defini"
+    ],
+    "replaced_bad": null
+   }
+  },
+  {
+   "n": 99,
+   "category": "known_bad_retry",
+   "set": "openhands_qwen3_coder_30b",
+   "run": "matplotlib__matplotlib-25332",
+   "step": 96,
+   "detail": {
+    "kind": "retry_own",
+    "removed_at": 76,
+    "known_bad": [
+     33,
+     true,
+     null
+    ],
+    "replaced_bad": null
+   }
+  },
+  {
+   "n": 100,
+   "category": "known_bad_retry",
+   "set": "swehero_heldout",
+   "run": "2cd99a94-f3c6-4348-a461-93d23e47a7fa",
+   "step": 124,
+   "detail": {
+    "kind": "retry_own",
+    "removed_at": 118,
+    "known_bad": [
+     40,
+     true,
+     "FAILED tests/transforms/test_insert_ops.py::test_insert_decorator_doesnt_cause_index_error - Failed: DID NOT RAISE <clas"
+    ],
+    "replaced_bad": null
+   }
+  },
+  {
+   "n": 101,
+   "category": "circle",
+   "set": "swehero_heldout",
+   "run": "f5272b6b-c1b4-41d9-a3f3-d8540d71e2aa",
+   "step": 90,
+   "detail": {
+    "kind": "back_to_original",
+    "removed_at": 76,
+    "known_bad": [
+     26,
+     true,
+     "Traceback (most recent call last):"
+    ],
+    "replaced_bad": [
+     42,
+     true,
+     "FAILED rollbar/test/test_loghandler.py::LogHandlerTest::test_message_stays_unformatted - AssertionError: 'Hello 1 world'"
+    ]
+   }
+  },
+  {
+   "n": 102,
+   "category": "circle",
+   "set": "swehero_heldout",
+   "run": "bc237037-8bf2-42b6-888d-7a53724d10a4",
+   "step": 106,
+   "detail": {
+    "kind": "back_to_original",
+    "removed_at": 98,
+    "known_bad": [
+     41,
+     true,
+     "KeyError: 'units'"
+    ],
+    "replaced_bad": [
+     50,
+     true,
+     "FAILED tests/test_indices.py::TestGrowingSeasonLength::test_simple - ValueError: indexes along dimension 'time' are not "
+    ]
+   }
+  },
+  {
+   "n": 103,
+   "category": "circle",
+   "set": "swehero_heldout",
+   "run": "d3afc77e-4611-4474-9b21-4184bb0ec41d",
+   "step": 66,
+   "detail": {
+    "kind": "back_to_original",
+    "removed_at": 50,
+    "known_bad": [
+     23,
+     true,
+     "peppy.exceptions.InvalidSampleTableFileException: sample_table is missing 'sample_name' column; you must specify sample_"
+    ],
+    "replaced_bad": [
+     27,
+     true,
+     "KeyError: 'sample_name'"
+    ]
+   }
+  },
+  {
+   "n": 104,
+   "category": "circle",
+   "set": "swehero_heldout",
+   "run": "af262d09-f607-4017-b3fe-459df81f551a",
+   "step": 110,
+   "detail": {
+    "kind": "back_to_original",
+    "removed_at": 78,
+    "known_bad": [
+     26,
+     true,
+     "SyntaxError: f-string expression part cannot include a backslash"
+    ],
+    "replaced_bad": [
+     45,
+     true,
+     "SyntaxError: f-string expression part cannot include a backslash"
+    ]
+   }
+  },
+  {
+   "n": 105,
+   "category": "circle",
+   "set": "swehero_heldout",
+   "run": "efbf16ee-0527-4309-b911-703081f4592e",
+   "step": 118,
+   "detail": {
+    "kind": "retry_own",
+    "removed_at": 112,
+    "known_bad": [
+     51,
+     true,
+     "AttributeError: 'FloatFormat' object has no attribute 'format'"
+    ],
+    "replaced_bad": [
+     57,
+     true,
+     "RecursionError: maximum recursion depth exceeded while calling a Python object"
+    ]
+   }
+  },
+  {
+   "n": 106,
+   "category": "circle",
+   "set": "swehero_heldout",
+   "run": "0f74363a-3d7b-4723-9044-0eb4a20610e0",
+   "step": 98,
+   "detail": {
+    "kind": "retry_own",
+    "removed_at": 88,
+    "known_bad": [
+     41,
+     true,
+     "Result: FAILED"
+    ],
+    "replaced_bad": [
+     47,
+     true,
+     "Comparison result: FAILED"
+    ]
+   }
+  },
+  {
+   "n": 107,
+   "category": "circle",
+   "set": "swehero_heldout",
+   "run": "e9aab8a8-8409-4f41-94a5-22938587a094",
+   "step": 122,
+   "detail": {
+    "kind": "back_to_original",
+    "removed_at": 96,
+    "known_bad": [
+     46,
+     true,
+     "ValueError: <Token var=<ContextVar name='flask.app_ctx' at 0x7ffff677c0b0> at 0x7ffff647f870> was created in a different"
+    ],
+    "replaced_bad": [
+     54,
+     true,
+     "FAILED tests/test_executor.py::test_submit_g_context_process - AttributeError: test_value"
+    ]
+   }
+  },
+  {
+   "n": 108,
+   "category": "circle",
+   "set": "swehero_heldout",
+   "run": "af262d09-f607-4017-b3fe-459df81f551a",
+   "step": 132,
+   "detail": {
+    "kind": "back_to_original",
+    "removed_at": 118,
+    "known_bad": [
+     57,
+     true,
+     "FAILED tests/binary_literals_test.py::test_binary_literals[f(\\n    U\"foo\"\\n    ur\"bar\".encode()\\n)\\n-f(\\n    b\"foo\"\\n   "
+    ],
+    "replaced_bad": [
+     60,
+     true,
+     "FAILED tests/raw_unicode_literals_test.py::test_fix_ur_literals[basic case] - assert 'ur\"hi\"' == 'u\"hi\"'"
+    ]
+   }
+  },
+  {
+   "n": 109,
+   "category": "circle",
+   "set": "openhands_qwen3_coder_480b",
+   "run": "django__django-15554",
+   "step": 288,
+   "detail": {
+    "kind": "retry_own",
+    "removed_at": 284,
+    "known_bad": [
+     137,
+     true,
+     null
+    ],
+    "replaced_bad": [
+     142,
+     true,
+     null
+    ]
+   }
+  },
+  {
+   "n": 110,
+   "category": "circle",
+   "set": "swehero_heldout",
+   "run": "ae23a0b0-0345-42b7-83f4-efea34366ae7",
+   "step": 146,
+   "detail": {
+    "kind": "retry_own",
+    "removed_at": 142,
+    "known_bad": [
+     68,
+     true,
+     "E   ImportError: cannot import name 'SyntheticTypeVisitor' from partially initialized module 'mypy.type_visitor' (most l"
+    ],
+    "replaced_bad": [
+     71,
+     true,
+     "debug_test.py:16: error: INTERNAL ERROR -- Please try using mypy master on GitHub:"
+    ]
+   }
+  },
+  {
+   "n": 111,
+   "category": "circle",
+   "set": "swehero_heldout",
+   "run": "2c79dbed-ce9e-4647-b222-9c81ca3f5b92",
+   "step": 126,
+   "detail": {
+    "kind": "back_to_original",
+    "removed_at": 114,
+    "known_bad": [
+     39,
+     true,
+     "AttributeError: 'MultiIndex' object has no attribute 'to_period'. Did you mean: 'to_series'?"
+    ],
+    "replaced_bad": [
+     60,
+     true,
+     "TypeError: axis must be a PeriodIndex, but got an instance of DatetimeIndex"
+    ]
+   }
+  },
+  {
+   "n": 112,
+   "category": "circle",
+   "set": "swehero_heldout",
+   "run": "41c5ef25-d840-48b5-8116-5a3b74255967",
+   "step": 164,
+   "detail": {
+    "kind": "back_to_original",
+    "removed_at": 132,
+    "known_bad": [
+     60,
+     true,
+     "AssertionError: Attributes of Series are different"
+    ],
+    "replaced_bad": [
+     76,
+     true,
+     "FAILED pandas/tests/groupby/transform/test_numba.py::test_index_data_correctly_passed - AssertionError: DataFrame.iloc[:"
+    ]
+   }
+  },
+  {
+   "n": 113,
+   "category": "circle",
+   "set": "swehero_heldout",
+   "run": "7598c11d-eb8a-434f-a404-7a185baa394b",
+   "step": 100,
+   "detail": {
+    "kind": "back_to_original",
+    "removed_at": 78,
+    "known_bad": [
+     32,
+     true,
+     "TypeError: activate() got an unexpected keyword argument 'assert_all_requests_are_fired'"
+    ],
+    "replaced_bad": [
+     47,
+     true,
+     "ImportError: attempted relative import with no known parent package"
+    ]
+   }
+  },
+  {
+   "n": 114,
+   "category": "circle",
+   "set": "swehero_heldout",
+   "run": "178fe7a2-df37-419d-a367-69486cdab0e5",
+   "step": 140,
+   "detail": {
+    "kind": "retry_own",
+    "removed_at": 36,
+    "known_bad": [
+     16,
+     true,
+     "FAILED test/test_markdown_extra.py::test_extra_044fc - pymarkdown.general.bad_tokenization_error.BadTokenizationError: A"
+    ],
+    "replaced_bad": [
+     32,
+     true,
+     "AttributeError: 'ApplicationConfigurationHelper' object has no attribute 'separator'"
+    ]
+   }
+  },
+  {
+   "n": 115,
+   "category": "circle",
+   "set": "swehero_heldout",
+   "run": "b5abc4ca-2c4d-492c-b703-7050cf3c8b6a",
+   "step": 160,
+   "detail": {
+    "kind": "retry_own",
+    "removed_at": 152,
+    "known_bad": [
+     72,
+     true,
+     "FAILED tests/func/test_add.py::test_should_protect_on_repeated_add[copy] - AssertionError: assert not True"
+    ],
+    "replaced_bad": [
+     76,
+     true,
+     "FAILED tests/func/test_add.py::test_should_protect_on_repeated_add[copy] - AssertionError: assert not True"
+    ]
+   }
+  },
+  {
+   "n": 116,
+   "category": "circle",
+   "set": "swehero_heldout",
+   "run": "ff68bc0f-f5c1-4d0f-b6eb-4585cea49fe6",
+   "step": 118,
+   "detail": {
+    "kind": "back_to_original",
+    "removed_at": 98,
+    "known_bad": [
+     35,
+     true,
+     "FAILED (failures=1)"
+    ],
+    "replaced_bad": [
+     57,
+     true,
+     "FAILED tests/mobly/controllers/android_device_lib/snippet_client_v2_test.py::SnippetClientV2Test::test_the_whole_lifecyc"
+    ]
+   }
+  },
+  {
+   "n": 117,
+   "category": "circle",
+   "set": "swehero_heldout",
+   "run": "18b4211f-784b-438c-9255-baaa16913362",
+   "step": 74,
+   "detail": {
+    "kind": "back_to_original",
+    "removed_at": 60,
+    "known_bad": [
+     27,
+     true,
+     "FAILED tests/preprocessing/test_positionfixes.py::TestGenerate_triplegs::test_str_userid - TypeError: agg function faile"
+    ],
+    "replaced_bad": [
+     35,
+     true,
+     "TypeError: 'NoneType' object is not subscriptable"
+    ]
+   }
+  },
+  {
+   "n": 118,
+   "category": "circle",
+   "set": "swehero_heldout",
+   "run": "bbc0af35-cde4-4d5c-a644-12dfbb23ed1f",
+   "step": 90,
+   "detail": {
+    "kind": "back_to_original",
+    "removed_at": 62,
+    "known_bad": [
+     22,
+     true,
+     "AttributeError: 'NoneType' object has no attribute 'write'"
+    ],
+    "replaced_bad": [
+     36,
+     true,
+     "FAILED test/test_workspace.py::test_workspace_loads_pycodestyle_config - KeyError: 'pycodestyle'"
+    ]
+   }
+  },
+  {
+   "n": 119,
+   "category": "circle",
+   "set": "swehero_heldout",
+   "run": "bb014f6b-5a5a-4d16-b11a-eb6577e95586",
+   "step": 136,
+   "detail": {
+    "kind": "retry_own",
+    "removed_at": 132,
+    "known_bad": [
+     63,
+     true,
+     "ValueError: No axis named 5 for object type Series"
+    ],
+    "replaced_bad": [
+     66,
+     true,
+     "ValueError: No axis named 5 for object type Series"
+    ]
+   }
+  },
+  {
+   "n": 120,
+   "category": "circle",
+   "set": "swehero_heldout",
+   "run": "4df98fba-d494-4b0d-b474-25a4c991c386",
+   "step": 62,
+   "detail": {
+    "kind": "back_to_original",
+    "removed_at": 52,
+    "known_bad": [
+     9,
+     true,
+     "FAILED tests/test_transform_pink_noise.py::test_pink_noise[10-None-8000-1.0] - AssertionError:"
+    ],
+    "replaced_bad": [
+     28,
+     true,
+     "FAILED tests/test_transform_pink_noise.py::test_pink_noise[10-None-8000-1.0] - AssertionError:"
+    ]
+   }
+  }
+ ]
+}

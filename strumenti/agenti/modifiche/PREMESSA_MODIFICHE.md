@@ -452,4 +452,33 @@ Per ogni `str_replace` riuscito su P, con `old` e `new` dopo `norm`:
 
 ## Scostamenti
 
-Nessuno.
+1. **11/10/2026. Verifica a campione (§7.4): il criterio delle etichette.**
+   - Il piano non fissava un criterio comune ai due giudici.
+   - Il criterio di Claude è in `verifica_criterio_claude.md`. Claude l'ha scritto dopo i casi 1–40 e prima di
+     etichettare i casi 41–120. Dei casi 41–46 aveva già visto una vista compatta.
+   - Claude ha letto i casi 1–40 con un visore che tagliava i messaggi vicini a 220 caratteri (160 e 260 intorno
+     alla rimozione) e i casi 41–120 per intero, cioè a 400 caratteri.
+   - Codex (etichette del 10/10) ha usato un criterio suo.
+   - I due giudici sono sistemi di IA: nessuna persona ha etichettato i casi.
+2. **11/10/2026. Verifica a campione: un passo in più, fuori dal piano.**
+   - Le etichette di Claude sono finite l'11/10 alle 21:49. L'impronta è nel commit 244f3d0, fatto prima di aprire
+     quelle di Codex.
+   - Dopo le due serie di etichette cieche, `aggiudica_campione.py` raccoglie dai log completi alcuni fatti
+     oggettivi che la finestra di 400 caratteri non mostrava: il messaggio intero, dove erano comparse prima le
+     righe cercate, che tipo di comando era fallito.
+   - Il passo non cambia nessuna etichetta: si riporta a parte.
+3. **12/10/2026. Ricalcolo indipendente (§7.5): perimetro e conteggi diversi.**
+   - Per SWE-Hero Codex ha usato solo le 221 esecuzioni R2E-Gym, non tutte le 24.269.
+     - Per questo H3 e H4 su SWE-Hero non sono state ricalcolate.
+     - Su SWE-Hero, H1 coincide solo come decisione.
+   - Le decisioni di H1, H2, H5 e H6 coincidono, ma alcuni conteggi no.
+     - H6, esecuzioni con un cerchio: Codex 1/221, misura.py 5/221.
+     - H3, esecuzioni che nominano l'errore su quelle ammesse: Codex 2/4 (30B) e 4/5 (480B); misura.py 0/3 e
+       0/15. Sulle stesse 221 esecuzioni, Codex ne ammette 2 e misura.py 5, senza nomi in entrambi i casi.
+     - H4, esecuzioni ammesse (30B, 480B, R2E-Gym): Codex 0, 1 e 1; misura.py 1, 5 e 4.
+   - Nel codice di Codex si vedono almeno tre scostamenti dalla §9. Non è verificato che spieghino le differenze:
+     - una redirezione con un solo `>` non conta come scrittura (§9 usa `>>?\s*`);
+     - i bersagli che non corrispondono a un percorso noto vengono scartati;
+     - i comandi di test sono riconosciuti senza distinguere maiuscole e minuscole.
+   - Le differenze, soprattutto sui nomi in H3, restano da spiegare.
+   - Codex aveva letto §§5–8, quindi non era cieco ai valori di sviluppo usati in H6.
